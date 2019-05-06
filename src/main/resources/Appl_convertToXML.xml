@@ -1,0 +1,650 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<imx:IMX xmlns:imx="http://com.informatica.imx" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" serializationSpecVersion="12.0" crcEnabled="1" xmlns:common1="http://com.informatica.ds.ms.feature.metadata.common/0" versioncommon1="0.2.1" xmlns:common2="http://com.informatica.ds.app.feature.metadata.common/0" versioncommon2="0.0.1" xmlns:connectinfo1="http://com.informatica.metadata.common.connectinfo/2" versionconnectinfo1="2.4.0" xmlns:project="http://com.informatica.metadata.common.project/2" versionproject="2.2.0" xmlns:source1="http://com.informatica.metadata.common.txhandlerconfig.source/2" versionsource1="2.1.0" xmlns:source="http://com.informatica.metadata.common.transformation.source/2" versionsource="2.1.0" xmlns:target1="http://com.informatica.metadata.common.txhandlerconfig.target/2" versiontarget1="2.4.0" xmlns:resourceaccess1="http://com.informatica.metadata.common.txhandlerconfig.resourceaccess/2" versionresourceaccess1="2.1.0" xmlns:datasourceoperation="http://com.informatica.metadata.flatbyte.generate.datasourceoperation/2" versiondatasourceoperation="2.1.0" xmlns:datarecord1="http://com.informatica.metadata.relational.datarecord/2" versiondatarecord1="2.5.0" xmlns:optimizerconfig="http://com.informatica.metadata.common.optimizerconfig/1" versionoptimizerconfig="1.0.0" xmlns:mapping="http://com.informatica.metadata.common.mapping/2" versionmapping="2.10.1" xmlns:adapter="http://com.informatica.metadata.common.adapter/2" versionadapter="2.2.0" xmlns:datahandler="http://com.informatica.metadata.common.datahandler/2" versiondatahandler="2.2.0" xmlns:runtime="http://com.informatica.metadata.common.runtime/2" versionruntime="2.12.1" xmlns:codepage="http://com.informatica.metadata.common.codepage/2" versioncodepage="2.1.0" xmlns:dsoconfig1="http://com.informatica.metadata.common.dsoconfig/2" versiondsoconfig1="2.1.0" xmlns:lookup1="http://com.informatica.metadata.common.txhandlerconfig.lookup/2" versionlookup1="2.3.0" xmlns:dsoconfig3="http://com.informatica.metadata.relational.dsoconfig/2" versiondsoconfig3="2.2.0" xmlns:core="http://com.informatica.metadata.common.core/2" versioncore="2.1.1" xmlns:dsoconfig2="http://com.informatica.metadata.flatbyte.parse.dsoconfig/2" versiondsoconfig2="2.10.0" xmlns:folder="http://com.informatica.metadata.common.folder/2" versionfolder="2.1.1" xmlns:datasource="http://com.informatica.metadata.flatbyte.datasource/2" versiondatasource="2.2.0" xmlns:typelibrary="http://com.informatica.metadata.common.typesystem.typelibrary/2" versiontypelibrary="2.4.0" xmlns:rule="http://com.informatica.metadata.common.rule/1" versionrule="1.5.0" xmlns:description="http://com.informatica.metadata.common.description/2" versiondescription="2.1.0" xmlns:javatx="http://com.informatica.metadata.common.transformation.javatx/2" versionjavatx="2.5.0" xmlns:datarecord="http://com.informatica.metadata.flatbyte.datarecord/2" versiondatarecord="2.3.0" xmlns:connectinfo="http://com.informatica.metadata.relational.connectinfo/0" versionconnectinfo="9.0.8.0" xmlns:common="http://com.informatica.ds.app.spec.metadata.common/0" versioncommon="0.6.1" xmlns:optimizer="http://com.informatica.metadata.common.optimizer/1" versionoptimizer="1.0.1" xmlns:txhandlerconfig="http://com.informatica.metadata.common.txhandlerconfig/2" versiontxhandlerconfig="2.1.1" xmlns:parameter="http://com.informatica.metadata.common.parameter/9" versionparameter="9.9.1" xmlns:dynamictype="http://com.informatica.metadata.common.config.dynamictype/1" versiondynamictype="1.1.0" xmlns:lookup="http://com.informatica.metadata.common.transformation.lookup/2" versionlookup="2.6.0" xmlns:types="http://com.informatica.metadata.common.types/2" versiontypes="2.4.0" xmlns:expression="http://com.informatica.metadata.common.transformation.expression/2" versionexpression="2.2.1" xmlns:datasourceoperation1="http://com.informatica.metadata.common.datasourceoperation/2" versiondatasourceoperation1="2.6.1" xmlns:aggregator="http://com.informatica.metadata.common.transformation.aggregator/2" versionaggregator="2.4.0" xmlns:mapplet="http://com.informatica.metadata.common.mapping.mapplet/2" versionmapplet="2.0.0" xmlns:transformation="http://com.informatica.metadata.common.transformation/3" versiontransformation="3.5.0" xmlns:target="http://com.informatica.metadata.common.transformation.target/2" versiontarget="2.4.0" xmlns:resourceaccess="http://com.informatica.metadata.common.transformation.resourceaccess/2" versionresourceaccess="2.3.0" xmlns:datasource1="http://com.informatica.metadata.common.datasource/2" versiondatasource1="2.2.0" xmlns:dsoconfig="http://com.informatica.metadata.flatbyte.generate.dsoconfig/2" versiondsoconfig="2.7.0" xmlns:joiner="http://com.informatica.metadata.common.transformation.joiner/2" versionjoiner="2.5.0" xmlns:datasourceoperation4="http://com.informatica.metadata.relational.datasourceoperation/2" versiondatasourceoperation4="2.10.0" xmlns:datasourceoperation3="http://com.informatica.metadata.flatbyte.parse.datasourceoperation/2" versiondatasourceoperation3="2.0.0" xmlns:pdo="http://com.informatica.metadata.common.optimizerconfig.pdo/1" versionpdo="1.0.0" xmlns:datasourceoperation2="http://com.informatica.metadata.flatbyte.datasourceoperation/2" versiondatasourceoperation2="2.0.0" xmlns:typesystem="http://com.informatica.metadata.common.typesystem/2" versiontypesystem="2.2.0" xmlns:config="http://com.informatica.metadata.common.config/1" versionconfig="1.1.0" xsi:schemaLocation="http://com.informatica.imx IMX.xsd http://com.informatica.ds.ms.feature.metadata.common/0 com.informatica.ds.ms.feature.metadata.common.xsd http://com.informatica.ds.app.feature.metadata.common/0 com.informatica.ds.app.feature.metadata.common.xsd http://com.informatica.metadata.common.connectinfo/2 com.informatica.metadata.common.connectinfo.xsd http://com.informatica.metadata.common.project/2 com.informatica.metadata.common.project.xsd http://com.informatica.metadata.common.txhandlerconfig.source/2 com.informatica.metadata.common.txhandlerconfig.source.xsd http://com.informatica.metadata.common.transformation.source/2 com.informatica.metadata.common.transformation.source.xsd http://com.informatica.metadata.common.txhandlerconfig.target/2 com.informatica.metadata.common.txhandlerconfig.target.xsd http://com.informatica.metadata.common.txhandlerconfig.resourceaccess/2 com.informatica.metadata.common.txhandlerconfig.resourceaccess.xsd http://com.informatica.metadata.flatbyte.generate.datasourceoperation/2 com.informatica.metadata.flatbyte.generate.datasourceoperation.xsd http://com.informatica.metadata.relational.datarecord/2 com.informatica.metadata.relational.datarecord.xsd http://com.informatica.metadata.common.optimizerconfig/1 com.informatica.metadata.common.optimizerconfig.xsd http://com.informatica.metadata.common.mapping/2 com.informatica.metadata.common.mapping.xsd http://com.informatica.metadata.common.adapter/2 com.informatica.metadata.common.adapter.xsd http://com.informatica.metadata.common.datahandler/2 com.informatica.metadata.common.datahandler.xsd http://com.informatica.metadata.common.runtime/2 com.informatica.metadata.common.runtime.xsd http://com.informatica.metadata.common.codepage/2 com.informatica.metadata.common.codepage.xsd http://com.informatica.metadata.common.dsoconfig/2 com.informatica.metadata.common.dsoconfig.xsd http://com.informatica.metadata.common.txhandlerconfig.lookup/2 com.informatica.metadata.common.txhandlerconfig.lookup.xsd http://com.informatica.metadata.relational.dsoconfig/2 com.informatica.metadata.relational.dsoconfig.xsd http://com.informatica.metadata.common.core/2 com.informatica.metadata.common.core.xsd http://com.informatica.metadata.flatbyte.parse.dsoconfig/2 com.informatica.metadata.flatbyte.parse.dsoconfig.xsd http://com.informatica.metadata.common.folder/2 com.informatica.metadata.common.folder.xsd http://com.informatica.metadata.flatbyte.datasource/2 com.informatica.metadata.flatbyte.datasource.xsd http://com.informatica.metadata.common.typesystem.typelibrary/2 com.informatica.metadata.common.typesystem.typelibrary.xsd http://com.informatica.metadata.common.rule/1 com.informatica.metadata.common.rule.xsd http://com.informatica.metadata.common.description/2 com.informatica.metadata.common.description.xsd http://com.informatica.metadata.common.transformation.javatx/2 com.informatica.metadata.common.transformation.javatx.xsd http://com.informatica.metadata.flatbyte.datarecord/2 com.informatica.metadata.flatbyte.datarecord.xsd http://com.informatica.metadata.relational.connectinfo/0 com.informatica.metadata.relational.connectinfo.xsd http://com.informatica.ds.app.spec.metadata.common/0 com.informatica.ds.app.spec.metadata.common.xsd http://com.informatica.metadata.common.optimizer/1 com.informatica.metadata.common.optimizer.xsd http://com.informatica.metadata.common.txhandlerconfig/2 com.informatica.metadata.common.txhandlerconfig.xsd http://com.informatica.metadata.common.parameter/9 com.informatica.metadata.common.parameter.xsd http://com.informatica.metadata.common.config.dynamictype/1 com.informatica.metadata.common.config.dynamictype.xsd http://com.informatica.metadata.common.transformation.lookup/2 com.informatica.metadata.common.transformation.lookup.xsd http://com.informatica.metadata.common.types/2 com.informatica.metadata.common.types.xsd http://com.informatica.metadata.common.transformation.expression/2 com.informatica.metadata.common.transformation.expression.xsd http://com.informatica.metadata.common.datasourceoperation/2 com.informatica.metadata.common.datasourceoperation.xsd http://com.informatica.metadata.common.transformation.aggregator/2 com.informatica.metadata.common.transformation.aggregator.xsd http://com.informatica.metadata.common.mapping.mapplet/2 com.informatica.metadata.common.mapping.mapplet.xsd http://com.informatica.metadata.common.transformation/3 com.informatica.metadata.common.transformation.xsd http://com.informatica.metadata.common.transformation.target/2 com.informatica.metadata.common.transformation.target.xsd http://com.informatica.metadata.common.transformation.resourceaccess/2 com.informatica.metadata.common.transformation.resourceaccess.xsd http://com.informatica.metadata.common.datasource/2 com.informatica.metadata.common.datasource.xsd http://com.informatica.metadata.flatbyte.generate.dsoconfig/2 com.informatica.metadata.flatbyte.generate.dsoconfig.xsd http://com.informatica.metadata.common.transformation.joiner/2 com.informatica.metadata.common.transformation.joiner.xsd http://com.informatica.metadata.relational.datasourceoperation/2 com.informatica.metadata.relational.datasourceoperation.xsd http://com.informatica.metadata.flatbyte.parse.datasourceoperation/2 com.informatica.metadata.flatbyte.parse.datasourceoperation.xsd http://com.informatica.metadata.common.optimizerconfig.pdo/1 com.informatica.metadata.common.optimizerconfig.pdo.xsd http://com.informatica.metadata.flatbyte.datasourceoperation/2 com.informatica.metadata.flatbyte.datasourceoperation.xsd http://com.informatica.metadata.common.typesystem/2 com.informatica.metadata.common.typesystem.xsd http://com.informatica.metadata.common.config/1 com.informatica.metadata.common.config.xsd">
+<common:ApplicationSpec imx:id="U:ze5RrG-CEemhB3sa2Qk8Eg" name="Appl_convertToXML">
+<features>
+<Feature imx:id="U:ze5RrW-CEemhB3sa2Qk8Eg" xsi:type="common1:MappingFeature" mappings="U:LJXLEG4_Eemg4Weg1t3_0g" name="m_convertToXML">
+<mappingFeatureconfig imx:id="ID_1" xsi:type="common1:MappingFeatureConfig" dateFormat="MM%2FDD%2FYYYY+HH24:MI:SS"/>
+</Feature>
+</features>
+</common:ApplicationSpec>
+<datarecord1:Table imx:id="U:L-X2xm9pEemg4Weg1t3_0g" connection="stringIdentity:con_CMS" connectionName="con_CMS" connectionType="com.informatica.metadata.relational.connectinfo.OracleNativeConnectInfo" name="REF_XSD_PORT2ELEMENT_MAPS" physicalName="REF_XSD_PORT2ELEMENT_MAPS">
+<columns>
+<Column imx:id="U:L-X2x29pEemg4Weg1t3_0g" xsi:type="datarecord1:Column" type="smd:com.informatica.adapters.typesystem.relational.OracleTypeSystem.typesystem%2Fvarchar2" name="XSD" nullable="true" odbcPrecision="1000" odbcType="smd:com.informatica.metadata.seed.odbc.ODBC.typesystem%2Fvarchar" precision="1000"/>
+<Column imx:id="U:L-X2yG9pEemg4Weg1t3_0g" xsi:type="datarecord1:Column" type="smd:com.informatica.adapters.typesystem.relational.OracleTypeSystem.typesystem%2Fvarchar2" name="ROOTELEMENT" nullable="true" odbcPrecision="100" odbcType="smd:com.informatica.metadata.seed.odbc.ODBC.typesystem%2Fvarchar" precision="100"/>
+<Column imx:id="U:L-X2yW9pEemg4Weg1t3_0g" xsi:type="datarecord1:Column" type="smd:com.informatica.adapters.typesystem.relational.OracleTypeSystem.typesystem%2Fvarchar2" name="LEVEL1ELEMENT" nullable="true" odbcPrecision="100" odbcType="smd:com.informatica.metadata.seed.odbc.ODBC.typesystem%2Fvarchar" precision="100"/>
+<Column imx:id="U:L-X2ym9pEemg4Weg1t3_0g" xsi:type="datarecord1:Column" type="smd:com.informatica.adapters.typesystem.relational.OracleTypeSystem.typesystem%2Fnumber%28p%2Cs%29" name="VALUEPORTNR" nullable="true" odbcPrecision="2" odbcType="smd:com.informatica.metadata.seed.odbc.ODBC.typesystem%2Fdecimal" precision="2"/>
+<Column imx:id="U:L-X2y29pEemg4Weg1t3_0g" xsi:type="datarecord1:Column" type="smd:com.informatica.adapters.typesystem.relational.OracleTypeSystem.typesystem%2Fvarchar2" name="XMLELEMENTNAME" nullable="true" odbcPrecision="100" odbcType="smd:com.informatica.metadata.seed.odbc.ODBC.typesystem%2Fvarchar" precision="100"/>
+</columns>
+</datarecord1:Table>
+<folder:Folder imx:id="U:8OfEGW46Eemg4Weg1t3_0g" name="xmlDemo_Java">
+<contents>
+<IObject imx:idref="U:ze5RrG-CEemhB3sa2Qk8Eg" xsi:type="common:ApplicationSpec"/>
+<IObject imx:idref="U:L-X2xm9pEemg4Weg1t3_0g" xsi:type="datarecord1:Table"/>
+<IObject imx:id="U:SytRcG9pEemg4Weg1t3_0g" xsi:type="mapping:Mapping" name="mplt_Port2XMLElement">
+<characteristics>
+<Characteristic imx:id="ID_2" xsi:type="mapplet:MappletCharacteristic"/>
+<Characteristic imx:id="ID_3" xsi:type="runtime:RuntimeCharacteristic" selectedExecutionEnvironmentName="native">
+<environments>
+<ExecutionEnvironment imx:id="ID_4" xsi:type="runtime:NativeExecutionEnvironment"/>
+</environments>
+<handlers>
+<TxHandlerConfig imx:id="ID_5" xsi:type="source1:SourceTxHandlerConfig" txInstance="U:UCoPgG9uEemg4Weg1t3_0g" selectedAdapter="smd:com.informatica.metadata.seed.relational.CanonicalRelational.relationalReaderDataAdapter"/>
+<TxHandlerConfig imx:id="ID_6" xsi:type="lookup1:LookupHandlerConfig" txInstance="U:UCoPg29uEemg4Weg1t3_0g" selectedAdapter="smd:com.informatica.metadata.seed.relational.CanonicalRelational.relationalReaderDataAdapter" cacheDirectory.="smd:com.informatica.metadata.common.parameter.util.InfaParameterSeed.CacheDir" cacheFileNamePrefix="XSD2PORT" cached="true"/>
+</handlers>
+</Characteristic>
+</characteristics>
+<definedLibraries imx:id="U:SytRcW9pEemg4Weg1t3_0g" xsi:type="typelibrary:TypeLibrary" name="mplt_Type_Definition_Library" typeSystem="smd:com.informatica.metadata.seed.platform.Platform.typesystem"/>
+<instances>
+<Instance imx:id="U:UCoPgG9uEemg4Weg1t3_0g" xsi:type="mapping:Instance" name="Read_REF_XSD_PORT2ELEMENT_MAPS" transformation="U:UCoPhG9uEemg4Weg1t3_0g">
+<fromOutlineLinks>
+<OutlineLink imx:id="ID_7" xsi:type="mapping:OutlineLink" fromInstance="U:UCoPgG9uEemg4Weg1t3_0g" toInstance="U:UCoPgW9uEemg4Weg1t3_0g"/>
+</fromOutlineLinks>
+<ports>
+<TransformationFieldPort imx:id="ID_8" xsi:type="mapping:TransformationFieldPort" instance="U:UCoPgG9uEemg4Weg1t3_0g" transformationField="U:UCpcv29uEemg4Weg1t3_0g">
+<children>
+<NestedPort imx:id="ID_9" xsi:type="mapping:NestedPort" toPorts="ID_10" parent="ID_8" structuralFeature="U:UCpcw29uEemg4Weg1t3_0g"/>
+<NestedPort imx:id="ID_11" xsi:type="mapping:NestedPort" toPorts="ID_12" parent="ID_8" structuralFeature="U:UCpcxG9uEemg4Weg1t3_0g"/>
+<NestedPort imx:id="ID_13" xsi:type="mapping:NestedPort" toPorts="ID_14" parent="ID_8" structuralFeature="U:UCpcxW9uEemg4Weg1t3_0g"/>
+</children>
+</TransformationFieldPort>
+</ports>
+</Instance>
+<Instance imx:id="U:UCoPgW9uEemg4Weg1t3_0g" xsi:type="mapping:Instance" name="AGG_ToCols" toOutlineLinks="ID_7" transformation="U:UCoPhW9uEemg4Weg1t3_0g">
+<fromOutlineLinks>
+<OutlineLink imx:id="ID_15" xsi:type="mapping:OutlineLink" fromInstance="U:UCoPgW9uEemg4Weg1t3_0g" toInstance="U:UCoPgm9uEemg4Weg1t3_0g"/>
+</fromOutlineLinks>
+<ports>
+<TransformationFieldPort imx:id="ID_10" xsi:type="mapping:TransformationFieldPort" fromPort="ID_9" toPorts="ID_16" instance="U:UCoPgW9uEemg4Weg1t3_0g" transformationField="U:UCpcum9uEemg4Weg1t3_0g"/>
+<TransformationFieldPort imx:id="ID_12" xsi:type="mapping:TransformationFieldPort" fromPort="ID_11" toPorts="ID_17" instance="U:UCoPgW9uEemg4Weg1t3_0g" transformationField="U:UCpcu29uEemg4Weg1t3_0g"/>
+<TransformationFieldPort imx:id="ID_14" xsi:type="mapping:TransformationFieldPort" fromPort="ID_13" toPorts="ID_18" instance="U:UCoPgW9uEemg4Weg1t3_0g" transformationField="U:UCpcvG9uEemg4Weg1t3_0g"/>
+</ports>
+</Instance>
+<Instance imx:id="U:UCoPgm9uEemg4Weg1t3_0g" xsi:type="mapping:Instance" name="EXP_Port2XML" toOutlineLinks="ID_15" transformation="U:UCoPhm9uEemg4Weg1t3_0g">
+<fromOutlineLinks>
+<OutlineLink imx:id="ID_19" xsi:type="mapping:OutlineLink" fromInstance="U:UCoPgm9uEemg4Weg1t3_0g" toInstance="U:EnPNoW9wEemg4Weg1t3_0g"/>
+</fromOutlineLinks>
+<ports>
+<TransformationFieldPort imx:id="ID_16" xsi:type="mapping:TransformationFieldPort" fromPort="ID_10" toPorts="ID_20" instance="U:UCoPgm9uEemg4Weg1t3_0g" transformationField="U:UCo2pW9uEemg4Weg1t3_0g"/>
+<TransformationFieldPort imx:id="ID_17" xsi:type="mapping:TransformationFieldPort" fromPort="ID_12" toPorts="ID_21" instance="U:UCoPgm9uEemg4Weg1t3_0g" transformationField="U:UCo2pm9uEemg4Weg1t3_0g"/>
+<TransformationFieldPort imx:id="ID_18" xsi:type="mapping:TransformationFieldPort" fromPort="ID_14" toPorts="ID_22" instance="U:UCoPgm9uEemg4Weg1t3_0g" transformationField="U:UCo2p29uEemg4Weg1t3_0g"/>
+<TransformationFieldPort imx:id="ID_23" xsi:type="mapping:TransformationFieldPort" toPorts="ID_24" instance="U:UCoPgm9uEemg4Weg1t3_0g" transformationField="U:UCo2qG9uEemg4Weg1t3_0g"/>
+</ports>
+</Instance>
+<Instance imx:id="U:UCoPg29uEemg4Weg1t3_0g" xsi:type="mapping:Instance" name="LKP_REF_XSD_PORT2ELEMENT_MAPS" transformation="U:UCoPh29uEemg4Weg1t3_0g"/>
+<Instance imx:id="U:EnPNoW9wEemg4Weg1t3_0g" xsi:type="mapping:Instance" name="output" toOutlineLinks="ID_19" transformation="U:EnPNom9wEemg4Weg1t3_0g">
+<ports>
+<TransformationFieldPort imx:id="ID_20" xsi:type="mapping:TransformationFieldPort" fromPort="ID_16" instance="U:EnPNoW9wEemg4Weg1t3_0g" transformationField="U:EnP0tG9wEemg4Weg1t3_0g"/>
+<TransformationFieldPort imx:id="ID_21" xsi:type="mapping:TransformationFieldPort" fromPort="ID_17" instance="U:EnPNoW9wEemg4Weg1t3_0g" transformationField="U:EnP0tW9wEemg4Weg1t3_0g"/>
+<TransformationFieldPort imx:id="ID_22" xsi:type="mapping:TransformationFieldPort" fromPort="ID_18" instance="U:EnPNoW9wEemg4Weg1t3_0g" transformationField="U:EnP0tm9wEemg4Weg1t3_0g"/>
+<TransformationFieldPort imx:id="ID_24" xsi:type="mapping:TransformationFieldPort" fromPort="ID_23" instance="U:EnPNoW9wEemg4Weg1t3_0g" transformationField="U:EnP0t29wEemg4Weg1t3_0g"/>
+</ports>
+</Instance>
+</instances>
+<transformations>
+<AbstractTransformation imx:id="U:UCoPhG9uEemg4Weg1t3_0g" xsi:type="source:SourceTx" active="true" name="Read_REF_XSD_PORT2ELEMENT_MAPS" dso="U:UCpcvW9uEemg4Weg1t3_0g">
+<anonymousDso imx:id="U:UCpcvW9uEemg4Weg1t3_0g" xsi:type="datasourceoperation4:ReadRelationalDataSourceOperation" name="REF_XSD_PORT2ELEMENT_MAPS" tableDefinitions="U:L-X2xm9pEemg4Weg1t3_0g" typeSystem="smd:com.informatica.adapters.typesystem.relational.OracleTypeSystem.typesystem">
+<defaultConfigs>
+<DSORuntimeConfig imx:id="U:UCpcwG9uEemg4Weg1t3_0g" xsi:type="dsoconfig3:RelationalDSORuntimeConfig" connectInfo="stringIdentity:con_CMS" connectionName="con_CMS"/>
+</defaultConfigs>
+<operations>
+<Capability imx:id="ID_25" xsi:type="datasourceoperation1:ReadCapability" defaultAdapter="smd:com.informatica.metadata.seed.relational.CanonicalRelational.relationalReaderDataAdapter" defaultConfig="U:UCpcwG9uEemg4Weg1t3_0g">
+<outGroups>
+<DataAccessGroup imx:id="ID_26" xsi:type="datasourceoperation1:DataAccessGroup" groupType="U:UCpcwW9uEemg4Weg1t3_0g"/>
+</outGroups>
+</Capability>
+<Capability imx:id="ID_27" xsi:type="datasourceoperation1:LookupCapability" defaultAdapter="smd:com.informatica.metadata.seed.relational.CanonicalRelational.relationalReaderDataAdapter" defaultConfig="U:UCpcwG9uEemg4Weg1t3_0g"/>
+</operations>
+<ownedCapabilityTypes>
+<ComplexType imx:id="U:UCpcwW9uEemg4Weg1t3_0g" xsi:type="typelibrary:ComplexType" name="REF_XSD_PORT2ELEMENT_MAPS">
+<features>
+<StructuralFeature imx:id="U:UCpcw29uEemg4Weg1t3_0g" xsi:type="typelibrary:StructuralFeature" type="smd:com.informatica.metadata.seed.platform.Platform.typesystem%2Fstring" lower="1" name="XSD" nullable="true" precision="1000" upper="1"/>
+<StructuralFeature imx:id="U:UCpcxG9uEemg4Weg1t3_0g" xsi:type="typelibrary:StructuralFeature" type="smd:com.informatica.metadata.seed.platform.Platform.typesystem%2Fstring" lower="1" name="ROOTELEMENT" nullable="true" precision="100" upper="1"/>
+<StructuralFeature imx:id="U:UCpcxW9uEemg4Weg1t3_0g" xsi:type="typelibrary:StructuralFeature" type="smd:com.informatica.metadata.seed.platform.Platform.typesystem%2Fstring" lower="1" name="LEVEL1ELEMENT" nullable="true" precision="100" upper="1"/>
+<StructuralFeature imx:id="U:UCpcxm9uEemg4Weg1t3_0g" xsi:type="typelibrary:StructuralFeature" type="smd:com.informatica.metadata.seed.platform.Platform.typesystem%2Fdecimal" lower="1" name="VALUEPORTNR" nullable="true" precision="2" upper="1"/>
+<StructuralFeature imx:id="U:UCpcx29uEemg4Weg1t3_0g" xsi:type="typelibrary:StructuralFeature" type="smd:com.informatica.metadata.seed.platform.Platform.typesystem%2Fstring" lower="1" name="XMLELEMENTNAME" nullable="true" precision="100" upper="1"/>
+</features>
+</ComplexType>
+</ownedCapabilityTypes>
+<typeLibrary imx:id="U:UCo2nm9uEemg4Weg1t3_0g" xsi:type="typelibrary:TypeLibrary"/>
+<relationalFields>
+<RelationalField imx:id="ID_28" xsi:type="datasourceoperation4:RelationalField" column="U:L-X2x29pEemg4Weg1t3_0g" feature="U:UCpcw29uEemg4Weg1t3_0g" name="XSD" odbcPrecision="1000" odbcType="smd:com.informatica.metadata.seed.odbc.ODBC.typesystem%2Fvarchar" recordInstance="ID_29"/>
+<RelationalField imx:id="ID_30" xsi:type="datasourceoperation4:RelationalField" column="U:L-X2yG9pEemg4Weg1t3_0g" feature="U:UCpcxG9uEemg4Weg1t3_0g" name="ROOTELEMENT" odbcPrecision="100" odbcType="smd:com.informatica.metadata.seed.odbc.ODBC.typesystem%2Fvarchar" recordInstance="ID_29"/>
+<RelationalField imx:id="ID_31" xsi:type="datasourceoperation4:RelationalField" column="U:L-X2yW9pEemg4Weg1t3_0g" feature="U:UCpcxW9uEemg4Weg1t3_0g" name="LEVEL1ELEMENT" odbcPrecision="100" odbcType="smd:com.informatica.metadata.seed.odbc.ODBC.typesystem%2Fvarchar" recordInstance="ID_29"/>
+<RelationalField imx:id="ID_32" xsi:type="datasourceoperation4:RelationalField" column="U:L-X2ym9pEemg4Weg1t3_0g" feature="U:UCpcxm9uEemg4Weg1t3_0g" name="VALUEPORTNR" odbcPrecision="2" odbcType="smd:com.informatica.metadata.seed.odbc.ODBC.typesystem%2Fdecimal" recordInstance="ID_29"/>
+<RelationalField imx:id="ID_33" xsi:type="datasourceoperation4:RelationalField" column="U:L-X2y29pEemg4Weg1t3_0g" feature="U:UCpcx29uEemg4Weg1t3_0g" name="XMLELEMENTNAME" odbcPrecision="100" odbcType="smd:com.informatica.metadata.seed.odbc.ODBC.typesystem%2Fvarchar" recordInstance="ID_29"/>
+</relationalFields>
+<relationalRecordInstances>
+<RelationalRecordInstance imx:id="ID_29" xsi:type="datasourceoperation4:RelationalRecordInstance" name="REF_XSD_PORT2ELEMENT_MAPS" record="U:L-X2xm9pEemg4Weg1t3_0g"/>
+</relationalRecordInstances>
+</anonymousDso>
+<sourceInterfaces>
+<SourceDataInterface imx:id="U:UCpcvm9uEemg4Weg1t3_0g" xsi:type="source:SourceDataInterface" name="Group" output="true">
+<sourceFields>
+<SourceTxField imx:id="U:UCpcv29uEemg4Weg1t3_0g" xsi:type="source:SourceTxField" type="U:UCpcwW9uEemg4Weg1t3_0g" name="output" output="true"/>
+</sourceFields>
+</SourceDataInterface>
+</sourceInterfaces>
+</AbstractTransformation>
+<AbstractTransformation imx:id="U:UCoPhW9uEemg4Weg1t3_0g" xsi:type="aggregator:AggregatorTx" active="true" name="AGG_ToCols" cacheDir.="smd:com.informatica.metadata.common.parameter.util.InfaParameterSeed.CacheDir" scope="allInput">
+<aggregatorInterface>
+<AggregatorDataInterface imx:id="U:UCo2qW9uEemg4Weg1t3_0g" xsi:type="aggregator:AggregatorDataInterface" input="true" name="Group" output="true">
+<aggregatorFields>
+<AggregatorField imx:id="U:UCpcum9uEemg4Weg1t3_0g" xsi:type="aggregator:AggregatorField" type="smd:com.informatica.metadata.seed.platform.Platform.typesystem%2Fstring" lower="1" precision="1000" upper="1" input="true" name="XSD" output="true" expression="XSD"/>
+<AggregatorField imx:id="U:UCpcu29uEemg4Weg1t3_0g" xsi:type="aggregator:AggregatorField" type="smd:com.informatica.metadata.seed.platform.Platform.typesystem%2Fstring" lower="1" precision="100" upper="1" input="true" name="ROOTELEMENT" output="true" expression="ROOTELEMENT"/>
+<AggregatorField imx:id="U:UCpcvG9uEemg4Weg1t3_0g" xsi:type="aggregator:AggregatorField" type="smd:com.informatica.metadata.seed.platform.Platform.typesystem%2Fstring" lower="1" precision="100" upper="1" input="true" name="LEVEL1ELEMENT" output="true" expression="LEVEL1ELEMENT"/>
+</aggregatorFields>
+</AggregatorDataInterface>
+</aggregatorInterface>
+<groupByFields imx:id="ID_34" xsi:type="transformation:TransformationFieldList">
+<fields>
+<TransformationFieldRef imx:id="ID_35" xsi:type="transformation:TransformationFieldRef" transformationField="U:UCpcum9uEemg4Weg1t3_0g"/>
+<TransformationFieldRef imx:id="ID_36" xsi:type="transformation:TransformationFieldRef" transformationField="U:UCpcu29uEemg4Weg1t3_0g"/>
+<TransformationFieldRef imx:id="ID_37" xsi:type="transformation:TransformationFieldRef" transformationField="U:UCpcvG9uEemg4Weg1t3_0g"/>
+</fields>
+</groupByFields>
+</AbstractTransformation>
+<AbstractTransformation imx:id="U:UCoPhm9uEemg4Weg1t3_0g" xsi:type="expression:ExpressionTx" name="EXP_Port2XML">
+<expressionInterface>
+<ExpressionDataInterface imx:id="U:UCo2pG9uEemg4Weg1t3_0g" xsi:type="expression:ExpressionDataInterface" input="true" name="Group" output="true">
+<expressionFields>
+<ExpressionField imx:id="U:UCo2pW9uEemg4Weg1t3_0g" xsi:type="expression:ExpressionField" type="smd:com.informatica.metadata.seed.platform.Platform.typesystem%2Fstring" lower="1" precision="1000" upper="1" input="true" name="XSD" output="true" expression="XSD"/>
+<ExpressionField imx:id="U:UCo2pm9uEemg4Weg1t3_0g" xsi:type="expression:ExpressionField" type="smd:com.informatica.metadata.seed.platform.Platform.typesystem%2Fstring" lower="1" precision="100" upper="1" input="true" name="ROOTELEMENT" output="true" expression="ROOTELEMENT"/>
+<ExpressionField imx:id="U:UCo2p29uEemg4Weg1t3_0g" xsi:type="expression:ExpressionField" type="smd:com.informatica.metadata.seed.platform.Platform.typesystem%2Fstring" lower="1" precision="100" upper="1" input="true" name="LEVEL1ELEMENT" output="true" expression="LEVEL1ELEMENT"/>
+<ExpressionField imx:id="U:UCo2qG9uEemg4Weg1t3_0g" xsi:type="expression:ExpressionField" type="smd:com.informatica.metadata.seed.platform.Platform.typesystem%2Fstring" lower="1" precision="1000" upper="1" name="ValueElements" output="true" expression=":LKP.LKP_REF_XSD_PORT2ELEMENT_MAPS%28XSD%2C1%29%0D%0A%7C%7C%27%3B%27%7C%7C:LKP.LKP_REF_XSD_PORT2ELEMENT_MAPS%28XSD%2C2%29%0D%0A%7C%7C%27%3B%27%7C%7C:LKP.LKP_REF_XSD_PORT2ELEMENT_MAPS%28XSD%2C3%29%0D%0A%7C%7C%27%3B%27%7C%7C:LKP.LKP_REF_XSD_PORT2ELEMENT_MAPS%28XSD%2C4%29%0D%0A%7C%7C%27%3B%27%7C%7C:LKP.LKP_REF_XSD_PORT2ELEMENT_MAPS%28XSD%2C5%29%0D%0A%7C%7C%27%3B%27%7C%7C:LKP.LKP_REF_XSD_PORT2ELEMENT_MAPS%28XSD%2C6%29%0D%0A%7C%7C%27%3B%27%7C%7C:LKP.LKP_REF_XSD_PORT2ELEMENT_MAPS%28XSD%2C7%29%0D%0A%7C%7C%27%3B%27%7C%7C:LKP.LKP_REF_XSD_PORT2ELEMENT_MAPS%28XSD%2C8%29%0D%0A%7C%7C%27%3B%27%7C%7C:LKP.LKP_REF_XSD_PORT2ELEMENT_MAPS%28XSD%2C9%29%0D%0A%7C%7C%27%3B%27%7C%7C:LKP.LKP_REF_XSD_PORT2ELEMENT_MAPS%28XSD%2C10%29">
+<defaultValue xsi:type="types:StringValue" valueLiteral="ERROR%28%27transformation+error%27%29"/>
+</ExpressionField>
+</expressionFields>
+</ExpressionDataInterface>
+</expressionInterface>
+</AbstractTransformation>
+<AbstractTransformation imx:id="U:UCoPh29uEemg4Weg1t3_0g" xsi:type="lookup:LookupTx" name="LKP_REF_XSD_PORT2ELEMENT_MAPS" dso="U:UCo2mG9uEemg4Weg1t3_0g" lookupCondition="XSD+%3D+in_Xsd+AND+VALUEPORTNR+%3D+in_ValuePortNr" multipleMatchHandling="reportError" persistentCache="true" returnPort="U:UCo2o29uEemg4Weg1t3_0g" updateDynamicCacheCondition="TRUE">
+<anonymousDso imx:id="U:UCo2mG9uEemg4Weg1t3_0g" xsi:type="datasourceoperation4:ReadRelationalDataSourceOperation" name="REF_XSD_PORT2ELEMENT_MAPS" tableDefinitions="U:L-X2xm9pEemg4Weg1t3_0g" typeSystem="smd:com.informatica.adapters.typesystem.relational.OracleTypeSystem.typesystem">
+<defaultConfigs>
+<DSORuntimeConfig imx:id="U:UCo2nG9uEemg4Weg1t3_0g" xsi:type="dsoconfig3:RelationalDSORuntimeConfig" connectInfo="stringIdentity:con_CMS" connectionName="con_CMS"/>
+</defaultConfigs>
+<operations>
+<Capability imx:id="ID_39" xsi:type="datasourceoperation1:ReadCapability" defaultAdapter="smd:com.informatica.metadata.seed.relational.CanonicalRelational.relationalReaderDataAdapter" defaultConfig="U:UCo2nG9uEemg4Weg1t3_0g">
+<outGroups>
+<DataAccessGroup imx:id="ID_40" xsi:type="datasourceoperation1:DataAccessGroup" groupType="U:UCo2nW9uEemg4Weg1t3_0g"/>
+</outGroups>
+</Capability>
+<Capability imx:id="ID_41" xsi:type="datasourceoperation1:LookupCapability" defaultAdapter="smd:com.informatica.metadata.seed.relational.CanonicalRelational.relationalReaderDataAdapter" defaultConfig="U:UCo2nG9uEemg4Weg1t3_0g"/>
+</operations>
+<ownedCapabilityTypes>
+<ComplexType imx:id="U:UCo2nW9uEemg4Weg1t3_0g" xsi:type="typelibrary:ComplexType" name="REF_XSD_PORT2ELEMENT_MAPS">
+<features>
+<StructuralFeature imx:id="U:UCo2n29uEemg4Weg1t3_0g" xsi:type="typelibrary:StructuralFeature" type="smd:com.informatica.metadata.seed.platform.Platform.typesystem%2Fstring" lower="1" name="XSD" nullable="true" precision="1000" upper="1"/>
+<StructuralFeature imx:id="U:UCo2oG9uEemg4Weg1t3_0g" xsi:type="typelibrary:StructuralFeature" type="smd:com.informatica.metadata.seed.platform.Platform.typesystem%2Fstring" lower="1" name="ROOTELEMENT" nullable="true" precision="100" upper="1"/>
+<StructuralFeature imx:id="U:UCo2oW9uEemg4Weg1t3_0g" xsi:type="typelibrary:StructuralFeature" type="smd:com.informatica.metadata.seed.platform.Platform.typesystem%2Fstring" lower="1" name="LEVEL1ELEMENT" nullable="true" precision="100" upper="1"/>
+<StructuralFeature imx:id="U:UCo2om9uEemg4Weg1t3_0g" xsi:type="typelibrary:StructuralFeature" type="smd:com.informatica.metadata.seed.platform.Platform.typesystem%2Fdecimal" lower="1" name="VALUEPORTNR" nullable="true" precision="2" upper="1"/>
+<StructuralFeature imx:id="U:UCo2o29uEemg4Weg1t3_0g" xsi:type="typelibrary:StructuralFeature" type="smd:com.informatica.metadata.seed.platform.Platform.typesystem%2Fstring" lower="1" name="XMLELEMENTNAME" nullable="true" precision="100" upper="1"/>
+</features>
+</ComplexType>
+</ownedCapabilityTypes>
+<relationalFields>
+<RelationalField imx:id="ID_42" xsi:type="datasourceoperation4:RelationalField" column="U:L-X2x29pEemg4Weg1t3_0g" feature="U:UCo2n29uEemg4Weg1t3_0g" name="XSD" odbcPrecision="1000" odbcType="smd:com.informatica.metadata.seed.odbc.ODBC.typesystem%2Fvarchar" recordInstance="ID_43"/>
+<RelationalField imx:id="ID_44" xsi:type="datasourceoperation4:RelationalField" column="U:L-X2yG9pEemg4Weg1t3_0g" feature="U:UCo2oG9uEemg4Weg1t3_0g" name="ROOTELEMENT" odbcPrecision="100" odbcType="smd:com.informatica.metadata.seed.odbc.ODBC.typesystem%2Fvarchar" recordInstance="ID_43"/>
+<RelationalField imx:id="ID_45" xsi:type="datasourceoperation4:RelationalField" column="U:L-X2yW9pEemg4Weg1t3_0g" feature="U:UCo2oW9uEemg4Weg1t3_0g" name="LEVEL1ELEMENT" odbcPrecision="100" odbcType="smd:com.informatica.metadata.seed.odbc.ODBC.typesystem%2Fvarchar" recordInstance="ID_43"/>
+<RelationalField imx:id="ID_46" xsi:type="datasourceoperation4:RelationalField" column="U:L-X2ym9pEemg4Weg1t3_0g" feature="U:UCo2om9uEemg4Weg1t3_0g" name="VALUEPORTNR" odbcPrecision="2" odbcType="smd:com.informatica.metadata.seed.odbc.ODBC.typesystem%2Fdecimal" recordInstance="ID_43"/>
+<RelationalField imx:id="ID_47" xsi:type="datasourceoperation4:RelationalField" column="U:L-X2y29pEemg4Weg1t3_0g" feature="U:UCo2o29uEemg4Weg1t3_0g" name="XMLELEMENTNAME" odbcPrecision="100" odbcType="smd:com.informatica.metadata.seed.odbc.ODBC.typesystem%2Fvarchar" recordInstance="ID_43"/>
+</relationalFields>
+<relationalRecordInstances>
+<RelationalRecordInstance imx:id="ID_43" xsi:type="datasourceoperation4:RelationalRecordInstance" name="REF_XSD_PORT2ELEMENT_MAPS" record="U:L-X2xm9pEemg4Weg1t3_0g"/>
+</relationalRecordInstances>
+</anonymousDso>
+<dynamicCacheFields>
+<DynamicCacheField imx:id="ID_48" xsi:type="lookup:DynamicCacheField" dynamicUpdatesFrom="U:Yvkp1m9vEemg4Weg1t3_0g" ignoreInMatch="true" lookupFeature="U:UCo2n29uEemg4Weg1t3_0g"/>
+<DynamicCacheField imx:id="ID_49" xsi:type="lookup:DynamicCacheField" lookupFeature="U:UCo2oG9uEemg4Weg1t3_0g"/>
+<DynamicCacheField imx:id="ID_50" xsi:type="lookup:DynamicCacheField" lookupFeature="U:UCo2oW9uEemg4Weg1t3_0g"/>
+<DynamicCacheField imx:id="ID_51" xsi:type="lookup:DynamicCacheField" ignoreInMatch="true" lookupFeature="U:UCo2om9uEemg4Weg1t3_0g"/>
+<DynamicCacheField imx:id="ID_52" xsi:type="lookup:DynamicCacheField" lookupFeature="U:UCo2o29uEemg4Weg1t3_0g"/>
+</dynamicCacheFields>
+<lookupInterface>
+<LookupDataInterface imx:id="U:UCo2mW9uEemg4Weg1t3_0g" xsi:type="lookup:LookupDataInterface" input="true" name="Group" output="true">
+<lookupFields>
+<LookupField imx:id="U:UCo2mm9uEemg4Weg1t3_0g" xsi:type="lookup:LookupField" type="U:UCo2nW9uEemg4Weg1t3_0g" lower="1" precision="10" upper="1" name="output" output="true"/>
+<LookupField imx:id="U:Yvkp1m9vEemg4Weg1t3_0g" xsi:type="lookup:LookupField" type="smd:com.informatica.metadata.seed.platform.Platform.typesystem%2Fstring" lower="1" precision="1000" upper="1" input="true" name="in_Xsd"/>
+<LookupField imx:id="U:V4NwE29xEemhB3sa2Qk8Eg" xsi:type="lookup:LookupField" type="smd:com.informatica.metadata.seed.platform.Platform.typesystem%2Fdecimal" lower="1" precision="2" upper="1" input="true" name="in_ValuePortNr"/>
+</lookupFields>
+</LookupDataInterface>
+</lookupInterface>
+</AbstractTransformation>
+<AbstractTransformation imx:id="U:EnPNom9wEemg4Weg1t3_0g" xsi:type="mapplet:MappletOutputTx" active="true" name="output">
+<outputInterfaces>
+<MappletOutputInterface imx:id="U:EnP0s29wEemg4Weg1t3_0g" xsi:type="mapplet:MappletOutputInterface" input="true" name="Output">
+<outputFields>
+<MappletOutputField imx:id="U:EnP0tG9wEemg4Weg1t3_0g" xsi:type="mapplet:MappletOutputField" type="smd:com.informatica.metadata.seed.platform.Platform.typesystem%2Fstring" lower="1" precision="1000" upper="1" input="true" name="XSD"/>
+<MappletOutputField imx:id="U:EnP0tW9wEemg4Weg1t3_0g" xsi:type="mapplet:MappletOutputField" type="smd:com.informatica.metadata.seed.platform.Platform.typesystem%2Fstring" lower="1" precision="100" upper="1" input="true" name="ROOTELEMENT"/>
+<MappletOutputField imx:id="U:EnP0tm9wEemg4Weg1t3_0g" xsi:type="mapplet:MappletOutputField" type="smd:com.informatica.metadata.seed.platform.Platform.typesystem%2Fstring" lower="1" precision="100" upper="1" input="true" name="LEVEL1ELEMENT"/>
+<MappletOutputField imx:id="U:EnP0t29wEemg4Weg1t3_0g" xsi:type="mapplet:MappletOutputField" type="smd:com.informatica.metadata.seed.platform.Platform.typesystem%2Fstring" lower="1" precision="1000" upper="1" input="true" name="outOrderedElements"/>
+</outputFields>
+</MappletOutputInterface>
+</outputInterfaces>
+</AbstractTransformation>
+</transformations>
+</IObject>
+<IObject imx:id="U:NIiNnm4_Eemg4Weg1t3_0g" xsi:type="datasource:FlatByteDataSource" name="inputforxmldemo">
+<fileDefinitions>
+<FlatByteDefinition imx:id="U:NIiNrW4_Eemg4Weg1t3_0g" xsi:type="datarecord:FlatByteDefinition" codePageObject="smd:com.informatica.metadata.seed.platform.CodePages.codepagesystem%2F2252" defaultDateFormat="A++19+YYYY-MM-DD+HH24:MI:SS" defaultDecimalSeparator="." name="FileByteDefinition">
+<columns>
+<FlatByteColumn imx:id="U:NIiNrm4_Eemg4Weg1t3_0g" xsi:type="datarecord:FlatByteColumn" type="smd:com.informatica.metadata.seed.flatbyte.FlatFileTypeSystem.typesystem%2Fnumber" flatByteRecord="U:NIiNrW4_Eemg4Weg1t3_0g" name="IdCol" precision="10"/>
+<FlatByteColumn imx:id="U:NIiNr24_Eemg4Weg1t3_0g" xsi:type="datarecord:FlatByteColumn" type="smd:com.informatica.metadata.seed.flatbyte.FlatFileTypeSystem.typesystem%2Fnumber" flatByteRecord="U:NIiNrW4_Eemg4Weg1t3_0g" name="NumCol" precision="10"/>
+<FlatByteColumn imx:id="U:NIiNsG4_Eemg4Weg1t3_0g" xsi:type="datarecord:FlatByteColumn" type="smd:com.informatica.metadata.seed.flatbyte.FlatFileTypeSystem.typesystem%2Fstring" flatByteRecord="U:NIiNrW4_Eemg4Weg1t3_0g" name="textCol" precision="100"/>
+<FlatByteColumn imx:id="U:NIiNsW4_Eemg4Weg1t3_0g" xsi:type="datarecord:FlatByteColumn" type="smd:com.informatica.metadata.seed.flatbyte.FlatFileTypeSystem.typesystem%2Fnumber" flatByteRecord="U:NIiNrW4_Eemg4Weg1t3_0g" name="NumCol2" precision="10"/>
+</columns>
+<recordStrategy imx:id="ID_53" xsi:type="datarecord:CharacterDelimitedRecordStrategy" flatByteRecord="U:NIiNrW4_Eemg4Weg1t3_0g" columnDelimiterCharacters="%3B"/>
+</FlatByteDefinition>
+</fileDefinitions>
+<defaultGenerator imx:id="U:NIiNn24_Eemg4Weg1t3_0g" xsi:type="datasourceoperation:FlatByteGenerateDataSourceOperation" dataSource="U:NIiNnm4_Eemg4Weg1t3_0g" recordDefinition="U:NIiNrW4_Eemg4Weg1t3_0g">
+<operations>
+<Capability imx:id="ID_54" xsi:type="datasourceoperation1:WriteCapability" defaultAdapter="smd:com.informatica.metadata.seed.flatbyte.FlatFile.flatFileGeneratingDataAdapter" defaultConfig="U:NIiNom4_Eemg4Weg1t3_0g">
+<inGroups>
+<DataAccessGroup imx:id="ID_55" xsi:type="datasourceoperation1:DataAccessGroup" groupType="U:NIiNqG4_Eemg4Weg1t3_0g" input="true"/>
+</inGroups>
+</Capability>
+</operations>
+<ownedCapabilityTypes>
+<ComplexType imx:id="U:NIiNqG4_Eemg4Weg1t3_0g" xsi:type="typelibrary:ComplexType" name="input">
+<features>
+<StructuralFeature imx:id="U:NIiNqW4_Eemg4Weg1t3_0g" xsi:type="typelibrary:StructuralFeature" type="smd:com.informatica.metadata.seed.platform.Platform.typesystem%2Fdecimal" lower="1" name="IdCol" precision="10" upper="1"/>
+<StructuralFeature imx:id="U:NIiNqm4_Eemg4Weg1t3_0g" xsi:type="typelibrary:StructuralFeature" type="smd:com.informatica.metadata.seed.platform.Platform.typesystem%2Fdecimal" lower="1" name="NumCol" precision="10" upper="1"/>
+<StructuralFeature imx:id="U:NIiNq24_Eemg4Weg1t3_0g" xsi:type="typelibrary:StructuralFeature" type="smd:com.informatica.metadata.seed.platform.Platform.typesystem%2Fstring" lower="1" name="textCol" precision="100" upper="1"/>
+<StructuralFeature imx:id="U:NIiNrG4_Eemg4Weg1t3_0g" xsi:type="typelibrary:StructuralFeature" type="smd:com.informatica.metadata.seed.platform.Platform.typesystem%2Fdecimal" lower="1" name="NumCol2" precision="10" upper="1"/>
+</features>
+</ComplexType>
+</ownedCapabilityTypes>
+<columnToInterfaceMap>
+<ColumnFeature imx:id="ID_56" xsi:type="datasourceoperation2:ColumnFeature" column="U:NIiNrm4_Eemg4Weg1t3_0g" feature="U:NIiNqW4_Eemg4Weg1t3_0g"/>
+<ColumnFeature imx:id="ID_57" xsi:type="datasourceoperation2:ColumnFeature" column="U:NIiNr24_Eemg4Weg1t3_0g" feature="U:NIiNqm4_Eemg4Weg1t3_0g"/>
+<ColumnFeature imx:id="ID_58" xsi:type="datasourceoperation2:ColumnFeature" column="U:NIiNsG4_Eemg4Weg1t3_0g" feature="U:NIiNq24_Eemg4Weg1t3_0g"/>
+<ColumnFeature imx:id="ID_59" xsi:type="datasourceoperation2:ColumnFeature" column="U:NIiNsW4_Eemg4Weg1t3_0g" feature="U:NIiNrG4_Eemg4Weg1t3_0g"/>
+</columnToInterfaceMap>
+</defaultGenerator>
+<defaultParser imx:id="U:NIiNoG4_Eemg4Weg1t3_0g" xsi:type="datasourceoperation3:FlatByteParseDataSourceOperation" dataSource="U:NIiNnm4_Eemg4Weg1t3_0g" recordDefinition="U:NIiNrW4_Eemg4Weg1t3_0g">
+<operations>
+<Capability imx:id="ID_60" xsi:type="datasourceoperation1:ReadCapability" defaultAdapter="smd:com.informatica.metadata.seed.flatbyte.FlatFile.flatFileParsingDataAdapter" defaultConfig="U:NIiNoW4_Eemg4Weg1t3_0g">
+<outGroups>
+<DataAccessGroup imx:id="ID_61" xsi:type="datasourceoperation1:DataAccessGroup" groupType="U:NIiNo24_Eemg4Weg1t3_0g"/>
+</outGroups>
+</Capability>
+</operations>
+<ownedCapabilityTypes>
+<ComplexType imx:id="U:NIiNo24_Eemg4Weg1t3_0g" xsi:type="typelibrary:ComplexType" name="output">
+<features>
+<StructuralFeature imx:id="U:NIiNpG4_Eemg4Weg1t3_0g" xsi:type="typelibrary:StructuralFeature" type="smd:com.informatica.metadata.seed.platform.Platform.typesystem%2Fdecimal" lower="1" name="IdCol" precision="10" upper="1"/>
+<StructuralFeature imx:id="U:NIiNpW4_Eemg4Weg1t3_0g" xsi:type="typelibrary:StructuralFeature" type="smd:com.informatica.metadata.seed.platform.Platform.typesystem%2Fdecimal" lower="1" name="NumCol" precision="10" upper="1"/>
+<StructuralFeature imx:id="U:NIiNpm4_Eemg4Weg1t3_0g" xsi:type="typelibrary:StructuralFeature" type="smd:com.informatica.metadata.seed.platform.Platform.typesystem%2Fstring" lower="1" name="textCol" precision="100" upper="1"/>
+<StructuralFeature imx:id="U:NIiNp24_Eemg4Weg1t3_0g" xsi:type="typelibrary:StructuralFeature" type="smd:com.informatica.metadata.seed.platform.Platform.typesystem%2Fdecimal" lower="1" name="NumCol2" precision="10" upper="1"/>
+</features>
+</ComplexType>
+</ownedCapabilityTypes>
+<columnToInterfaceMap>
+<ColumnFeature imx:id="ID_62" xsi:type="datasourceoperation2:ColumnFeature" column="U:NIiNrm4_Eemg4Weg1t3_0g" feature="U:NIiNpG4_Eemg4Weg1t3_0g"/>
+<ColumnFeature imx:id="ID_63" xsi:type="datasourceoperation2:ColumnFeature" column="U:NIiNr24_Eemg4Weg1t3_0g" feature="U:NIiNpW4_Eemg4Weg1t3_0g"/>
+<ColumnFeature imx:id="ID_64" xsi:type="datasourceoperation2:ColumnFeature" column="U:NIiNsG4_Eemg4Weg1t3_0g" feature="U:NIiNpm4_Eemg4Weg1t3_0g"/>
+<ColumnFeature imx:id="ID_65" xsi:type="datasourceoperation2:ColumnFeature" column="U:NIiNsW4_Eemg4Weg1t3_0g" feature="U:NIiNp24_Eemg4Weg1t3_0g"/>
+</columnToInterfaceMap>
+<parseStrategy imx:id="ID_66" xsi:type="datasourceoperation3:CharacterDelimitedParseStrategy" entity="U:NIiNoG4_Eemg4Weg1t3_0g" escapeCharacterRemoved="true" lineBreakCharacter="%5C012"/>
+</defaultParser>
+<defaultReaderConfig imx:id="U:NIiNoW4_Eemg4Weg1t3_0g" xsi:type="dsoconfig2:FlatbyteReaderConfig" defaultDynFldPrecision="10" defaultDynFldType="string" lineSequentialBufferLength="1024" schemaType="DataDriven" sourceFileDirectory="D:%5CResilioSync%5CInfoWorkRelated%5CxmlDemo%5Cfiles%5Cinput" sourceFileDirectory.="smd:com.informatica.metadata.common.parameter.util.InfaParameterSeed.SourceDir" sourceFileName="inputforxmldemo.txt"/>
+<defaultWriterConfig imx:id="U:NIiNom4_Eemg4Weg1t3_0g" xsi:type="dsoconfig:FlatbyteWriterConfig" mergeDirectory.="smd:com.informatica.metadata.common.parameter.util.InfaParameterSeed.TargetDir" mergeFile="inputforxmldemo1.out" targetFileDirectory.="smd:com.informatica.metadata.common.parameter.util.InfaParameterSeed.TargetDir" targetFileName="inputforxmldemo.txt"/>
+</IObject>
+<IObject imx:id="U:B2Yc-291EemhB3sa2Qk8Eg" xsi:type="datasource:FlatByteDataSource" name="ff_convertToXml_Result">
+<fileDefinitions>
+<FlatByteDefinition imx:id="U:B2ZEGG91EemhB3sa2Qk8Eg" xsi:type="datarecord:FlatByteDefinition" codePageObject="smd:com.informatica.metadata.seed.platform.CodePages.codepagesystem%2F106" defaultDateFormat="A++19+YYYY-MM-DD+HH24:MI:SS" defaultDecimalSeparator="." name="FileByteDefinition">
+<columns>
+<FlatByteColumn imx:id="U:B2ZEGW91EemhB3sa2Qk8Eg" xsi:type="datarecord:FlatByteColumn" type="smd:com.informatica.metadata.seed.flatbyte.FlatFileTypeSystem.typesystem%2Fstring" flatByteRecord="U:B2ZEGG91EemhB3sa2Qk8Eg" name="resultCode" precision="10"/>
+<FlatByteColumn imx:id="U:B2ZEGm91EemhB3sa2Qk8Eg" xsi:type="datarecord:FlatByteColumn" type="smd:com.informatica.metadata.seed.flatbyte.FlatFileTypeSystem.typesystem%2Fstring" flatByteRecord="U:B2ZEGG91EemhB3sa2Qk8Eg" name="resultMessage" precision="1000"/>
+<FlatByteColumn imx:id="U:B2ZEG291EemhB3sa2Qk8Eg" xsi:type="datarecord:FlatByteColumn" type="smd:com.informatica.metadata.seed.flatbyte.FlatFileTypeSystem.typesystem%2Fint" flatByteRecord="U:B2ZEGG91EemhB3sa2Qk8Eg" name="nrFilesCreated" precision="10"/>
+</columns>
+<recordStrategy imx:id="ID_67" xsi:type="datarecord:CharacterDelimitedRecordStrategy" flatByteRecord="U:B2ZEGG91EemhB3sa2Qk8Eg" columnDelimiterCharacters="%2C"/>
+</FlatByteDefinition>
+</fileDefinitions>
+<defaultGenerator imx:id="U:B2Yc_G91EemhB3sa2Qk8Eg" xsi:type="datasourceoperation:FlatByteGenerateDataSourceOperation" dataSource="U:B2Yc-291EemhB3sa2Qk8Eg" recordDefinition="U:B2ZEGG91EemhB3sa2Qk8Eg">
+<operations>
+<Capability imx:id="ID_68" xsi:type="datasourceoperation1:WriteCapability" defaultAdapter="smd:com.informatica.metadata.seed.flatbyte.FlatFile.flatFileGeneratingDataAdapter" defaultConfig="U:B2ZED291EemhB3sa2Qk8Eg">
+<inGroups>
+<DataAccessGroup imx:id="ID_69" xsi:type="datasourceoperation1:DataAccessGroup" groupType="U:B2ZEFG91EemhB3sa2Qk8Eg" input="true"/>
+</inGroups>
+</Capability>
+</operations>
+<ownedCapabilityTypes>
+<ComplexType imx:id="U:B2ZEFG91EemhB3sa2Qk8Eg" xsi:type="typelibrary:ComplexType" name="input">
+<features>
+<StructuralFeature imx:id="U:B2ZEFW91EemhB3sa2Qk8Eg" xsi:type="typelibrary:StructuralFeature" type="smd:com.informatica.metadata.seed.platform.Platform.typesystem%2Fstring" lower="1" name="resultCode" precision="10" upper="1"/>
+<StructuralFeature imx:id="U:B2ZEFm91EemhB3sa2Qk8Eg" xsi:type="typelibrary:StructuralFeature" type="smd:com.informatica.metadata.seed.platform.Platform.typesystem%2Fstring" lower="1" name="resultMessage" precision="1000" upper="1"/>
+<StructuralFeature imx:id="U:B2ZEF291EemhB3sa2Qk8Eg" xsi:type="typelibrary:StructuralFeature" type="smd:com.informatica.metadata.seed.platform.Platform.typesystem%2Finteger" lower="1" name="nrFilesCreated" precision="10" upper="1"/>
+</features>
+</ComplexType>
+</ownedCapabilityTypes>
+<columnToInterfaceMap>
+<ColumnFeature imx:id="ID_70" xsi:type="datasourceoperation2:ColumnFeature" column="U:B2ZEGW91EemhB3sa2Qk8Eg" feature="U:B2ZEFW91EemhB3sa2Qk8Eg"/>
+<ColumnFeature imx:id="ID_71" xsi:type="datasourceoperation2:ColumnFeature" column="U:B2ZEGm91EemhB3sa2Qk8Eg" feature="U:B2ZEFm91EemhB3sa2Qk8Eg"/>
+<ColumnFeature imx:id="ID_72" xsi:type="datasourceoperation2:ColumnFeature" column="U:B2ZEG291EemhB3sa2Qk8Eg" feature="U:B2ZEF291EemhB3sa2Qk8Eg"/>
+</columnToInterfaceMap>
+</defaultGenerator>
+<defaultParser imx:id="U:B2ZEDW91EemhB3sa2Qk8Eg" xsi:type="datasourceoperation3:FlatByteParseDataSourceOperation" dataSource="U:B2Yc-291EemhB3sa2Qk8Eg" recordDefinition="U:B2ZEGG91EemhB3sa2Qk8Eg">
+<operations>
+<Capability imx:id="ID_73" xsi:type="datasourceoperation1:ReadCapability" defaultAdapter="smd:com.informatica.metadata.seed.flatbyte.FlatFile.flatFileParsingDataAdapter" defaultConfig="U:B2ZEDm91EemhB3sa2Qk8Eg">
+<outGroups>
+<DataAccessGroup imx:id="ID_74" xsi:type="datasourceoperation1:DataAccessGroup" groupType="U:B2ZEEG91EemhB3sa2Qk8Eg"/>
+</outGroups>
+</Capability>
+</operations>
+<ownedCapabilityTypes>
+<ComplexType imx:id="U:B2ZEEG91EemhB3sa2Qk8Eg" xsi:type="typelibrary:ComplexType" name="output">
+<features>
+<StructuralFeature imx:id="U:B2ZEEW91EemhB3sa2Qk8Eg" xsi:type="typelibrary:StructuralFeature" type="smd:com.informatica.metadata.seed.platform.Platform.typesystem%2Fstring" lower="1" name="resultCode" precision="10" upper="1"/>
+<StructuralFeature imx:id="U:B2ZEEm91EemhB3sa2Qk8Eg" xsi:type="typelibrary:StructuralFeature" type="smd:com.informatica.metadata.seed.platform.Platform.typesystem%2Fstring" lower="1" name="resultMessage" precision="1000" upper="1"/>
+<StructuralFeature imx:id="U:B2ZEE291EemhB3sa2Qk8Eg" xsi:type="typelibrary:StructuralFeature" type="smd:com.informatica.metadata.seed.platform.Platform.typesystem%2Finteger" lower="1" name="nrFilesCreated" precision="10" upper="1"/>
+</features>
+</ComplexType>
+</ownedCapabilityTypes>
+<columnToInterfaceMap>
+<ColumnFeature imx:id="ID_75" xsi:type="datasourceoperation2:ColumnFeature" column="U:B2ZEGW91EemhB3sa2Qk8Eg" feature="U:B2ZEEW91EemhB3sa2Qk8Eg"/>
+<ColumnFeature imx:id="ID_76" xsi:type="datasourceoperation2:ColumnFeature" column="U:B2ZEGm91EemhB3sa2Qk8Eg" feature="U:B2ZEEm91EemhB3sa2Qk8Eg"/>
+<ColumnFeature imx:id="ID_77" xsi:type="datasourceoperation2:ColumnFeature" column="U:B2ZEG291EemhB3sa2Qk8Eg" feature="U:B2ZEE291EemhB3sa2Qk8Eg"/>
+</columnToInterfaceMap>
+<parseStrategy imx:id="ID_78" xsi:type="datasourceoperation3:CharacterDelimitedParseStrategy" entity="U:B2ZEDW91EemhB3sa2Qk8Eg" escapeCharacterRemoved="true" lineBreakCharacter="%5C012"/>
+</defaultParser>
+<defaultReaderConfig imx:id="U:B2ZEDm91EemhB3sa2Qk8Eg" xsi:type="dsoconfig2:FlatbyteReaderConfig" defaultDynFldPrecision="10" defaultDynFldType="string" lineSequentialBufferLength="1024" schemaType="DataDriven" sourceFileDirectory.="smd:com.informatica.metadata.common.parameter.util.InfaParameterSeed.SourceDir" sourceFileName="convertToXml_Result.result"/>
+<defaultWriterConfig imx:id="U:B2ZED291EemhB3sa2Qk8Eg" xsi:type="dsoconfig:FlatbyteWriterConfig" mergeDirectory.="smd:com.informatica.metadata.common.parameter.util.InfaParameterSeed.TargetDir" mergeFile="ff_convertToXml_Result1.out" targetFileDirectory.="smd:com.informatica.metadata.common.parameter.util.InfaParameterSeed.TargetDir" targetFileName="convertToXml_Result.result"/>
+</IObject>
+<IObject imx:id="U:Ky76Mm49Eemg4Weg1t3_0g" xsi:type="javatx:JavaTx" active="true" name="convert2XML" transformationConfiguration="smd:com.informatica.extensions.transformation.seed.JavaTx.configuration" byteCode="yv66vgAAADQCRAoAuAEGCQC3AQcJALcBCAkAtwEJBwEKCgAFAQYJALcBCwgBDAoAtwENCAEOCQC3AQ8KALcBEAgBEQgBEgkAtwETCAEUCQC3ARUIARYKACYBFwcBGAoAFAEGCAEZCgAUARoJALcBGwgBHAoAFAEdCgC3AR4IAR8IASAJALcBIQgBIggBIwkAtwEkCAElCQC3ASYKABQBJwgBKAcBKQoBKgErBwEsCgEtAS4KALcBLwcBMAgBMQoAKwEdCgC3ATIHATMIATQKAC8BHQoBNQE2CgE1ATcKATgBOQoAtwE6CwE7ATwLATsBPQsBPgE9CQC3AT8KAIQBQAsBQQFCCwFBAUMKAUQBRQoBRAFGBwFHCgA%2FAUgHAUkHAUoKAEIBSwoAQQFMCgFNAU4JALcBTwkAtwFQBwFRCAFSCgBIAR0HAVMIAVQKAEsBHQsBVQFWBwFXCgBPAVgJALcBWQoAtwFaCAFbCQC3AVwKAV0BXgcBYAoATwFjCAFkCAFlCAFmCAFnCAFoCAFpCAFqCAFrCAFsCAFtCAFuCAFvCADRCgC3AXAIANIIANMKALcBcQoAtwFyBwFzCQC3AXQKAXUBdgkAtwF3CQC3AXgKAXUBeQoABQF6CgF1AXsKAAUBHQkAtwF8CQF9AX4KAX0BfwkAtwGACgGBAYIJALcBgwcBhAoBgQGFCgGGAYcIAYgJALcBiQkAtwGKCQC3AYsKALcBjAkAtwGNCgC3AY4IAY8HAZAKAIQBBgoAhAGRCAGSCgCEAZMIAZQIAZUKACYBlgoBlwGYCgCEAZkIAZoKALcBmwgBnAgBnQgBngoAtwGfCQC3AaAHAaEJALcBogoAlQFLCQF9AaMJALcBpAkBpQGmCgC3AacHAagKALcBqQoAtwGqCQC3AasJAX0BrAgBrQgBrggBrwgBsAoAtwGxCQF9AbIJAX0BswkBfQG0CgC3AbUJALcBtgoAagG3CgBqAbgHAbkKALcBugoAagG7CgC3AbwKALcBvQoAtwG%2BBwG%2FCgCzAQYIAcAIAcEHAcIHAcMBAARsb2NrAQASTGphdmEvbGFuZy9PYmplY3Q7AQAGbnJSb3dzAQABSQEACnBhcnROclJvd3MBAAduckZpbGVzAQALcGFydE5yRmlsZXMBAAxmaXhlZE5yRmlsZXMBAAJyYwEADW9uZUZpbGVQZXJSb3cBABJMamF2YS9sYW5nL1N0cmluZzsBAAZ0YXJnZXQBAAdwYXRoWG1sAQAUTGphdmEvbmlvL2ZpbGUvUGF0aDsBAAhlbGVtZW50cwEABHJvb3QBAAZsZXZlbDEBAAtlbGVtZW50TGlzdAEAFUxqYXZhL3V0aWwvQXJyYXlMaXN0OwEACVNpZ25hdHVyZQEAKUxqYXZhL3V0aWwvQXJyYXlMaXN0PExqYXZhL2xhbmcvU3RyaW5nOz47AQAGdmFsdWVzAQAGc3RyQnVmAQAYTGphdmEvbGFuZy9TdHJpbmdCdWZmZXI7AQAKcmVzdWx0Q29kZQEADXJlc3VsdE1lc3NhZ2UBAA5uckZpbGVzQ3JlYXRlZAEABjxpbml0PgEAAygpVgEABENvZGUBAA9MaW5lTnVtYmVyVGFibGUBAA1jaGVja1NldHRpbmdzAQADKClJAQANU3RhY2tNYXBUYWJsZQEACkV4Y2VwdGlvbnMBAApjaGVja0lucHV0AQALb3V0U2V0dGluZ3MBAA9nZW5lcmF0ZVhtbEZpbGUHAcIHASkHAcQHATAHATMBAA5nZXRSb290RWxlbWVudAEAFCgpTGphdmEvbGFuZy9TdHJpbmc7AQALd3JpdGVEYXRhVG8BACkoTGphdmEvbmlvL2ZpbGUvUGF0aDtMamF2YS9sYW5nL1N0cmluZzspVgcBxQcBxgcBxwcByAcByQcBygcBywcBRwcBSQcBvwcBzAcBUQcBUwEABGluaXQBACMoTGphdmEvdXRpbC9MaXN0O0xqYXZhL3V0aWwvTGlzdDspVgcBVwEAB2V4ZWN1dGUBAGsoTGNvbS9pbmZvcm1hdGljYS9wb3dlcmNlbnRlci9zZGsvcmVwb3NpdG9yeS9JR3JvdXA7TGNvbS9pbmZvcm1hdGljYS9wb3dlcmNlbnRlci9zZGsvc2VydmVyL0lJbnB1dEJ1ZmZlcjspVgcBzQcBzgcBqAEAD2VvZk5vdGlmaWNhdGlvbgEANihMY29tL2luZm9ybWF0aWNhL3Bvd2VyY2VudGVyL3Nkay9yZXBvc2l0b3J5L0lHcm91cDspVgEAEGlucHV0VHJhbnNhY3Rpb24BAAQoSSlWAQALZ2VuZXJhdGVSb3cHAbkBAAg8Y2xpbml0PgEAClNvdXJjZUZpbGUBAB5KVFhQYXJ0aXRpb25Ecml2ZXJJbXBsR2VuLmphdmEMANQA1QwAvwC8DADAALwMAM4AywEAFmphdmEvbGFuZy9TdHJpbmdCdWZmZXIMAM8A0AEAEm9uZUZpbGVQZXJJbnB1dFJvdwwBzwHQAQABTgwAwgDDDAHRAdABAA50YXJnZXRGaWxlTmFtZQEACEVSUi0wMDAyDADRAMMBACRZb3UgbXVzdCBzcGVjaWZ5IGEgdGFyZ2V0IGZpbGUgbmFtZS4MANIAwwEAAk9LDAHSAdMBABdqYXZhL2xhbmcvU3RyaW5nQnVpbGRlcgEAFVByb3ZpZGVkIHRhcmdldEZpbGUgPgwB1AHVDADEAMMBAAE8DAHWAOUMAdcB2AEAH0RldGVybWluZWQgb25lRmlsZVBlcklucHV0Um93ID4BABtQcm92aWRlZCByb290RWxlbWVudCBuYW1lID4MAMgAwwEAAjwuAQAdUHJvdmlkZWQgbGV2ZWwxRWxlbWVudCBuYW1lID4MAMkAwwEAAV8MALsAvAwB1AHZAQAELnhtbAEAEGphdmEvbGFuZy9TdHJpbmcHAdoMAdsB3AEAJWphdmEvbmlvL2ZpbGUvYXR0cmlidXRlL0ZpbGVBdHRyaWJ1dGUHAd0MAd4B3wwA5gDnAQAoamF2YS9uaW8vZmlsZS9GaWxlQWxyZWFkeUV4aXN0c0V4Y2VwdGlvbgEAGXhtbCBmaWxlIGFscmVhZHkgZXhpc3RzOiAMAeAB2AEAE2phdmEvaW8vSU9FeGNlcHRpb24BABtjb3VsZCBub3QgY3JlYXRlIHhtbCBmaWxlOiAHAcUMAeEB4gwB4wHkBwHGDAHlAeYMAOQA5QcBxwwB5wHoDAHpAeoHAcgMAMoAywwB6wHsBwHJDAHtAe4MAe8B8AcBygwB4QHxDAHyAfMBACFqYXZheC94bWwvdHJhbnNmb3JtL2RvbS9ET01Tb3VyY2UMANQB9AEAJ2phdmF4L3htbC90cmFuc2Zvcm0vc3RyZWFtL1N0cmVhbVJlc3VsdAEADGphdmEvaW8vRmlsZQwA1AHYDADUAfUHAcsMAfYB9wwAuQC6DAC%2BALwBAC5qYXZheC94bWwvcGFyc2Vycy9QYXJzZXJDb25maWd1cmF0aW9uRXhjZXB0aW9uAQBGQ291bGQgbm90IHdyaXRlIHRvIHhtbCBmaWxlLiBQYXJzZXIgQ29uZmlndXJhdGlvbiBleGNlcHRpb24gb2NjdXJyZWQ6IAEAKGphdmF4L3htbC90cmFuc2Zvcm0vVHJhbnNmb3JtZXJFeGNlcHRpb24BAD5Db3VsZCBub3Qgd3JpdGUgdG8geG1sIGZpbGUuIFRyYW5zZm9ybWVyIGV4Y2VwdGlvbiBvY2N1cnJlZDo6IAcB%2BAwB2wH5AQAyY29tL2luZm9ybWF0aWNhL3Bvd2VyY2VudGVyL3Nkay9zZXJ2ZXIvSUJ1ZmZlckluaXQMAfoA2QwB%2BwC8DAH8ANUBAAxlbGVtZW50TmFtZXMMAf0B%2FgcB%2FwwCAAHuBwIBAQA7Y29tL2luZm9ybWF0aWNhL3Bvd2VyY2VudGVyL3Nkay9yZXBvc2l0b3J5L0lGaWVsZCRKRGF0YVR5cGUBAAlKRGF0YVR5cGUBAAxJbm5lckNsYXNzZXMMAgICAwEAC3Jvb3RFbGVtZW50AQANbGV2ZWwxRWxlbWVudAEABlZhbHVlMQEABlZhbHVlMgEABlZhbHVlMwEABlZhbHVlNAEABlZhbHVlNQEABlZhbHVlNgEABlZhbHVlNwEABlZhbHVlOAEABlZhbHVlOQEAB1ZhbHVlMTAMAgQB0AwCBQIGDAIHAggBADRjb20vaW5mb3JtYXRpY2EvcG93ZXJjZW50ZXIvc2RrL3NlcnZlci9JT3V0cHV0QnVmZmVyDAIJAgoHAc4MAgsA2QwCDAC8DADTALwMAdECDQwCDgEADAIPAhAMAhECEgcCEwwCFAIVDAIWAhcMAhgCGQcCGgwCGwDlDAIcAMMBADNjb20vaW5mb3JtYXRpY2EvcG93ZXJjZW50ZXIvc2RrL3NlcnZlci9FTG9nTXNnTGV2ZWwMAh0A5QcCHgwCHwIgAQAWTm8gZXJyb3JzIGVuY291bnRlcmVkLgwAvQC8DADHAMMMAMUAxgwA2ADZDADBALwMAN0A1QEALGNoZWNrU2V0dGluZ3MgcmVwb3J0ZWQgYW4gZXJyb3IuIFJ1biBhYm9ydGVkAQATamF2YS91dGlsL0FycmF5TGlzdAwCIQHTAQAKUmVjZWl2ZWQgPgwCIgDZAQALPCB2YWx1ZShzKS4BAAE7DAIjAiQHAiUMAiYCJwwA1AIoAQANPCBlbGVtZW50KHMpLgwA3ADZAQAgaW5wdXQgcm93IGluIGN1cnJlbnQgcGFydGl0aW9uID4BABU8IGdlbmVyYXRlZCBhbiBlcnJvci4BAAFZDADeANUMAikCEgEAOGNvbS9pbmZvcm1hdGljYS9wb3dlcmNlbnRlci9zZXJ2ZXIvanR4L0pUWEZhdGFsRXhjZXB0aW9uDAIqAMMMAisCFQwCLAItBwIuDAIvAi0MAjAA1QEALGNvbS9pbmZvcm1hdGljYS9wb3dlcmNlbnRlci9zZGsvU0RLRXhjZXB0aW9uDAIxAjIMAjMA1QwCNAISDAI1AhUBACpUaGUgbnVtYmVyIG9mIHJvd3MgZm9yIHRoaXMgcGFydGl0aW9uIGlzOiABACtUaGUgbnVtYmVyIG9mIGZpbGVzIGZvciB0aGlzIHBhcnRpdGlvbiBpczogAQA4VGhlIHRvdGFsIG51bWJlciBvZiByb3dzIGFjcm9zcyBwYXJ0aXRpb25zIHRpbGwgbm93IGlzOiABADlUaGUgdG90YWwgbnVtYmVyIG9mIGZpbGVzIGFjcm9zcyBwYXJ0aXRpb25zIHRpbGwgbm93IGlzOiAMAQEA1QwCNgIVDAI3AhUMAjgCFQwCOQHQDAI6ALwMAjsCAwwCPAI9AQA9Y29tL2luZm9ybWF0aWNhL3Bvd2VyY2VudGVyL3Nkay9zZXJ2ZXIvRGF0YVRydW5jYXRlZEV4Y2VwdGlvbgwCPgHYDAI%2FAkAMAkEA1QwCQgDVDAJDANUBABBqYXZhL2xhbmcvT2JqZWN0AQABWAEAB1VOS05PV04BAEBjb20vaW5mb3JtYXRpY2EvcG93ZXJjZW50ZXIvc2VydmVyL2p0eC9KVFhQYXJ0aXRpb25Ecml2ZXJJbXBsR2VuAQBCY29tL2luZm9ybWF0aWNhL3Bvd2VyY2VudGVyL3NlcnZlci9qdHgvSlRYUGFydGl0aW9uRHJpdmVySW1wbEZpeGVkAQASamF2YS9uaW8vZmlsZS9QYXRoAQAoamF2YXgveG1sL3BhcnNlcnMvRG9jdW1lbnRCdWlsZGVyRmFjdG9yeQEAIWphdmF4L3htbC9wYXJzZXJzL0RvY3VtZW50QnVpbGRlcgEAFG9yZy93M2MvZG9tL0RvY3VtZW50AQATb3JnL3czYy9kb20vRWxlbWVudAEAEmphdmEvdXRpbC9JdGVyYXRvcgEAJmphdmF4L3htbC90cmFuc2Zvcm0vVHJhbnNmb3JtZXJGYWN0b3J5AQAfamF2YXgveG1sL3RyYW5zZm9ybS9UcmFuc2Zvcm1lcgEAE2phdmEvbGFuZy9UaHJvd2FibGUBADFjb20vaW5mb3JtYXRpY2EvcG93ZXJjZW50ZXIvc2RrL3JlcG9zaXRvcnkvSUdyb3VwAQAzY29tL2luZm9ybWF0aWNhL3Bvd2VyY2VudGVyL3Nkay9zZXJ2ZXIvSUlucHV0QnVmZmVyAQAQaXNJbkZsZENvbm5lY3RlZAEAFShMamF2YS9sYW5nL1N0cmluZzspWgEABmlzTnVsbAEABmVxdWFscwEAFShMamF2YS9sYW5nL09iamVjdDspWgEABmFwcGVuZAEALShMamF2YS9sYW5nL1N0cmluZzspTGphdmEvbGFuZy9TdHJpbmdCdWlsZGVyOwEACHRvU3RyaW5nAQAHbG9nSW5mbwEAFShMamF2YS9sYW5nL1N0cmluZzspVgEAHChJKUxqYXZhL2xhbmcvU3RyaW5nQnVpbGRlcjsBABNqYXZhL25pby9maWxlL1BhdGhzAQADZ2V0AQA7KExqYXZhL2xhbmcvU3RyaW5nO1tMamF2YS9sYW5nL1N0cmluZzspTGphdmEvbmlvL2ZpbGUvUGF0aDsBABNqYXZhL25pby9maWxlL0ZpbGVzAQAKY3JlYXRlRmlsZQEAUihMamF2YS9uaW8vZmlsZS9QYXRoO1tMamF2YS9uaW8vZmlsZS9hdHRyaWJ1dGUvRmlsZUF0dHJpYnV0ZTspTGphdmEvbmlvL2ZpbGUvUGF0aDsBAAtmYWlsU2Vzc2lvbgEAC25ld0luc3RhbmNlAQAsKClMamF2YXgveG1sL3BhcnNlcnMvRG9jdW1lbnRCdWlsZGVyRmFjdG9yeTsBABJuZXdEb2N1bWVudEJ1aWxkZXIBACUoKUxqYXZheC94bWwvcGFyc2Vycy9Eb2N1bWVudEJ1aWxkZXI7AQALbmV3RG9jdW1lbnQBABgoKUxvcmcvdzNjL2RvbS9Eb2N1bWVudDsBAA1jcmVhdGVFbGVtZW50AQApKExqYXZhL2xhbmcvU3RyaW5nOylMb3JnL3czYy9kb20vRWxlbWVudDsBAAthcHBlbmRDaGlsZAEAJihMb3JnL3czYy9kb20vTm9kZTspTG9yZy93M2MvZG9tL05vZGU7AQAIaXRlcmF0b3IBABYoKUxqYXZhL3V0aWwvSXRlcmF0b3I7AQAHaGFzTmV4dAEAAygpWgEABG5leHQBABQoKUxqYXZhL2xhbmcvT2JqZWN0OwEAKigpTGphdmF4L3htbC90cmFuc2Zvcm0vVHJhbnNmb3JtZXJGYWN0b3J5OwEADm5ld1RyYW5zZm9ybWVyAQAjKClMamF2YXgveG1sL3RyYW5zZm9ybS9UcmFuc2Zvcm1lcjsBABUoTG9yZy93M2MvZG9tL05vZGU7KVYBABEoTGphdmEvaW8vRmlsZTspVgEACXRyYW5zZm9ybQEAOyhMamF2YXgveG1sL3RyYW5zZm9ybS9Tb3VyY2U7TGphdmF4L3htbC90cmFuc2Zvcm0vUmVzdWx0OylWAQAOamF2YS91dGlsL0xpc3QBABUoSSlMamF2YS9sYW5nL09iamVjdDsBAAtnZXRDYXBhY2l0eQEADG91dHB1dEJ1ZkNhcAEACmluaXRpYWxpemUBAAhqdHhVdGlscwEAMUxjb20vaW5mb3JtYXRpY2EvcG93ZXJjZW50ZXIvc2VydmVyL2p0eC9KVFhVdGlsczsBAC9jb20vaW5mb3JtYXRpY2EvcG93ZXJjZW50ZXIvc2VydmVyL2p0eC9KVFhVdGlscwEAE2lzU2VydmVyVW5pY29kZU1vZGUBADFjb20vaW5mb3JtYXRpY2EvcG93ZXJjZW50ZXIvc2RrL3JlcG9zaXRvcnkvSUZpZWxkAQASYmluZENvbHVtbkRhdGFUeXBlAQAFKElJKVYBABFpc091dEZsZFByb2plY3RlZAEADnNldElucHV0QnVmZmVyAQA4KExjb20vaW5mb3JtYXRpY2EvcG93ZXJjZW50ZXIvc2RrL3NlcnZlci9JSW5wdXRCdWZmZXI7KVYBABBnZXRPdXRwdXRCdWZmZXJzAQASKClMamF2YS91dGlsL0xpc3Q7AQAJb3V0cHV0QnVmAQA2TGNvbS9pbmZvcm1hdGljYS9wb3dlcmNlbnRlci9zZGsvc2VydmVyL0lPdXRwdXRCdWZmZXI7AQATZ2V0TnVtUm93c0F2YWlsYWJsZQEACGluUm93TnVtAQAFKElJKVoBAAlzZXRMZW5ndGgBAA9nZXRTdHJpbmdCdWZmZXIBAB0oSUlMamF2YS9sYW5nL1N0cmluZ0J1ZmZlcjspSQEADWlzVmVyYm9zZURhdGEBAAFaAQAjY29tL2luZm9ybWF0aWNhL3Byb2R1Y3RzL2p0eC9KdHhNc2cBAA9CRUdJTl9JTlBVVF9ST1cBACVMY29tL2luZm9ybWF0aWNhL3Byb2R1Y3RzL2p0eC9KdHhNc2c7AQAOZ2V0SW5mYU1lc3NhZ2UBAE0oTGNvbS9pbmZvcm1hdGljYS9wcm9kdWN0cy9qdHgvSnR4TXNnOylMY29tL2luZm9ybWF0aWNhL21lc3NhZ2VzL0luZmFNZXNzYWdlOwEAC3V0aWxzU2VydmVyAQA1TGNvbS9pbmZvcm1hdGljYS9wb3dlcmNlbnRlci9zZGsvc2VydmVyL0lVdGlsc1NlcnZlcjsBACRjb20vaW5mb3JtYXRpY2EvbWVzc2FnZXMvSW5mYU1lc3NhZ2UBAAVnZXRJZAEABnByZWZpeAEACmdldE1lc3NhZ2UBADNjb20vaW5mb3JtYXRpY2EvcG93ZXJjZW50ZXIvc2RrL3NlcnZlci9JVXRpbHNTZXJ2ZXIBAAZsb2dNc2cBADooTGphdmEvbGFuZy9TdHJpbmc7TGphdmEvbGFuZy9TdHJpbmc7SUxqYXZhL2xhbmcvU3RyaW5nOylWAQADYWRkAQAEc2l6ZQEABXNwbGl0AQAnKExqYXZhL2xhbmcvU3RyaW5nOylbTGphdmEvbGFuZy9TdHJpbmc7AQAQamF2YS91dGlsL0FycmF5cwEABmFzTGlzdAEAJShbTGphdmEvbGFuZy9PYmplY3Q7KUxqYXZhL3V0aWwvTGlzdDsBABkoTGphdmEvdXRpbC9Db2xsZWN0aW9uOylWAQAWaXNGYXRhbEV4Y2VwdGlvblRocm93bgEACGZhdGFsTXNnAQAORVhJVF9JTlBVVF9ST1cBAAp0cmFuc1Njb3BlAQBETGNvbS9pbmZvcm1hdGljYS9tZXRhZGF0YS9jb21tb24vdHJhbnNmb3JtYXRpb24vVHJhbnNmb3JtYXRpb25TY29wZTsBAEJjb20vaW5mb3JtYXRpY2EvbWV0YWRhdGEvY29tbW9uL3RyYW5zZm9ybWF0aW9uL1RyYW5zZm9ybWF0aW9uU2NvcGUBAANyb3cBAAhmbHVzaEJ1ZgEAD2hhbmRsZUV4Y2VwdGlvbgEAMShMY29tL2luZm9ybWF0aWNhL3Bvd2VyY2VudGVyL3Nkay9TREtFeGNlcHRpb247KVYBABJwcmVwYXJlRm9ySW5wdXRSb3cBAAlpc1ZlcmJvc2UBABFCRUdJTl9FTkRfT0ZfREFUQQEAEEVYSVRfRU5EX09GX0RBVEEBABFCRUdJTl9UUkFOU0FDVElPTgEAEEVYSVRfVFJBTlNBQ1RJT04BAA9pc1NldE51bGxDYWxsZWQBAAlvdXRSb3dOdW0BAAdzZXROdWxsAQAJc2V0U3RyaW5nAQAXKElJTGphdmEvbGFuZy9TdHJpbmc7KVYBABxoYW5kbGVEYXRhVHJ1bmNhdGVkRXhjZXB0aW9uAQAHc2V0TG9uZwEABihJSUopVgEAGGluY3JlbWVudE91dHB1dFJvd051bWJlcgEAEGZsdXNoQnVmV2hlbkZ1bGwBAA9jbGVhck51bGxDb2xTZXQAIQC3ALgAAAATAAgAuQC6AAAACAC7ALwAAAAAAL0AvAAAAAgAvgC8AAAAAAC%2FALwAAAAAAMAAvAAAAAAAwQC8AAAACADCAMMAAAAIAMQAwwAAAAgAxQDGAAAACADHAMMAAAAIAMgAwwAAAAgAyQDDAAAACADKAMsAAQDMAAAAAgDNAAAAzgDLAAEAzAAAAAIAzQACAM8A0AAAAAIA0QDDAAAAAgDSAMMAAAACANMAvAAAAA0AAQDUANUAAQDWAAAARwADAAEAAAAfKrcAASoEtQACKgO1AAMqAbUABCq7AAVZtwAGtQAHsQAAAAEA1wAAABYABQAAAEAABABOAAkATwAOAFsAEwDdAAIA2ADZAAIA1gAAAIwAAgABAAAARCoSCLYACZoACxIKswALpwARKhIItgAMmQAIEgqzAAsqEg22AAyZAA8qEg61AA8qEhC1ABEqtAAPEhK2ABOZAAUDrAKsAAAAAgDXAAAAKgAKAAAAYwAJAGQAEQBmABoAZwAfAIIAKACDAC4AhAA0AIcAQACIAEIAigDaAAAABgAEEQ0UDQDbAAAABAABAJwAAgDcANkAAQDWAAAAGgABAAEAAAACA6wAAAABANcAAAAGAAEAAACOAAAA3QDVAAEA1gAAAKEAAwABAAAAeSq7ABRZtwAVEha2ABeyABi2ABcSGbYAF7YAGrYAGyq7ABRZtwAVEhy2ABeyAAu2ABcSGbYAF7YAGrYAGyq7ABRZtwAVEh22ABeyAB62ABcSH7YAF7YAGrYAGyq7ABRZtwAVEiC2ABeyACG2ABcSH7YAF7YAGrYAG7EAAAABANcAAAAWAAUAAACTAB4AlAA8AJUAWgCWAHgAlwAAAN4A1QACANYAAADmAAMABAAAAHa7ABRZtwAVsgAYtgAXEiK2ABeyACO2ACQSJbYAF7YAGkwrA70AJrgAJ00sA70AKLgAKVcqLCu2ACqnADxOKrsAFFm3ABUSLLYAFy22AC22ABe2ABq2AC6nAB5OKrsAFFm3ABUSMLYAFy22ADG2ABe2ABq2AC6xAAIAKgA5ADwAKwAqADkAWgAvAAIA1wAAAC4ACwAAAJoAIQCbACoAnQAzAJ4AOQCjADwAnwA9AKAAVwCjAFoAoQBbAKIAdQCkANoAAAAaAAP%2FADwAAwcA3wcA4AcA4QABBwDiXQcA4xoA2wAAAAQAAQCcAAAA5ADlAAEA1gAAAB4AAQABAAAABipXsgAesAAAAAEA1wAAAAYAAQAAAKcAAADmAOcAAgDWAAACPwAFABAAAAEUuAAyTi22ADM6BBkEtgA0OgUZBSq2ADW5ADYCADoGGQUZBrkANwIAVxkFsgAhuQA2AgA6BxkGGQe5ADgCAFcBOgiyADm2ADo6CbIAObYAOjoKGQq5ADsBAJkAJxkKuQA8AQDAACY6CxkFGQu5ADYCADoIGQcZCLkAOAIAV6f%2F1bgAPToKGQq2AD46C7sAP1kZBbcAQDoMuwBBWbsAQlkstwBDtwBEOg0ZCxkMGQ22AEUqWbQAAgRgtQACsgBGWToOwrIARwRgswBHGQ7DpwALOg8ZDsMZD7%2BnADxOKrsAFFm3ABUSSbYAFy22AEq2ABe2ABq2AC6nAB5OKrsAFFm3ABUSTLYAFy22AE22ABe2ABq2AC6xAAQAwQDMAM8AAADPANQAzwAAAAAA1wDaAEgAAADXAPgASwACANcAAAB2AB0AAACzAAQAtAAKALUAEQC3AB4AuAAoALoANAC7AD4AvABBAL4ASQC%2FAGcAwAByAMEAfADCAH8AxgCEAMcAiwDIAJYAyQCnAMoAsADMALoAzQDBAM8AyQDQANcA2ADaANIA2wDTAPUA2AD4ANYA%2BQDXARMA2QDaAAAAfQAH%2FwBRAAsHAN8HAOEHAOAHAOgHAOkHAOoHAOsHAOsHAOsHAOwHAOwAAPoALf8ATwAPBwDfBwDhBwDgBwDoBwDpBwDqBwDrBwDrBwDrBwDsBwDtBwDuBwDvBwDwBwDxAAEHAPL%2FAAcAAwcA3wcA4QcA4AAAQgcA810HAPQaANsAAAAEAAEAnAABAPUA9gACANYAAAQRAAMABQAAAp4rA7kATgIAwABPTiwDuQBOAgDAAE86BCoZBLYAULUAUSq2AFIqElO2AAmZAB0qtABUtgBVmQANLQMQB7YAV6cACS0DCLYAVyoSDbYACZkAHSq0AFS2AFWZAA0tBBAHtgBXpwAJLQQItgBXKhIItgAJmQAdKrQAVLYAVZkADS0FEAe2AFenAAktBQi2AFcqEli2AAmZAB0qtABUtgBVmQANLQYQB7YAV6cACS0GCLYAVyoSWbYACZkAHSq0AFS2AFWZAA0tBxAHtgBXpwAJLQcItgBXKhJatgAJmQAdKrQAVLYAVZkADS0IEAe2AFenAAktCAi2AFcqElu2AAmZAB8qtABUtgBVmQAOLRAGEAe2AFenAAotEAYItgBXKhJctgAJmQAfKrQAVLYAVZkADi0QBxAHtgBXpwAKLRAHCLYAVyoSXbYACZkAHyq0AFS2AFWZAA4tEAgQB7YAV6cACi0QCAi2AFcqEl62AAmZAB8qtABUtgBVmQAOLRAJEAe2AFenAAotEAkItgBXKhJftgAJmQAfKrQAVLYAVZkADi0QChAHtgBXpwAKLRAKCLYAVyoSYLYACZkAHyq0AFS2AFWZAA4tEAsQB7YAV6cACi0QCwi2AFcqEmG2AAmZAB8qtABUtgBVmQAOLRAMEAe2AFenAAotEAwItgBXKhJitgAJmQAfKrQAVLYAVZkADi0QDRAHtgBXpwAKLRANCLYAVyoSY7YACZkAHyq0AFS2AFWZAA4tEA4QB7YAV6cACi0QDgi2AFcqEmS2AGWZAB8qtABUtgBVmQAOGQQDEAe2AFenAAoZBAMItgBXKhJmtgBlmQAfKrQAVLYAVZkADhkEBBAHtgBXpwAKGQQECLYAVyoSZ7YAZZkAChkEBQW2AFexAAAAAgDXAAABLgBLAAAA6gALAOsAFwDsACAA7QAkAO8ALQDxADcA8gBBAPQARwD3AFAA%2BQBaAPoAZAD8AGoA%2FwBzAQEAfQECAIcBBACNAQcAlgEJAKABCgCqAQwAsAEPALkBEQDDARIAzQEUANMBFwDcARkA5gEaAPABHAD2AR8A%2FwEhAQkBIgEUASQBGwEnASQBKQEuASoBOQEsAUABLwFJATEBUwEyAV4BNAFlATcBbgE5AXgBOgGDATwBigE%2FAZMBQQGdAUIBqAFEAa8BRwG4AUkBwgFKAc0BTAHUAU8B3QFRAecBUgHyAVQB%2BQFXAgIBWQIMAVoCFwFcAh4BXwInAWECMQFiAjwBZAJDAWcCTAFpAlYBagJhAWwCaAFvAnEBcQJ7AXIChgF0Ao0BdwKWAXkCnQF7ANoAAAAtACP9AEEHAPcHAPcFHAUcBRwFHAUcBR0GHQYdBh0GHQYdBh0GHQYdBh0GHQYPANsAAAAEAAEAnAABAPgA%2BQACANYAAAkdAAUAFwAABcMqLLYAaCoqtgBpA7kATgIAwABqtQBrLLYAbD4qA7UAbQQ2FBUUHaMFnCoBtQAPKgG1ABEqA7UAbgE6BQE6BgE6BwE6CAE6CQE6CgE6CwE6DAE6DQE6DgE6DwE6EAE6EQE6EgE6EyoSU7YACZkALiwqtABtA7YAb5oAIiq0AAcDtgBwLCq0AG0DKrQAB7YAcVcqtAAHtgByOgUqEg22AAmZAC4sKrQAbQS2AG%2BaACIqtAAHA7YAcCwqtABtBCq0AAe2AHFXKrQAB7YAcjoGKhIItgAJmQAuLCq0AG0FtgBvmgAiKrQABwO2AHAsKrQAbQUqtAAHtgBxVyq0AAe2AHI6ByoSWLYACZkALiwqtABtBrYAb5oAIiq0AAcDtgBwLCq0AG0GKrQAB7YAcVcqtAAHtgByOggqElm2AAmZAC4sKrQAbQe2AG%2BaACIqtAAHA7YAcCwqtABtByq0AAe2AHFXKrQAB7YAcjoJKhJatgAJmQAuLCq0AG0ItgBvmgAiKrQABwO2AHAsKrQAbQgqtAAHtgBxVyq0AAe2AHI6CioSW7YACZkAMCwqtABtEAa2AG%2BaACMqtAAHA7YAcCwqtABtEAYqtAAHtgBxVyq0AAe2AHI6CyoSXLYACZkAMCwqtABtEAe2AG%2BaACMqtAAHA7YAcCwqtABtEAcqtAAHtgBxVyq0AAe2AHI6DCoSXbYACZkAMCwqtABtEAi2AG%2BaACMqtAAHA7YAcCwqtABtEAgqtAAHtgBxVyq0AAe2AHI6DSoSXrYACZkAMCwqtABtEAm2AG%2BaACMqtAAHA7YAcCwqtABtEAkqtAAHtgBxVyq0AAe2AHI6DioSX7YACZkAMCwqtABtEAq2AG%2BaACMqtAAHA7YAcCwqtABtEAoqtAAHtgBxVyq0AAe2AHI6DyoSYLYACZkAMCwqtABtEAu2AG%2BaACMqtAAHA7YAcCwqtABtEAsqtAAHtgBxVyq0AAe2AHI6ECoSYbYACZkAMCwqtABtEAy2AG%2BaACMqtAAHA7YAcCwqtABtEAwqtAAHtgBxVyq0AAe2AHI6ESoSYrYACZkAMCwqtABtEA22AG%2BaACMqtAAHA7YAcCwqtABtEA0qtAAHtgBxVyq0AAe2AHI6EioSY7YACZkAMCwqtABtEA62AG%2BaACMqtAAHA7YAcCwqtABtEA4qtAAHtgBxVyq0AAe2AHI6Eyq0AHOZACKyAHS4AHU6FSq0AHYZFbYAdyq0AHgQCBkVtgB6tgB7KhIStQAPKhJ8tQARKrIAR7UAbipZtAB9BGC1AH2yAEZZOhXCsgAjBGCzACMZFcOnAAs6FhkVwxkWvyq0AH0EoAA1GQWzAH4ZCLMAHhkJswAhGQazABgZB7MAC7IAGAO9ACa4ACezAH8qKrcAgLUAgSq2AIIqtACBmgAGpwAJKhKDtgAuKrsAhFm3AIW1AAQZCsYADSq0AAQZCrYAhlcZC8YADSq0AAQZC7YAhlcZDMYADSq0AAQZDLYAhlcZDcYADSq0AAQZDbYAhlcZDsYADSq0AAQZDrYAhlcZD8YADSq0AAQZD7YAhlcZEMYADSq0AAQZELYAhlcZEcYADSq0AAQZEbYAhlcZEsYADSq0AAQZErYAhlcZE8YADSq0AAQZE7YAhlcquwAUWbcAFRKHtgAXKrQABLYAiLYAJBKJtgAXtgAatgAbuwCEWbIAfhKKtgCLuACMtwCNswA5KrsAFFm3ABUSh7YAF7IAObYAiLYAJBKOtgAXtgAatgAbKiq3AI%2B1AIEqtACBmgAGpwAiKrsAFFm3ABUSkLYAFyq0AH22ACQSkbYAF7YAGrYALrIACxKStgATmQAHKrYAkyq0AJSZAA%2B7AJVZKrQAlrcAl78qtABzmQAisgCYuAB1OhUqtAB2GRW2AHcqtAB4EAgZFbYAerYAeyq0AJmyAJqmAAcqtgCbpwALOhUqGRW2AJ0qtgCehBQBp%2FpksQADA80D2APbAAAD2wPgA9sAAAApBa0FsACcAAIA1wAAAiIAiAAAAYUABQGGABYBhwAbAYgAIAGbACkBoAAuAaEAMwGiADgBpQA7AaYAPgGnAEEBqABEAakARwGqAEoBqwBNAawAUAGtAFMBrgBWAa8AWQGwAFwBsQBfAbIAYgGzAGUBtgB6AbgAggG5AJABugCZAb0ArgG%2FALYBwADEAcEAzQHEAOIBxgDqAccA%2BAHIAQEBywEWAc0BHgHOASwBzwE1AdIBSgHUAVIB1QFgAdYBaQHZAX4B2wGGAdwBlAHdAZ0B4AGzAeIBuwHjAcoB5AHTAecB6QHpAfEB6gIAAesCCQHuAh8B8AInAfECNgHyAj8B9QJVAfcCXQH4AmwB%2BQJ1AfwCiwH%2BApMB%2FwKiAgACqwIDAsECBQLJAgYC2AIHAuECCgL3AgwC%2FwINAw4CDgMXAhEDLQITAzUCFANEAhUDTQIYA2MCGgNrAhsDegIcA4MCHwOKAiEDkgIiA6kCJgOvAicDtQIoA7wCKgPGAisDzQItA9UCLgPjAjAD6wIxA%2FACMgP1AjMD%2BgI0A%2F8CNQQEAjYEEQI3BBkCOAQdAjoEJwI8BC0CPwQ4AkAERwJBBFYCQgRlAkMEdAJEBIMCRQSSAkYEoQJHBLACSAS%2FAkkEzgJLBPACTAUFAk0FJgJPBS4CUAU4AlMFVwJvBWICcAVmAnUFbQJ3BXkCegWAAnwFiAJ9BZ8CgAWpAoIFrQKJBbAChgWyAogFuAKKBbwBmwXCAowA2gAAAQgAKf8AIwAVBwDfBwD6BwD7AQAAAAAAAAAAAAAAAAAAAAABAAD%2FAHUAFQcA3wcA%2BgcA%2BwEABwDgBwDgBwDgBwDgBwDgBwDgBwDgBwDgBwDgBwDgBwDgBwDgBwDgBwDgBwDgAQAAMzMzMzM1NTU1NTU1NTUl%2FwAxABYHAN8HAPoHAPsBAAcA4AcA4AcA4AcA4AcA4AcA4AcA4AcA4AcA4AcA4AcA4AcA4AcA4AcA4AcA4AEHAPEAAQcA8voABzkJBRkODg4ODg4ODg77AGkeDhIlDf8AAgAVBwDfBwD6BwD7AQAAAAAAAAAAAAAAAAAAAAABAAEHAPwH%2FwAJAAQHAN8HAPoHAPsBAAAA2wAAAAQAAQCcAAEA%2FQD%2BAAIA1gAAAcAABQAEAAABDSq0AGvHABQqKrYAaQO5AE4CAMAAarUAayq0AJ%2BZAB%2ByAKC4AHVNKrQAdiy2AHcqtAB4EAgstgB6tgB7KrsAFFm3ABUSobYAFyq0AH22ACS2ABq2ABsqKrQAAgRktQADKrsAFFm3ABUSorYAFyq0AAO2ACS2ABq2ABuyAEZZTcIquwAUWbcAFRKjtgAXsgAjtgAktgAatgAbKrIARwRktQADKrsAFFm3ABUSpLYAFyq0AAO2ACS2ABq2ABssw6cACE4swy2%2FKrcApSq0AJSZAA%2B7AJVZKrQAlrcAl78qtACfmQAfsgCmuAB1TSq0AHYstgB3KrQAeBAILLYAerYAeyq2AJunAAlNKiy2AJ2xAAMAfwC9AMAAAADAAMMAwAAAAAABAwEGAJwAAgDXAAAAYgAYAAAClwAHApkAGAKcAB8CngAmAp8AOwKpAFUCqgBfAqsAeQKsAH8CrgCYAq8AoQKwALsCsQDFArMAyQK3ANACuQDcArsA4wK9AOoCvgD%2FAsABAwLFAQYCwgEHAsQBDALGANoAAAAhAAgYIv8AhAADBwDfBwD6BwDxAAEHAPL6AAQWIkYHAPwFANsAAAAEAAEAnAABAP8BAAACANYAAADcAAUAAwAAAHgqtACfmQAfsgCnuAB1TSq0AHYstgB3KrQAeBAILLYAerYAeyq0AJSZAA%2B7AJVZKrQAlrcAl78qtACfmQAfsgCouAB1TSq0AHYstgB3KrQAeBAILLYAerYAeyq2AJsqKrYAaQO5AE4CAMAAarUAa6cACU0qLLYAnbEAAQAAAG4AcQCcAAIA1wAAADoADgAAAtIABwLUAA4C1QAjAt0AKgLfADYC4QA9AuMARALkAFkC5gBdAucAbgLsAHEC6QByAusAdwLtANoAAAAKAAUjEiJXBwD8BQDbAAAABAABAJwAAgEBANUAAgDWAAABXwAFAAIAAAC%2BKhJktgBlmQA8KhJktgCpmgAzKrQAD8cAEiq0AGsqtACqA7YAq6cAHSq0AGsqtACqAyq0AA%2B2AKynAApMKhJktgCuKhJmtgBlmQA8KhJmtgCpmgAzKrQAEccAEiq0AGsqtACqBLYAq6cAHSq0AGsqtACqBCq0ABG2AKynAApMKhJmtgCuKhJntgBlmQAnKhJntgCpmgAeKrQAayq0AKoFKrQAboW2AK%2BnAApMKhJntgCuKrYAsCq2ALEqtgCysQADACgAOAA7AK0AagB6AH0ArQCWAKcAqgCtAAIA1wAAAF4AFwAAAvcAEgL5ABkC%2BgAoAv8AOAMEADsDAQA8AwMAQgMIAFQDCgBbAwsAagMQAHoDFQB9AxIAfgMUAIQDGQCWAx0ApwMiAKoDHwCrAyEAsQMkALUDJQC5AyYAvQMnANoAAAATAAgoUgcBAgYnUgcBAgZlBwECBgDbAAAABAABAJwACAEDANUAAQDWAAAAYAACAAAAAAAsuwCzWbcAtLMARgSzAEcStbMACxK2swAYErazAH4StrMAHhK2swAhAbMAObEAAAABANcAAAAiAAgAAABKAAoATQAOAFEAEwBTABgAVgAdAFcAIgBYACcAWgACAQQAAAACAQUBYgAAAAoAAQBWAV8BYQAJ" byteCodeLen="13731" checkSum="2070144587" helperCodeSnippet="%2F%2F+ToDo:+Declare+static+and+non-static++partition+level+variables+and+functions+here%0A%2F%2F+For+example%2C%0A%2F%2F+%0A%2F%2F+static+int+countNullRows%3B++++++++++++%2F%2F+counts+the+number+of+output+rows+across+all+partitions+containing+null+values%0A%2F%2F+int+partCountNullRows%3B+++++++++++++++%2F%2F+counts+the+number+of+output+rows+in+this+partition+containing+null+values%0A%2F%2F+%0Astatic+Object+lock+%3D+new+Object%28%29%3B+++%2F%2F+lock+to+synchronize+nrRows%0Astatic+int+nrRows%3B%0Aint+partNrRows%3B%0Astatic+int+nrFiles+%3D1%3B%0Aint+partNrFiles+%3D1%3B%0Aint+fixedNrFiles%3D0%3B%0Aint+rc%3B%0Astatic+String+oneFilePerRow+%3D%22X%22%3B%0A%2F%2Fstatic+String+xsd+%3D%22UNKNOWN%22%3B%0Astatic+String+target+%3D%22UNKNOWN%22%3B%0A%2F%2Fstatic+Path+pathXsd%3B%0Astatic+Path+pathXml%3B%0Astatic+String+elements+%3D+%22UNKNOWN%22%3B%0Astatic+String+root+%3D%22UNKNOWN%22%3B%0Astatic+String+level1+%3D%22UNKNOWN%22%3B%0A%0Astatic+ArrayList%3CString%3E+elementList+%3D+null%3B%0AArrayList%3CString%3E+values+%3Dnull%3B%0A" importPackagesSnippet="%2F%2F+ToDo:+Enter+the+Java+packages+to+be++imported+here%0A%2F%2F+For+example%2C+if+you+want+to+use+Hashtable+in+any+of+the+snippets%2C+import+the+Hashtable+%2F%2F+as+shown+below:%0A+%2F%2F+%0A%2F%2F+import+java.util.Hashtable%3B%0A%0Aimport+java.io.BufferedWriter%3B%0Aimport+java.io.IOException%3B%0A%2F%2Fimport+java.nio.charset.Charset%3B%0Aimport+java.nio.charset.StandardCharsets%3B%0Aimport+java.nio.file.%2A%3B%0Aimport+java.util.%2A%3B%0Aimport+java.io.File%3B%0Aimport+javax.xml.parsers.DocumentBuilder%3B%0Aimport+javax.xml.parsers.DocumentBuilderFactory%3B%0Aimport+javax.xml.parsers.ParserConfigurationException%3B%0Aimport+javax.xml.transform.Transformer%3B%0Aimport+javax.xml.transform.TransformerException%3B%0Aimport+javax.xml.transform.TransformerFactory%3B%0Aimport+javax.xml.transform.dom.DOMSource%3B%0Aimport+javax.xml.transform.stream.StreamResult%3B%0Aimport+org.w3c.dom.Document%3B%0Aimport+org.w3c.dom.Element%3B%0A" infaFunctionsSnippet="private+int+checkSettings%28%29+throws+SDKException+%7B%0D%0A%09%2F%2Fdo+some+checks%0D%0A%09%2F%2FTODO:+More+to+come%0D%0A%09if%28%21isInFldConnected%28%22oneFilePerInputRow%22%29%29+%7B%0D%0A%09%09oneFilePerRow+%3D+%22N%22%3B%0D%0A%09%7D+else+%7B%0D%0A%09++++++if+%28isNull%28%22oneFilePerInputRow%22%29%29+%7B%0D%0A%09++++++%09oneFilePerRow+%3D+%22N%22%3B%0D%0A%09++++++%7D%0D%0A%09%7D%0D%0A%0D%0A%2F%2A%09%0D%0A%2F%2FxsdFile+checks%0D%0A%09if%28isNull%28%22xsdFile%22%29%29+%7B%0D%0A%09%09resultCode+%3D%22ERR-0001%22%3B%0D%0A%09%09resultMessage+%3D%22You+must+specify+an+XSD+file.%22%3B%0D%0A%09%7D%0D%0A%09if%28Files.isRegularFile%28pathXsd%29%29+%7B%0D%0A%09%09logInfo%28%22XSD+file+%3E%22+%2B+xsd+%2B%22%3C+was+found%22%29%3B%0D%0A%09%09if%28Files.isReadable%28pathXsd%29%29+%7B%0D%0A%09%09%09logInfo%28%22Can+read+XSD+file+%3E%22+%2B+xsd+%2B+%22%3C%22%29%3B%0D%0A%09%09%7D+else+%7B%0D%0A%09%09%09logError%28%22Cannot+read+XSD+file+%3E%22+%2B+xsd+%2B+%22%3C.+Check+file%2Fdirectory+permissions%22%29%3B%0D%0A%09%09%09resultCode+%3D%22ERR-0004%22%3B%0D%0A%09%09%09resultMessage%3D%22Cannot+read+XSD+file+%3E%22+%2B+xsd+%2B+%22%3C.+Check+file%2Fdirectory+permissions%22%3B%0D%0A%09%09%7D%0D%0A%09%7D+else+%7B%0D%0A%09%09logError%28%22XSD+file+%3E%22+%2B+xsd+%2B+%22%3C+was+not+found%22%29%3B%0D%0A%09%09resultCode+%3D%22ERR-0003%22%3B%0D%0A%09%09resultMessage+%3D%22XSD+file+%3E%22+%2B+xsd+%2B+%22%3C+was+not+found%22%3B%0D%0A%09%7D%0D%0A%2A%2F%0D%0A%0D%0A%2F%2FtargetFileName+checks%0D%0A%09if%28isNull%28%22targetFileName%22%29%29+%7B%0D%0A%09%09resultCode+%3D%22ERR-0002%22%3B%0D%0A%09%09resultMessage+%3D%22You+must+specify+a+target+file+name.%22%3B%0D%0A%09%7D%0D%0A%09%0D%0A%09if%28resultCode.equals%28%22OK%22%29%29%0D%0A%09%09return+0%3B%0D%0A%09else%0D%0A%09%09return+-1%3B%0D%0A%7D%0D%0A%2F%2Fcheck+each+row%0D%0Aprivate+int+checkInput%28%29+%7B%0D%0A%09return+0%3B%0D%0A%7D%0D%0A%2F%2F+output+important+settings+and+parameters%0D%0Avoid+outSettings%28%29+%7B%0D%0A%2F%2F%09logInfo%28%22Provided+xsdFile+%3E%22+%2B+xsd+%2B+%22%3C%22%29%3B%0D%0A%09logInfo%28%22Provided+targetFile+%3E%22+%2B+target+%2B+%22%3C%22%29%3B%0D%0A%09logInfo%28%22Determined+oneFilePerInputRow+%3E%22+%2B+oneFilePerRow+%2B+%22%3C%22%29%3B%0D%0A%09logInfo%28%22Provided+rootElement+name+%3E%22+%2B+root+%2B%22%3C.%22%29%3B%0D%0A%09logInfo%28%22Provided+level1Element+name+%3E%22+%2B+level1+%2B%22%3C.%22%29%3B%0D%0A%7D%0D%0A%0D%0Avoid+generateXmlFile%28%29+throws+SDKException+%7B%0D%0A%09String+currentTarget+%3D+target+%2B+%22_%22+%2B+nrRows+%2B%22.xml%22%3B%0D%0A%09Path+pathXmlFile+%3D+Paths.get%28currentTarget%29%3B%0D%0A%09try+%7B%0D%0A%09%09Files.createFile%28pathXmlFile%29%3B%0D%0A%09%09writeDataTo%28pathXmlFile%2C+currentTarget%29%3B%0D%0A%09%7D+catch+%28FileAlreadyExistsException+e%29+%7B%0D%0A%09%09failSession%28%22xml+file+already+exists:+%22+%2B+e.toString%28%29%29%3B%0D%0A%09%7D+catch+%28IOException+ioe%29+%7B%0D%0A%09%09failSession%28%22could+not+create+xml+file:+%22+%2B+ioe.toString%28%29%29%3B%0D%0A%09%7D%0D%0A%7D%0D%0A%0D%0AString+getRootElement%28%29+%7B%0D%0A%09return+this.root%3B%0D%0A%7D%0D%0A%0D%0Avoid+writeDataTo%28Path+pathXmlFile%2C+String+xmlFileName%29+throws+SDKException+%7B%0D%0A%09try+%7B%0D%0A%2F%2A%09%09String+testString+%3D%22%3Cdummy%3ETesting1.2.3.%3C%2Fdummy%3E%22%3B%0D%0A%09%09BufferedWriter+bw+%3D+Files.newBufferedWriter%28pathXmlFile%2C+StandardCharsets.UTF_8%29%3B%0D%0A%09%09bw.write%28%22%3C%3Fxml+version%3D%5C%221.0%5C%22+encoding%3D%5C%22UTF-8%5C%22%3F%3E%22%29%3B%0D%0A%09%09bw.write%28testString%2C+0%2C+testString.length%28%29%29%3B%0D%0A%09%09bw.newLine%28%29%3B%0D%0A%09%09bw.close%28%29%3B%0D%0A%2A%2F%0D%0A%09DocumentBuilderFactory+documentFactory+%3D+DocumentBuilderFactory.newInstance%28%29%3B%0D%0A%09DocumentBuilder+documentBuilder+%3D+documentFactory.newDocumentBuilder%28%29%3B%0D%0A%09Document+document+%3D+documentBuilder.newDocument%28%29%3B%0D%0A%09%2F%2Froot+element%0D%0A%09Element+rootElement+%3D+document.createElement%28getRootElement%28%29%29%3B+%0D%0A%09document.appendChild%28rootElement%29%3B%0D%0A%09%2F%2Flevel1+element%0D%0A%09Element+level1Element+%3D+document.createElement%28level1%29%3B%0D%0A%09rootElement.appendChild%28level1Element%29%3B%0D%0A%09Element+element+%3D+null%3B%0D%0A%09%0D%0A%09Iterator+itr+%3D+elementList.iterator%28%29%3B+%0D%0A%09for%28String+elem+:+elementList%29+%7B%0D%0A%09%09element+%3D+document.createElement%28elem%29%3B%0D%0A%09%09level1Element.appendChild%28element%29%3B%0D%0A%09%7D%0D%0A%09%0D%0A%09%2F%2FTODO:+The+rest%2C+like+adding+the+values+to+the+elements%0D%0A%09%0D%0A%09TransformerFactory+transformerFactory+%3D+TransformerFactory.newInstance%28%29%3B%0D%0A%09Transformer+transformer+%3D+transformerFactory.newTransformer%28%29%3B%0D%0A%09DOMSource+domSource+%3D+new+DOMSource%28document%29%3B%0D%0A%09StreamResult+streamResult+%3D+new+StreamResult%28new+File%28xmlFileName%29%29%3B%0D%0A%09transformer.transform%28domSource%2C+streamResult%29%3B%0D%0A%09%0D%0A%09partNrFiles%2B%2B%3B%0D%0A%09synchronized%28lock%29%0D%0A%09%09%7B%0D%0A%09%09%09nrFiles%2B%2B%3B%0D%0A%09%09%7D%0D%0A%09%0D%0A%09%7D+catch+%28ParserConfigurationException+ep%29+%7B%0D%0A%09%09failSession%28%22Could+not+write+to+xml+file.+Parser+Configuration+exception+occurred:+%22+%2B+ep.toString%28%29%29%3B%0D%0A%09%7D+%2F%2Acatch+%28TransformerConfigurationException+etc%29+%7B%0D%0A%09%09failSession%28%22Could+not+write+to+xml+file.+Transformer+Configuration+exception+occurred:+%22+%2B+etc.toString%28%29%29%3B%0D%0A%09%7D+%2A%2F+catch+%28TransformerException+et%29+%7B%0D%0A%09%09failSession%28%22Could+not+write+to+xml+file.+Transformer+exception+occurred::+%22+%2B+et.toString%28%29%29%3B%0D%0A%09%7D%0D%0A%7D" nanoSecondsInDateTimeSelected="false" numOfInnerClasses="0" onEndOfDataMethodSnippet="%2F%2F+ToDo:+Enter+code+that+executes+when+all+the+input+data+is+received+by+the+transformation+here%0A%2F%2F+%0A%2F%2F+logInfo%28%22The+number+of+null+rows+for+this+partition+is+:+%22+%2B+partCountNullRows%29%3B%0A%2F%2F+synchronized%28lock%29%0A%2F%2F+%7B%0A%2F%2F%09%09logInfo%28%22The+total+number+of+null+rows+across+partitions+till+now+is+:+%22+%2B++countNullRows%29%3B%0A%2F%2F+%7D%0AlogInfo%28%22The+number+of+rows+for+this+partition+is:+%22+%2B+partNrRows%29%3B%0AfixedNrFiles+%3D+partNrFiles+-1%3B%0AlogInfo%28%22The+number+of+files+for+this+partition+is:+%22+%2B+fixedNrFiles%29%3B%0Asynchronized%28lock%29%0A+%7B%0A+%09logInfo%28%22The+total+number+of+rows+across+partitions+till+now+is:+%22+%2B+nrRows%29%3B%0A+%09fixedNrFiles+%3D+nrFiles+-1%3B%0A+%09logInfo%28%22The+total+number+of+files+across+partitions+till+now+is:+%22+%2B+fixedNrFiles%29%3B%0A+%7D%0A+%0AgenerateRow%28%29%3B%0A%0A" onInputRowMethodSnippet="resultCode+%3D%22OK%22%3B%0AresultMessage+%3D+%22No+errors+encountered.%22%3B%0AnrFilesCreated+%3D+nrFiles%3B%0A%0ApartNrRows%2B%2B%3B%0Asynchronized%28lock%29%0A%09%09%7B%0A%09%09%09nrRows%2B%2B%3B%0A%09%09%7D%0A%2F%2Flog+input+and+settings+for+each+partition%0Aif+%28partNrRows+%3D%3D+1%29+%7B%0A%09elements+%3D+elementNames%3B+%0A%09root+%3D+rootElement%3B%0A%09level1+%3D+level1Element%3B%0A%09target+%3D+targetFileName%3B%0A%09oneFilePerRow+%3D+oneFilePerInputRow%3B%0A%09pathXml+%3D+Paths.get%28target%29%3B%0A%09rc%3DcheckSettings%28%29%3B%0A%09outSettings%28%29%3B%0A%7D%0Aif+%28rc+%3D%3D+0%29+%7B%0A%7D+else+%7B%0A%09failSession%28%22checkSettings+reported+an+error.+Run+aborted%22%29%3B%0A%7D%0A%0Avalues+%3D+new+ArrayList%3CString%3E%28%29%3B+%0Aif%28Value1+%21%3D+null%29+values.add%28Value1%29%3B++%0Aif%28Value2+%21%3D+null%29+values.add%28Value2%29%3B++%0Aif%28Value3+%21%3D+null%29+values.add%28Value3%29%3B++%0Aif%28Value4+%21%3D+null%29+values.add%28Value4%29%3B++%0Aif%28Value5+%21%3D+null%29+values.add%28Value5%29%3B++%0Aif%28Value6+%21%3D+null%29+values.add%28Value6%29%3B++%0Aif%28Value7+%21%3D+null%29+values.add%28Value7%29%3B++%0Aif%28Value8+%21%3D+null%29+values.add%28Value8%29%3B++%0Aif%28Value9+%21%3D+null%29+values.add%28Value9%29%3B++%0Aif%28Value10+%21%3D+null%29+values.add%28Value10%29%3B++%0A%0AlogInfo%28%22Received+%3E%22+%2B+values.size%28%29+%2B%22%3C+value%28s%29.%22%29%3B%0AelementList+%3D+new+ArrayList%3CString%3E%28Arrays.asList%28elements.split%28%22%3B%22%29%29%29%3B+%0AlogInfo%28%22Received+%3E%22+%2B+elementList.size%28%29+%2B%22%3C+element%28s%29.%22%29%3B%0A%0Arc+%3D+checkInput%28%29%3B%0Aif+%28rc+%3D%3D+0%29+%7B%0A%09%0A%7D+else+%7B%0A%09failSession%28%22input+row+in+current+partition+%3E%22+%2B+partNrRows+%2B+%22%3C+generated+an+error.%22%29%3B%0A%7D%0A%0A%0A%2F%2F+ToDo:+Enter+code+to+process+an+input+row+here.%0A%2F%2FYou+can+access+an+input+column+data+by+referring+the+input+column+name%0A%2F%2F+You+can+set+an+output+column+data+by+referring+the+output+column+name%0A%2F%2F+For+example%2C+if%0A%2F%2F+input1+and+input2+are+input+ports+of+type+int%2C+and%0A%2F%2F+output1+and+output2++are+output+ports+of+type+int%0A%2F%2F+then+transformation+logic+can+be+like+as+follows:%0A%2F%2F+%0A%2F%2F+if%28%21isNull%28%22input1%22%29+%26%26+%21isNull%28%22input1%22%29%29%0A%2F%2F+%7B%0A%2F%2F%09%09output1+%3D+input1+%2B+input2%3B%0A%2F%2F%09%09output2+%3D+input1+-+input2%3B%0A%2F%2F+%7D%0A%2F%2F+else%0A%2F%2F+%7B%0A%2F%2F%09%09setNull%28%22output1%22%29%3B%0A%2F%2F%09%09setNull%28%22output2%22%29%3B%0A%2F%2F%09%09partCountNullRows%2B%2B%3B%0A%2F%2F%09%09synchronized%28lock%29%0A%2F%2F%09%09%7B%0A%2F%2F%09%09%09countNullRows%2B%2B%3B%0A%2F%2F%09%09%7D%0A%2F%2F+%7D%0A%0Aif%28oneFilePerRow.equals%28%22Y%22%29%29+%7B%0A%09generateXmlFile%28%29%3B%0A%7D%0A" onTransactionMethodSnippet="%2F%2F+ToDo:+Enter+code+that+executes+when+a+transaction+is+received+by+the+transformation%0A%0A%0A" snippetsOfOptimizerInterfaces="%2F%2F+Transformation+instance+for+predicate+push+optimization%0D%0AInstance+instance%3B%0D%0A%0D%0A%0D%0A%2F%2F+Initialize+PredicatePushOptimizable%0D%0Apublic+void+initPredicatePushOptimizable%28Instance+inst%29+%7B%0D%0A%09%2F%2F+Store+the+instance%0D%0A%09instance+%3D+inst%3B%0D%0A%7D%0D%0A%0D%0A%0D%0Apublic+ResultAndMessage+allowPredicatePush%28boolean+ignoreOrderOfOp%29+%7B%0D%0A%09%2F%2F+This+function+must+return+true+in+order+to+enable+predicate+push+optimization%0D%0A%09%2F%2F+return+new+ResultAndMessage%28true%2C+%22%22%29%3B%0D%0A%09return+new+ResultAndMessage%28false%2C+%22Predicate+Push+Optimization+Is+Not+Supported%22%29%3B%09%0D%0A%7D%0D%0A%0D%0A%0D%0Apublic+boolean+canGenerateOutputFieldEvalError%28%29+%7B%0D%0A%09%2F%2F+If+the+Java+transformation+can+generate+an+output+field+evaluation+error+%28common+case%29%2C%0D%0A%09%2F%2F+return+true.+Otherwise+return+false.%0D%0A%09return+true%3B%0D%0A%7D%0D%0A%0D%0A%0D%0Apublic+InfaExpression+getInputExpr%28TransformationField+field%2C%0D%0A%09%09TransformationDataInterface+group%29+%7B%0D%0A%09%2F%2F+This+function+returns+an+Informatica+expression+for+output+fields+based+on+the+value+of+input+fields%0D%0A%09%2F%2F+You+can+push+predicates+that+have+fields+with+input+expressions+defined+for+them.%0D%0A%09%2F%2F+For+example%2C+if+you+have+two+input+fields+in0+and+in1+and+three+output+fields+out0%2C+out1%2C+out2%0D%0A%09%2F%2F+out0+is+the+pass-through+of+in1%2C+out1+is+sum+of+in0+and+in1%2C+and+out2+is+unknown.+The+code+should+be:%0D%0A%09%2F%2Fif+%28field.getName%28%29.equals%28%22out0%22%29%29%0D%0A%09%2F%2F++return+new+InfaExpression%28%22in0%22%2C+instance%29%3B%0D%0A%09%2F%2Felse+if+%28field.getName%28%29.equals%28%22out1%22%29%29%0D%0A%09%2F%2F%09return+new+InfaExpression%28%22in0+%2B+in1%22%2C+instance%29%3B%0D%0A%09%2F%2Felse+if+%28field.getName%28%29.equals%28%22out2%22%29%29%0D%0A%09%2F%2F%09return+null%3B%0D%0A%09return+null%3B%0D%0A%7D%0D%0A%0D%0A%0D%0Apublic+List%3CTransformationDataInterface%3E+inputGroupsPushPredicateTo%28%0D%0A%09%09List%3CTransformationField%3E+fields%29+%7B%0D%0A%09%2F%2F+This+function+returns+a+list+of+input+data+interfaces+to+push+predicates+to.%0D%0A%09%2F%2F+Since+the+Java+transformation+has+one+input+data+interface%2C+you+should+not+have+to+modify+this+function.%0D%0A%09AbstractTransformation+tx+%3D+instance.getTransformation%28%29%3B%0D%0A%09List%3CDataInterface%3E+dis+%3D+tx.getDataInterfaces%28%29%3B%0D%0A%09List%3CTransformationDataInterface%3E+inputDIs+%3D+new+ArrayList%3CTransformationDataInterface%3E%28%29%3B%0D%0A%09for+%28DataInterface+di+:+dis%29%7B%0D%0A%09%09TransformationDataInterface+tdi+%3D+%28TransformationDataInterface%29+di%3B%0D%0A%09%09if+%28tdi.isInput%28%29%29%0D%0A%09%09%09inputDIs.add%28tdi%29%3B%0D%0A%09%7D%0D%0A%09if%28inputDIs.size%28%29+%3D%3D+1%29%0D%0A%09%09return+inputDIs%3B%0D%0A%09else%0D%0A%09%09return+null%3B%0D%0A%7D %2F%2F+The+transformation+instance+for+which+this+Filter+Pushdown+Optimizable+Implementation+is+for%0D%0AInstance+instanceForFPO%3B%0D%0A%0D%0A%2F%2F+Initialize+the+Filter+Pushdown+Optimizable%0D%0Apublic+void+initFilterPushdownOptimizable%28Instance+inst%2C%0D%0A%09%09OptimizerSessInfo+context%29+%7B%0D%0A%09%2F%2F+Store+the+instance%0D%0A%09instanceForFPO+%3D+inst%3B%0D%0A%7D%0D%0A%0D%0Apublic+ResultAndMessage+isFilterSupported%28%29+%7B%0D%0A%09%2F%2F+To+Enable+Filter+Pushdown+Optimization+this+function+should+return+true%0D%0A++++%2F%2F+return+new+ResultAndMessage%28true%2C+%22%22%29%3B%0D%0A%09return+new+ResultAndMessage%28false%2C+%22Filter+Pushdown+Optimization+Is+Not+Supported%22%29%3B%0D%0A%7D%0D%0A%09%0D%0Apublic+ResultAndMessage+pushFilter%28InfaExpression+condition%29+%7B%0D%0A%09%0D%0A%09%2F%2F+Add+code+to+absorb+the+filter%0D%0A%09%2F%2F+If+filter+is+successfully+absorbed+return+new+ResultAndMessage%28true%2C+%22%22%29%3B+and+the+optimizer%0D%0A%09%2F%2F+will+remove+the+filter+from+the+mapping%0D%0A%09%2F%2F+If+the+filter+is+not+absorbed%2C+return+new+ResultAndMessage%28false%2C+msg%29%3B+%0D%0A%09return+new+ResultAndMessage%28false%2C+%22Filter+Pushdown+Optimization+Is+Not+Supported%22%29%3B%0D%0A%7D%0D%0A%0D%0A%2F%2F+Metadata+stored+in+this+class+is+not+accessible+at+runtime.+To+pass%0D%0A%2F%2F+metadata+to+the+runtime%2C+a+method+storeMetadata%28String+key%2C+String+data%29+is+%0D%0A%2F%2F+provided.+Data+must+be+provided+as+a+String%2C+and+will+be+associated+with+%0D%0A%2F%2F+the+given+key.+If+data+for+the+key+is+already+present%2C+it+will+be+%0D%0A%2F%2F+overwritten.+Note:+to+ensure+proper+behavior%2C+do+not+change+the+name+of%0D%0A%2F%2F+instanceForFPO.+Example+call:%0D%0A%2F%2F+storeMetadata+%28key%2C+data%29%3B%0D%0A%2F%2F%0D%0A%2F%2F+A+corresponding+method+getMetadata%28String+key%29+is+provided+to+retrieve%0D%0A%2F%2F+metadata+that+has+been+stored+with+storeMetadata.+It+returns+a+String:%0D%0A%2F%2F+the+data+associated+with+the+key%2C+or+null+if+no+data+is+found.+Note:+to+%0D%0A%2F%2F+ensure+proper+behavior%2C+do+not+change+the+name+of+instanceForFPO.%0D%0A%2F%2F+Example+call:%0D%0A%2F%2F+String+data+%3D+getMetadata%28key%29%3B">
+<javaInterfaces>
+<JavaDataInterface imx:id="U:Ky76M249Eemg4Weg1t3_0g" xsi:type="javatx:JavaDataInterface" input="true" name="Input">
+<javaFields>
+<JavaField imx:id="U:aH2i225vEemg4Weg1t3_0g" xsi:type="javatx:JavaField" type="smd:com.informatica.metadata.seed.platform.Platform.typesystem%2Fstring" lower="1" precision="1000" upper="1" input="true" name="elementNames"/>
+<JavaField imx:id="U:LeU1I25sEemg4Weg1t3_0g" xsi:type="javatx:JavaField" type="smd:com.informatica.metadata.seed.platform.Platform.typesystem%2Fstring" lower="1" precision="1000" upper="1" input="true" name="targetFileName"/>
+<JavaField imx:id="U:LeU1JG5sEemg4Weg1t3_0g" xsi:type="javatx:JavaField" type="smd:com.informatica.metadata.seed.platform.Platform.typesystem%2Fstring" lower="1" precision="1" upper="1" input="true" name="oneFilePerInputRow"/>
+<JavaField imx:id="U:ZsdzTG9zEemhB3sa2Qk8Eg" xsi:type="javatx:JavaField" type="smd:com.informatica.metadata.seed.platform.Platform.typesystem%2Fstring" lower="1" precision="100" upper="1" input="true" name="rootElement"/>
+<JavaField imx:id="U:ZsdzTW9zEemhB3sa2Qk8Eg" xsi:type="javatx:JavaField" type="smd:com.informatica.metadata.seed.platform.Platform.typesystem%2Fstring" lower="1" precision="100" upper="1" input="true" name="level1Element"/>
+<JavaField imx:id="U:SC-kFm4-Eemg4Weg1t3_0g" xsi:type="javatx:JavaField" type="smd:com.informatica.metadata.seed.platform.Platform.typesystem%2Fstring" lower="1" precision="100" upper="1" input="true" name="Value1"/>
+<JavaField imx:id="U:SC-kF24-Eemg4Weg1t3_0g" xsi:type="javatx:JavaField" type="smd:com.informatica.metadata.seed.platform.Platform.typesystem%2Fstring" lower="1" precision="100" upper="1" input="true" name="Value2"/>
+<JavaField imx:id="U:SC-kGG4-Eemg4Weg1t3_0g" xsi:type="javatx:JavaField" type="smd:com.informatica.metadata.seed.platform.Platform.typesystem%2Fstring" lower="1" precision="100" upper="1" input="true" name="Value3"/>
+<JavaField imx:id="U:SC-kGW4-Eemg4Weg1t3_0g" xsi:type="javatx:JavaField" type="smd:com.informatica.metadata.seed.platform.Platform.typesystem%2Fstring" lower="1" precision="100" upper="1" input="true" name="Value4"/>
+<JavaField imx:id="U:SC-kGm4-Eemg4Weg1t3_0g" xsi:type="javatx:JavaField" type="smd:com.informatica.metadata.seed.platform.Platform.typesystem%2Fstring" lower="1" precision="100" upper="1" input="true" name="Value5"/>
+<JavaField imx:id="U:SC-kG24-Eemg4Weg1t3_0g" xsi:type="javatx:JavaField" type="smd:com.informatica.metadata.seed.platform.Platform.typesystem%2Fstring" lower="1" precision="100" upper="1" input="true" name="Value6"/>
+<JavaField imx:id="U:SC-kHG4-Eemg4Weg1t3_0g" xsi:type="javatx:JavaField" type="smd:com.informatica.metadata.seed.platform.Platform.typesystem%2Fstring" lower="1" precision="100" upper="1" input="true" name="Value7"/>
+<JavaField imx:id="U:SC-kHW4-Eemg4Weg1t3_0g" xsi:type="javatx:JavaField" type="smd:com.informatica.metadata.seed.platform.Platform.typesystem%2Fstring" lower="1" precision="100" upper="1" input="true" name="Value8"/>
+<JavaField imx:id="U:SC-kHm4-Eemg4Weg1t3_0g" xsi:type="javatx:JavaField" type="smd:com.informatica.metadata.seed.platform.Platform.typesystem%2Fstring" lower="1" precision="100" upper="1" input="true" name="Value9"/>
+<JavaField imx:id="U:SC-kH24-Eemg4Weg1t3_0g" xsi:type="javatx:JavaField" type="smd:com.informatica.metadata.seed.platform.Platform.typesystem%2Fstring" lower="1" precision="100" upper="1" input="true" name="Value10"/>
+</javaFields>
+</JavaDataInterface>
+<JavaDataInterface imx:id="U:Ky76NG49Eemg4Weg1t3_0g" xsi:type="javatx:JavaDataInterface" name="Output" output="true">
+<javaFields>
+<JavaField imx:id="U:SC-kCm4-Eemg4Weg1t3_0g" xsi:type="javatx:JavaField" type="smd:com.informatica.metadata.seed.platform.Platform.typesystem%2Fstring" lower="1" precision="10" upper="1" output="true" name="resultCode">
+<defaultValue xsi:type="types:StringValue" valueLiteral="ERROR%28%27resultCode+transformation+error%27%29"/>
+</JavaField>
+<JavaField imx:id="U:SC-kC24-Eemg4Weg1t3_0g" xsi:type="javatx:JavaField" type="smd:com.informatica.metadata.seed.platform.Platform.typesystem%2Fstring" lower="1" precision="1000" upper="1" output="true" name="resultMessage">
+<defaultValue xsi:type="types:StringValue" valueLiteral="ERROR%28%27resultMessage+transformation+error%27%29"/>
+</JavaField>
+<JavaField imx:id="U:r9XSfG6cEemg4Weg1t3_0g" xsi:type="javatx:JavaField" type="smd:com.informatica.metadata.seed.platform.Platform.typesystem%2Finteger" lower="1" precision="10" upper="1" output="true" name="nrFilesCreated">
+<defaultValue xsi:type="types:StringValue" valueLiteral="ERROR%28%27nrFilesCreated+transformation+error%27%29"/>
+</JavaField>
+</javaFields>
+</JavaDataInterface>
+</javaInterfaces>
+</IObject>
+<IObject imx:id="U:LJXLEG4_Eemg4Weg1t3_0g" xsi:type="mapping:Mapping" name="m_convertToXML">
+<characteristics>
+<Characteristic imx:id="ID_82" xsi:type="runtime:RuntimeCharacteristic" maximumRuntimeIntervalPerSource="PT0S" selectedExecutionEnvironmentName="native" stateStore.="smd:com.informatica.metadata.common.parameter.util.InfaParameterSeed.StateStore">
+<environments>
+<ExecutionEnvironment imx:id="ID_83" xsi:type="runtime:NativeExecutionEnvironment">
+<partitioningConfig imx:id="ID_84" xsi:type="runtime:NativePartitioningConfig"/>
+</ExecutionEnvironment>
+</environments>
+<handlers>
+<TxHandlerConfig imx:id="ID_85" xsi:type="source1:SourceTxHandlerConfig" txInstance="U:d8jkqG4_Eemg4Weg1t3_0g" selectedAdapter="smd:com.informatica.metadata.seed.flatbyte.FlatFile.flatFileParsingDataAdapter"/>
+<TxHandlerConfig imx:id="ID_86" xsi:type="target1:TargetTxHandlerConfig" txInstance="U:LuIloG91EemhB3sa2Qk8Eg" selectedAdapter="smd:com.informatica.metadata.seed.flatbyte.FlatFile.flatFileGeneratingDataAdapter" rejectDirectory.="smd:com.informatica.metadata.common.parameter.util.InfaParameterSeed.RejectDir" rejectFile="ff_convertToXml_Result.bad"/>
+</handlers>
+<streamingConfig imx:id="ID_87" xsi:type="runtime:StreamingConfig" batchInterval="PT20S" cacheRefreshInterval="PT1H"/>
+</Characteristic>
+<Characteristic imx:id="ID_88" xsi:type="optimizer:OptimizerCharacteristic">
+<configs>
+<OptimizerConfig imx:id="ID_89" xsi:type="pdo:PushdownConfig"/>
+</configs>
+</Characteristic>
+</characteristics>
+<definedLibraries imx:id="U:LJZnUW4_Eemg4Weg1t3_0g" xsi:type="typelibrary:TypeLibrary" name="m_Type_Definition_Library" typeSystem="smd:com.informatica.metadata.seed.platform.Platform.typesystem"/>
+<instances>
+<Instance imx:id="U:d8jkqG4_Eemg4Weg1t3_0g" xsi:type="mapping:Instance" name="Read_inputforxmldemo" transformation="U:d8jkq24_Eemg4Weg1t3_0g">
+<fromOutlineLinks>
+<OutlineLink imx:id="ID_90" xsi:type="mapping:OutlineLink" fromInstance="U:d8jkqG4_Eemg4Weg1t3_0g" toInstance="U:d8jkqW4_Eemg4Weg1t3_0g"/>
+</fromOutlineLinks>
+<ports>
+<TransformationFieldPort imx:id="ID_91" xsi:type="mapping:TransformationFieldPort" instance="U:d8jkqG4_Eemg4Weg1t3_0g" transformationField="U:d8mA9G4_Eemg4Weg1t3_0g">
+<children>
+<NestedPort imx:id="ID_92" xsi:type="mapping:NestedPort" toPorts="ID_93" parent="ID_91" structuralFeature="U:NIiNpG4_Eemg4Weg1t3_0g"/>
+<NestedPort imx:id="ID_94" xsi:type="mapping:NestedPort" toPorts="ID_95" parent="ID_91" structuralFeature="U:NIiNpW4_Eemg4Weg1t3_0g"/>
+<NestedPort imx:id="ID_96" xsi:type="mapping:NestedPort" toPorts="ID_97" parent="ID_91" structuralFeature="U:NIiNpm4_Eemg4Weg1t3_0g"/>
+<NestedPort imx:id="ID_98" xsi:type="mapping:NestedPort" toPorts="ID_99" parent="ID_91" structuralFeature="U:NIiNp24_Eemg4Weg1t3_0g"/>
+</children>
+</TransformationFieldPort>
+</ports>
+</Instance>
+<Instance imx:id="U:d8jkqW4_Eemg4Weg1t3_0g" xsi:type="mapping:Instance" name="EXP_Parameters_Input" toOutlineLinks="ID_90" transformation="U:d8jkrG4_Eemg4Weg1t3_0g">
+<fromOutlineLinks>
+<OutlineLink imx:id="ID_100" xsi:type="mapping:OutlineLink" fromInstance="U:d8jkqW4_Eemg4Weg1t3_0g" toInstance="U:DMgCKm9yEemhB3sa2Qk8Eg"/>
+</fromOutlineLinks>
+<ports>
+<TransformationFieldPort imx:id="ID_93" xsi:type="mapping:TransformationFieldPort" fromPort="ID_92" instance="U:d8jkqW4_Eemg4Weg1t3_0g" transformationField="U:d8jkr24_Eemg4Weg1t3_0g"/>
+<TransformationFieldPort imx:id="ID_95" xsi:type="mapping:TransformationFieldPort" fromPort="ID_94" instance="U:d8jkqW4_Eemg4Weg1t3_0g" transformationField="U:d8jksG4_Eemg4Weg1t3_0g"/>
+<TransformationFieldPort imx:id="ID_97" xsi:type="mapping:TransformationFieldPort" fromPort="ID_96" instance="U:d8jkqW4_Eemg4Weg1t3_0g" transformationField="U:d8jksW4_Eemg4Weg1t3_0g"/>
+<TransformationFieldPort imx:id="ID_99" xsi:type="mapping:TransformationFieldPort" fromPort="ID_98" instance="U:d8jkqW4_Eemg4Weg1t3_0g" transformationField="U:d8jksm4_Eemg4Weg1t3_0g"/>
+<TransformationFieldPort imx:id="ID_101" xsi:type="mapping:GroupPort" toPorts="ID_102" instance="U:d8jkqW4_Eemg4Weg1t3_0g" dataInterface="U:d8jkrW4_Eemg4Weg1t3_0g"/>
+</ports>
+</Instance>
+<Instance imx:id="U:d8jkqm4_Eemg4Weg1t3_0g" xsi:type="mapping:Instance" name="convert2XML" toOutlineLinks="ID_103" transformation="U:Ky76Mm49Eemg4Weg1t3_0g">
+<fromOutlineLinks>
+<OutlineLink imx:id="ID_104" xsi:type="mapping:OutlineLink" fromInstance="U:d8jkqm4_Eemg4Weg1t3_0g" toInstance="U:LuIln291EemhB3sa2Qk8Eg"/>
+</fromOutlineLinks>
+<ports>
+<TransformationFieldPort imx:id="ID_105" xsi:type="mapping:TransformationFieldPort" fromPort="ID_106" instance="U:d8jkqm4_Eemg4Weg1t3_0g" transformationField="U:aH2i225vEemg4Weg1t3_0g"/>
+<TransformationFieldPort imx:id="ID_107" xsi:type="mapping:TransformationFieldPort" fromPort="ID_108" instance="U:d8jkqm4_Eemg4Weg1t3_0g" transformationField="U:LeU1I25sEemg4Weg1t3_0g"/>
+<TransformationFieldPort imx:id="ID_109" xsi:type="mapping:TransformationFieldPort" fromPort="ID_110" instance="U:d8jkqm4_Eemg4Weg1t3_0g" transformationField="U:LeU1JG5sEemg4Weg1t3_0g"/>
+<TransformationFieldPort imx:id="ID_111" xsi:type="mapping:TransformationFieldPort" fromPort="ID_112" instance="U:d8jkqm4_Eemg4Weg1t3_0g" transformationField="U:ZsdzTG9zEemhB3sa2Qk8Eg"/>
+<TransformationFieldPort imx:id="ID_113" xsi:type="mapping:TransformationFieldPort" fromPort="ID_114" instance="U:d8jkqm4_Eemg4Weg1t3_0g" transformationField="U:ZsdzTW9zEemhB3sa2Qk8Eg"/>
+<TransformationFieldPort imx:id="ID_115" xsi:type="mapping:TransformationFieldPort" fromPort="ID_116" instance="U:d8jkqm4_Eemg4Weg1t3_0g" transformationField="U:SC-kFm4-Eemg4Weg1t3_0g"/>
+<TransformationFieldPort imx:id="ID_117" xsi:type="mapping:TransformationFieldPort" toPorts="ID_118" instance="U:d8jkqm4_Eemg4Weg1t3_0g" transformationField="U:SC-kCm4-Eemg4Weg1t3_0g"/>
+<TransformationFieldPort imx:id="ID_119" xsi:type="mapping:TransformationFieldPort" toPorts="ID_120" instance="U:d8jkqm4_Eemg4Weg1t3_0g" transformationField="U:SC-kC24-Eemg4Weg1t3_0g"/>
+<TransformationFieldPort imx:id="ID_121" xsi:type="mapping:TransformationFieldPort" toPorts="ID_122" instance="U:d8jkqm4_Eemg4Weg1t3_0g" transformationField="U:r9XSfG6cEemg4Weg1t3_0g"/>
+</ports>
+</Instance>
+<Instance imx:id="U:8ZZMEW9wEemg4Weg1t3_0g" xsi:type="mapping:Instance" name="mplt_Port2XMLElement" transformation="U:8ZZMEm9wEemg4Weg1t3_0g">
+<fromOutlineLinks>
+<OutlineLink imx:id="ID_123" xsi:type="mapping:OutlineLink" fromInstance="U:8ZZMEW9wEemg4Weg1t3_0g" toInstance="U:DMgCKm9yEemhB3sa2Qk8Eg"/>
+</fromOutlineLinks>
+<ports>
+<TransformationFieldPort imx:id="ID_124" xsi:type="mapping:GroupPort" toPorts="ID_125" instance="U:8ZZMEW9wEemg4Weg1t3_0g" dataInterface="U:8ZZME29wEemg4Weg1t3_0g"/>
+</ports>
+</Instance>
+<Instance imx:id="U:DMgCKm9yEemhB3sa2Qk8Eg" xsi:type="mapping:Instance" name="JNR_Data_XMLStruct" toOutlineLinks="ID_100 ID_123" transformation="U:DMgCK29yEemhB3sa2Qk8Eg">
+<fieldMapSpec imx:id="ID_126" xsi:type="mapping:FieldMapSpec">
+<fieldMapPorts>
+<FieldMapPort imx:id="ID_106" xsi:type="mapping:FieldMapPort" toPorts="ID_105">
+<generatedFieldRef imx:id="ID_127" xsi:type="transformation:GeneratedFieldRef" transformationField="U:DMgCMm9yEemhB3sa2Qk8Eg" fieldName="outOrderedElements"/>
+</FieldMapPort>
+<FieldMapPort imx:id="ID_108" xsi:type="mapping:FieldMapPort" toPorts="ID_107">
+<generatedFieldRef imx:id="ID_128" xsi:type="transformation:GeneratedFieldRef" transformationField="U:DMgCMW9yEemhB3sa2Qk8Eg" fieldName="targetFullPath_DTL"/>
+</FieldMapPort>
+<FieldMapPort imx:id="ID_110" xsi:type="mapping:FieldMapPort" toPorts="ID_109">
+<generatedFieldRef imx:id="ID_129" xsi:type="transformation:GeneratedFieldRef" transformationField="U:DMgCMW9yEemhB3sa2Qk8Eg" fieldName="oneFilePerInputRow_DTL"/>
+</FieldMapPort>
+<FieldMapPort imx:id="ID_112" xsi:type="mapping:FieldMapPort" toPorts="ID_111">
+<generatedFieldRef imx:id="ID_130" xsi:type="transformation:GeneratedFieldRef" transformationField="U:DMgCMm9yEemhB3sa2Qk8Eg" fieldName="ROOTELEMENT"/>
+</FieldMapPort>
+<FieldMapPort imx:id="ID_114" xsi:type="mapping:FieldMapPort" toPorts="ID_113">
+<generatedFieldRef imx:id="ID_131" xsi:type="transformation:GeneratedFieldRef" transformationField="U:DMgCMm9yEemhB3sa2Qk8Eg" fieldName="LEVEL1ELEMENT"/>
+</FieldMapPort>
+<FieldMapPort imx:id="ID_116" xsi:type="mapping:FieldMapPort" toPorts="ID_115">
+<generatedFieldRef imx:id="ID_132" xsi:type="transformation:GeneratedFieldRef" transformationField="U:DMgCMW9yEemhB3sa2Qk8Eg" fieldName="textCol_DTL"/>
+</FieldMapPort>
+</fieldMapPorts>
+</fieldMapSpec>
+<fromOutlineLinks>
+<OutlineLink imx:id="ID_103" xsi:type="mapping:OutlineLink" fromInstance="U:DMgCKm9yEemhB3sa2Qk8Eg" toInstance="U:d8jkqm4_Eemg4Weg1t3_0g"/>
+</fromOutlineLinks>
+<ports>
+<TransformationFieldPort imx:id="ID_102" xsi:type="mapping:TransformationFieldPort" fromPort="ID_101" instance="U:DMgCKm9yEemhB3sa2Qk8Eg" transformationField="U:DMgCMG9yEemhB3sa2Qk8Eg"/>
+<TransformationFieldPort imx:id="ID_125" xsi:type="mapping:TransformationFieldPort" fromPort="ID_124" instance="U:DMgCKm9yEemhB3sa2Qk8Eg" transformationField="U:DMgCL29yEemhB3sa2Qk8Eg"/>
+</ports>
+</Instance>
+<Instance imx:id="U:LuIln291EemhB3sa2Qk8Eg" xsi:type="mapping:Instance" name="EXP_CollectInfo" toOutlineLinks="ID_104" transformation="U:LuIloW91EemhB3sa2Qk8Eg">
+<fromOutlineLinks>
+<OutlineLink imx:id="ID_133" xsi:type="mapping:OutlineLink" fromInstance="U:LuIln291EemhB3sa2Qk8Eg" toInstance="U:LuIloG91EemhB3sa2Qk8Eg"/>
+</fromOutlineLinks>
+<ports>
+<TransformationFieldPort imx:id="ID_118" xsi:type="mapping:TransformationFieldPort" fromPort="ID_117" toPorts="ID_134" instance="U:LuIln291EemhB3sa2Qk8Eg" transformationField="U:LuIlpm91EemhB3sa2Qk8Eg"/>
+<TransformationFieldPort imx:id="ID_120" xsi:type="mapping:TransformationFieldPort" fromPort="ID_119" toPorts="ID_135" instance="U:LuIln291EemhB3sa2Qk8Eg" transformationField="U:LuJLt291EemhB3sa2Qk8Eg"/>
+<TransformationFieldPort imx:id="ID_122" xsi:type="mapping:TransformationFieldPort" fromPort="ID_121" toPorts="ID_136" instance="U:LuIln291EemhB3sa2Qk8Eg" transformationField="U:LuJLuG91EemhB3sa2Qk8Eg"/>
+</ports>
+</Instance>
+<Instance imx:id="U:LuIloG91EemhB3sa2Qk8Eg" xsi:type="mapping:Instance" name="Write_ff_convertToXml_Result" toOutlineLinks="ID_133" transformation="U:LuIlom91EemhB3sa2Qk8Eg">
+<ports>
+<TransformationFieldPort imx:id="ID_137" xsi:type="mapping:TransformationFieldPort" instance="U:LuIloG91EemhB3sa2Qk8Eg" transformationField="U:LuIlpG91EemhB3sa2Qk8Eg">
+<children>
+<NestedPort imx:id="ID_134" xsi:type="mapping:NestedPort" fromPort="ID_118" parent="ID_137" structuralFeature="U:B2ZEFW91EemhB3sa2Qk8Eg"/>
+<NestedPort imx:id="ID_135" xsi:type="mapping:NestedPort" fromPort="ID_120" parent="ID_137" structuralFeature="U:B2ZEFm91EemhB3sa2Qk8Eg"/>
+<NestedPort imx:id="ID_136" xsi:type="mapping:NestedPort" fromPort="ID_122" parent="ID_137" structuralFeature="U:B2ZEF291EemhB3sa2Qk8Eg"/>
+</children>
+</TransformationFieldPort>
+</ports>
+</Instance>
+</instances>
+<transformations>
+<AbstractTransformation imx:id="U:d8jkq24_Eemg4Weg1t3_0g" xsi:type="source:SourceTx" active="true" name="Read_inputforxmldemo" dso="U:NIiNoG4_Eemg4Weg1t3_0g">
+<sourceInterfaces>
+<SourceDataInterface imx:id="U:d8jks24_Eemg4Weg1t3_0g" xsi:type="source:SourceDataInterface" name="Group" output="true">
+<sourceFields>
+<SourceTxField imx:id="U:d8mA9G4_Eemg4Weg1t3_0g" xsi:type="source:SourceTxField" type="U:NIiNo24_Eemg4Weg1t3_0g" name="output" output="true"/>
+</sourceFields>
+</SourceDataInterface>
+</sourceInterfaces>
+</AbstractTransformation>
+<AbstractTransformation imx:id="U:d8jkrG4_Eemg4Weg1t3_0g" xsi:type="expression:ExpressionTx" name="EXP_Parameters_Input">
+<expressionInterface>
+<ExpressionDataInterface imx:id="U:d8jkrW4_Eemg4Weg1t3_0g" xsi:type="expression:ExpressionDataInterface" input="true" name="Group" output="true">
+<expressionFields>
+<ExpressionField imx:id="U:d8jkrm4_Eemg4Weg1t3_0g" xsi:type="expression:ExpressionField" type="smd:com.informatica.metadata.seed.platform.Platform.typesystem%2Fstring" lower="1" precision="1000" upper="1" name="xsdFile" output="true" expression="%27t_risk_rating.xsd%27">
+<defaultValue xsi:type="types:StringValue" valueLiteral="ERROR%28%27transformation+error%27%29"/>
+</ExpressionField>
+<ExpressionField imx:id="U:SelEJ25vEemg4Weg1t3_0g" xsi:type="expression:ExpressionField" type="smd:com.informatica.metadata.seed.platform.Platform.typesystem%2Fstring" lower="1" precision="1000" upper="1" name="targetFilePrefix" output="true" expression="%27t_risk_rating%27">
+<annotations>
+<Annotation imx:id="ID_139" xsi:type="description:Description" body="If+oneFilePerInputRow+%3D+Y+then+the+xml+file+name+will+include+the+current+row+number."/>
+</annotations>
+<defaultValue xsi:type="types:StringValue" valueLiteral="ERROR%28%27transformation+error%27%29"/>
+</ExpressionField>
+<ExpressionField imx:id="U:hSovmW9yEemhB3sa2Qk8Eg" xsi:type="expression:ExpressionField" type="smd:com.informatica.metadata.seed.platform.Platform.typesystem%2Fstring" lower="1" precision="1000" upper="1" name="v_xsdFile" expression="%27t_risk_rating.xsd%27" variable="true"/>
+<ExpressionField imx:id="U:hSovmm9yEemhB3sa2Qk8Eg" xsi:type="expression:ExpressionField" type="smd:com.informatica.metadata.seed.platform.Platform.typesystem%2Fstring" lower="1" precision="1000" upper="1" name="v_targetFilePrefix" expression="%27t_risk_rating%27" variable="true"/>
+<ExpressionField imx:id="U:SelEKG5vEemg4Weg1t3_0g" xsi:type="expression:ExpressionField" type="smd:com.informatica.metadata.seed.platform.Platform.typesystem%2Fstring" lower="1" precision="1" upper="1" name="oneFilePerInputRow" output="true" expression="%27Y%27">
+<annotations>
+<Annotation imx:id="ID_141" xsi:type="description:Description" body="Y+will+generate+an+xml+file+for+each+input+row.+N+will+generate+one+single+xml+file."/>
+</annotations>
+<defaultValue xsi:type="types:StringValue" valueLiteral="%27N%27"/>
+</ExpressionField>
+<ExpressionField imx:id="U:d8jkr24_Eemg4Weg1t3_0g" xsi:type="expression:ExpressionField" type="smd:com.informatica.metadata.seed.platform.Platform.typesystem%2Fdecimal" lower="1" precision="10" upper="1" input="true" name="IdCol" output="true"/>
+<ExpressionField imx:id="U:d8jksG4_Eemg4Weg1t3_0g" xsi:type="expression:ExpressionField" type="smd:com.informatica.metadata.seed.platform.Platform.typesystem%2Fdecimal" lower="1" precision="10" upper="1" input="true" name="NumCol" output="true"/>
+<ExpressionField imx:id="U:d8jksW4_Eemg4Weg1t3_0g" xsi:type="expression:ExpressionField" type="smd:com.informatica.metadata.seed.platform.Platform.typesystem%2Fstring" lower="1" precision="100" upper="1" input="true" name="textCol" output="true"/>
+<ExpressionField imx:id="U:d8jksm4_Eemg4Weg1t3_0g" xsi:type="expression:ExpressionField" type="smd:com.informatica.metadata.seed.platform.Platform.typesystem%2Fdecimal" lower="1" precision="10" upper="1" input="true" name="NumCol2" output="true"/>
+<ExpressionField imx:id="U:DMgpQ29yEemhB3sa2Qk8Eg" xsi:type="expression:ExpressionField" type="smd:com.informatica.metadata.seed.platform.Platform.typesystem%2Fstring" lower="1" precision="1000" upper="1" name="xsdFullPath" output="true" expression="%27%2Fappl%2Fdata%2Fsource%2F%27+%7C%7C+v_xsdFile">
+<defaultValue xsi:type="types:StringValue" valueLiteral="ERROR%28%27transformation+error%27%29"/>
+</ExpressionField>
+<ExpressionField imx:id="U:DMgpRG9yEemhB3sa2Qk8Eg" xsi:type="expression:ExpressionField" type="smd:com.informatica.metadata.seed.platform.Platform.typesystem%2Fstring" lower="1" precision="1000" upper="1" name="targetFullPath" output="true" expression="%27%2Fappl%2Fdata%2Ftarget%2Fxml%2F%27+%7C%7C+v_targetFilePrefix">
+<defaultValue xsi:type="types:StringValue" valueLiteral="ERROR%28%27transformation+error%27%29"/>
+</ExpressionField>
+</expressionFields>
+</ExpressionDataInterface>
+</expressionInterface>
+</AbstractTransformation>
+<AbstractTransformation imx:id="U:8ZZMEm9wEemg4Weg1t3_0g" xsi:type="mapplet:MappletTx" name="mplt_Port2XMLElement" mapplet="U:SytRcG9pEemg4Weg1t3_0g">
+<mappletInterfaces>
+<MappletInterface imx:id="U:8ZZME29wEemg4Weg1t3_0g" xsi:type="mapplet:MappletInterface" name="Output" output="true" mappletInterface="U:EnP0s29wEemg4Weg1t3_0g">
+<mappletFields>
+<MappletField imx:id="U:8ZZMFG9wEemg4Weg1t3_0g" xsi:type="mapplet:MappletField" type="smd:com.informatica.metadata.seed.platform.Platform.typesystem%2Fstring" lower="1" precision="1000" upper="1" name="XSD" output="true" mappletField="U:EnP0tG9wEemg4Weg1t3_0g"/>
+<MappletField imx:id="U:8ZZMFW9wEemg4Weg1t3_0g" xsi:type="mapplet:MappletField" type="smd:com.informatica.metadata.seed.platform.Platform.typesystem%2Fstring" lower="1" precision="100" upper="1" name="ROOTELEMENT" output="true" mappletField="U:EnP0tW9wEemg4Weg1t3_0g"/>
+<MappletField imx:id="U:8ZZMFm9wEemg4Weg1t3_0g" xsi:type="mapplet:MappletField" type="smd:com.informatica.metadata.seed.platform.Platform.typesystem%2Fstring" lower="1" precision="100" upper="1" name="LEVEL1ELEMENT" output="true" mappletField="U:EnP0tm9wEemg4Weg1t3_0g"/>
+<MappletField imx:id="U:8ZZMF29wEemg4Weg1t3_0g" xsi:type="mapplet:MappletField" type="smd:com.informatica.metadata.seed.platform.Platform.typesystem%2Fstring" lower="1" precision="1000" upper="1" name="outOrderedElements" output="true" mappletField="U:EnP0t29wEemg4Weg1t3_0g"/>
+</mappletFields>
+</MappletInterface>
+</mappletInterfaces>
+</AbstractTransformation>
+<AbstractTransformation imx:id="U:DMgCK29yEemhB3sa2Qk8Eg" xsi:type="joiner:JoinerTx" active="true" name="JNR_Data_XMLStruct" cacheDir.="smd:com.informatica.metadata.common.parameter.util.InfaParameterSeed.CacheDir" caseSensitive="true" detailDataNullHighest="true" joinCondition="XSD+%3D+xsdFile_DTL" masterDataNullHighest="true" scope="allInput">
+<joinerInterfaces>
+<JoinerDataInterface imx:id="U:DMgCLG9yEemhB3sa2Qk8Eg" xsi:type="joiner:JoinerDataInterface" name="Output" output="true">
+<joinerFields>
+<JoinerField imx:id="U:DMgCMW9yEemhB3sa2Qk8Eg" xsi:type="joiner:JoinerField" type="smd:com.informatica.metadata.seed.dynamictype.InfaDynamicTypeSeed.Proxy" lower="1" upper="1" name="From_EXP_Parameters_Input" output="true">
+<typeConfig imx:id="ID_145" xsi:type="dynamictype:ProxyTypeConfig" typedElement="U:DMgCMG9yEemhB3sa2Qk8Eg"/>
+</JoinerField>
+<JoinerField imx:id="U:DMgCMm9yEemhB3sa2Qk8Eg" xsi:type="joiner:JoinerField" type="smd:com.informatica.metadata.seed.dynamictype.InfaDynamicTypeSeed.Proxy" lower="1" upper="1" name="From_mplt_Port2XMLElement" output="true">
+<typeConfig imx:id="ID_146" xsi:type="dynamictype:ProxyTypeConfig" typedElement="U:DMgCL29yEemhB3sa2Qk8Eg"/>
+</JoinerField>
+</joinerFields>
+</JoinerDataInterface>
+<JoinerDataInterface imx:id="U:DMgCLW9yEemhB3sa2Qk8Eg" xsi:type="joiner:JoinerDataInterface" input="true" name="Detail" detail="true">
+<joinerFields>
+<JoinerField imx:id="U:DMgCMG9yEemhB3sa2Qk8Eg" xsi:type="joiner:JoinerField" type="smd:com.informatica.metadata.seed.dynamictype.InfaDynamicTypeSeed.Rule" lower="1" upper="1" input="true" name="From_EXP_Parameters_Input">
+<typeConfig imx:id="ID_147" xsi:type="rule:RuleTypeConfig" rename="true">
+<renameOption imx:id="ID_148" xsi:type="config:AffixRenameOption" literal="_DTL" suffix="true"/>
+<rules>
+<Rule imx:id="ID_149" xsi:type="rule:AllRule"/>
+</rules>
+</typeConfig>
+</JoinerField>
+</joinerFields>
+</JoinerDataInterface>
+<JoinerDataInterface imx:id="U:DMgCLm9yEemhB3sa2Qk8Eg" xsi:type="joiner:JoinerDataInterface" input="true" name="Master">
+<joinerFields>
+<JoinerField imx:id="U:DMgCL29yEemhB3sa2Qk8Eg" xsi:type="joiner:JoinerField" type="smd:com.informatica.metadata.seed.dynamictype.InfaDynamicTypeSeed.Rule" lower="1" upper="1" input="true" name="From_mplt_Port2XMLElement">
+<typeConfig imx:id="ID_150" xsi:type="rule:RuleTypeConfig">
+<rules>
+<Rule imx:id="ID_151" xsi:type="rule:AllRule"/>
+</rules>
+</typeConfig>
+</JoinerField>
+</joinerFields>
+</JoinerDataInterface>
+</joinerInterfaces>
+</AbstractTransformation>
+<AbstractTransformation imx:id="U:LuIloW91EemhB3sa2Qk8Eg" xsi:type="expression:ExpressionTx" name="EXP_CollectInfo">
+<expressionInterface>
+<ExpressionDataInterface imx:id="U:LuIlpW91EemhB3sa2Qk8Eg" xsi:type="expression:ExpressionDataInterface" input="true" name="Group" output="true">
+<expressionFields>
+<ExpressionField imx:id="U:LuIlpm91EemhB3sa2Qk8Eg" xsi:type="expression:ExpressionField" type="smd:com.informatica.metadata.seed.platform.Platform.typesystem%2Fstring" lower="1" precision="10" upper="1" input="true" name="resultCode" output="true" expression="resultCode"/>
+<ExpressionField imx:id="U:LuJLt291EemhB3sa2Qk8Eg" xsi:type="expression:ExpressionField" type="smd:com.informatica.metadata.seed.platform.Platform.typesystem%2Fstring" lower="1" precision="1000" upper="1" input="true" name="resultMessage" output="true" expression="resultMessage"/>
+<ExpressionField imx:id="U:LuJLuG91EemhB3sa2Qk8Eg" xsi:type="expression:ExpressionField" type="smd:com.informatica.metadata.seed.platform.Platform.typesystem%2Finteger" lower="1" precision="10" upper="1" input="true" name="nrFilesCreated" output="true" expression="nrFilesCreated"/>
+</expressionFields>
+</ExpressionDataInterface>
+</expressionInterface>
+</AbstractTransformation>
+<AbstractTransformation imx:id="U:LuIlom91EemhB3sa2Qk8Eg" xsi:type="target:TargetTx" active="true" name="Write_ff_convertToXml_Result" dso="U:B2Yc_G91EemhB3sa2Qk8Eg">
+<targetInterfaces>
+<TargetDataInterface imx:id="U:LuIlo291EemhB3sa2Qk8Eg" xsi:type="target:TargetDataInterface" input="true" name="Group">
+<targetFields>
+<TargetTxField imx:id="U:LuIlpG91EemhB3sa2Qk8Eg" xsi:type="target:TargetTxField" type="U:B2ZEFG91EemhB3sa2Qk8Eg" input="true" name="Input"/>
+</targetFields>
+</TargetDataInterface>
+</targetInterfaces>
+</AbstractTransformation>
+</transformations>
+</IObject>
+</contents>
+</folder:Folder>
+<project:Project imx:id="U:lLxD0V0AEemW7O_a5GHCaA" name="Demo">
+<imx:annotations>
+<imx:IGenericAnnotations>
+<com.informatica.tools.objectie key1="projectName" value1="MRS_Demo01"/>
+</imx:IGenericAnnotations>
+</imx:annotations>
+<annotations>
+<Annotation imx:id="ID_152" xsi:type="description:Description"/>
+</annotations>
+<contents>
+<IObject imx:idref="U:8OfEGW46Eemg4Weg1t3_0g" xsi:type="folder:Folder"/>
+</contents>
+</project:Project>
+<connectinfo:OracleNativeConnectInfo imx:id="stringIdentity:con_CMS" connectionType="ORACLE" name="con_CMS">
+<defaultAttributes imx:id="U:wM5M10UBEemm_4gPdwQN4Q" xsi:type="connectinfo1:ConnectionPoolAttributes"/>
+</connectinfo:OracleNativeConnectInfo>
+<imx:crc value="3811238705"/>
+</imx:IMX>
