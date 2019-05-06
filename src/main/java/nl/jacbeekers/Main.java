@@ -30,11 +30,21 @@ public class Main {
         map2.put("rating_rank","456");
         data.add(map2);
 
-        generateXml xml = new generateXml();
+        generateXml xml =null;
+
+/*        xml = new generateXml();
         xml.setRootElement(rootElement);
         xml.setXsdFile(xsdFile);
         xml.setTarget(xmlFile);
+        xml.setOneFilePerRow("Y");
         xml.generateXmlFile(data);
+*/
+        xml = new generateXml();
+        xml.setRootElement(rootElement);
+        xml.setXsdFile(xsdFile);
+        xml.setTarget(xmlFile);
+        xml.setOneFilePerRow("N");
+        xml.generateXmlFileFromFile("D:\\GitRepos\\convert2xml\\src\\main\\resources\\inputforxmldemo.txt");
 
     }
 }
