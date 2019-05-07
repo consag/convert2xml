@@ -32,19 +32,19 @@ public class Main {
 
         generateXml xml =null;
 
-/*        xml = new generateXml();
-        xml.setRootElement(rootElement);
-        xml.setXsdFile(xsdFile);
-        xml.setTarget(xmlFile);
-        xml.setOneFilePerRow("Y");
-        xml.generateXmlFile(data);
-*/
         xml = new generateXml();
         xml.setRootElement(rootElement);
         xml.setXsdFile(xsdFile);
         xml.setTarget(xmlFile);
         xml.setOneFilePerRow("N");
-        xml.generateXmlFileFromFile("D:\\GitRepos\\convert2xml\\src\\main\\resources\\inputforxmldemo.txt");
-
+        xml.generateXmlFile(data);
+/*
+        xml = new generateXml();
+        xml.setRootElement(rootElement);
+        xml.setXsdFile(xsdFile);
+        xml.setTarget(xmlFile);
+        xml.setOneFilePerRow("N");
+        xml.generateXmlFile("D:\\GitRepos\\convert2xml\\src\\main\\resources\\inputforxmldemo.txt");
+*/
     }
 }

@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="19547e0a-df33-43ed-a81f-b4fbd21e4cd7" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/src/main/java/nl/jacbeekers/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/nl/jacbeekers/Main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/nl/jacbeekers/generateXml.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/nl/jacbeekers/generateXml.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
@@ -20,33 +21,49 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/nl/jacbeekers/generateXml.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="34">
-              <caret line="192" column="2" selection-start-line="192" selection-start-column="2" selection-end-line="192" selection-end-column="2" />
+            <state relative-caret-position="187">
+              <caret line="201" column="53" selection-start-line="201" selection-start-column="53" selection-end-line="201" selection-end-column="53" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#1460#1470#0" expanded="true" />
-                <element signature="e#1744#1745#0" expanded="true" />
-                <element signature="e#1780#1781#0" expanded="true" />
-                <element signature="e#1814#1815#0" expanded="true" />
-                <element signature="e#1849#1850#0" expanded="true" />
-                <element signature="e#1895#1896#0" expanded="true" />
-                <element signature="e#1933#1934#0" expanded="true" />
-                <element signature="e#2034#2035#0" expanded="true" />
-                <element signature="e#2070#2071#0" expanded="true" />
-                <element signature="e#14254#14255#0" expanded="true" />
-                <element signature="e#14354#14355#0" expanded="true" />
-                <element signature="e#14430#14431#0" expanded="true" />
-                <element signature="e#14538#14539#0" expanded="true" />
-                <element signature="e#14631#14632#0" expanded="true" />
-                <element signature="e#14714#14715#0" expanded="true" />
-                <element signature="e#14813#14814#0" expanded="true" />
-                <element signature="e#14887#14888#0" expanded="true" />
-                <element signature="e#14969#14970#0" expanded="true" />
-                <element signature="e#15035#15036#0" expanded="true" />
+                <element signature="e#1604#1605#0" expanded="true" />
+                <element signature="e#1637#1638#0" expanded="true" />
+                <element signature="e#1678#1679#0" expanded="true" />
+                <element signature="e#1711#1712#0" expanded="true" />
+                <element signature="e#1754#1755#0" expanded="true" />
+                <element signature="e#1786#1787#0" expanded="true" />
+                <element signature="e#1827#1828#0" expanded="true" />
+                <element signature="e#1860#1861#0" expanded="true" />
+                <element signature="e#1901#1902#0" expanded="true" />
+                <element signature="e#1934#1935#0" expanded="true" />
+                <element signature="e#16058#16059#0" expanded="true" />
+                <element signature="e#16138#16139#0" expanded="true" />
+                <element signature="e#16207#16208#0" expanded="true" />
+                <element signature="e#16291#16292#0" expanded="true" />
+                <element signature="e#16351#16352#0" expanded="true" />
+                <element signature="e#16428#16429#0" expanded="true" />
+                <element signature="e#16505#16506#0" expanded="true" />
+                <element signature="e#16605#16606#0" expanded="true" />
+                <element signature="e#16681#16682#0" expanded="true" />
+                <element signature="e#16789#16790#0" expanded="true" />
+                <element signature="e#16883#16884#0" expanded="true" />
+                <element signature="e#16966#16967#0" expanded="true" />
+                <element signature="e#17064#17065#0" expanded="true" />
+                <element signature="e#17138#17139#0" expanded="true" />
+                <element signature="e#17220#17221#0" expanded="true" />
+                <element signature="e#17286#17287#0" expanded="true" />
                 <element signature="e#13889#13890#0" expanded="true" />
                 <element signature="e#13919#13920#0" expanded="true" />
                 <element signature="e#13951#13952#0" expanded="true" />
                 <element signature="e#14012#14013#0" expanded="true" />
+                <element signature="e#16813#16814#0" expanded="true" />
+                <element signature="e#16855#16856#0" expanded="true" />
+                <element signature="e#16891#16892#0" expanded="true" />
+                <element signature="e#16928#16929#0" expanded="true" />
+                <element signature="e#16982#16983#0" expanded="true" />
+                <element signature="e#17028#17029#0" expanded="true" />
+                <element signature="e#17066#17067#0" expanded="true" />
+                <element signature="e#17105#17106#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -60,8 +77,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/nl/jacbeekers/Main.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="122">
-              <caret line="30" column="23" lean-forward="true" selection-start-line="30" selection-start-column="23" selection-end-line="30" selection-end-column="23" />
+            <state relative-caret-position="191">
+              <caret line="38" column="31" selection-start-line="38" selection-start-column="31" selection-end-line="38" selection-end-column="31" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -87,6 +104,10 @@
       <find>logInfo</find>
       <find>data</find>
       <find>xsds</find>
+      <find>logW</find>
+      <find>outinfo</find>
+      <find>getxsds</find>
+      <find>generateonexml</find>
     </findStrings>
     <replaceStrings>
       <replace>logDebug</replace>
@@ -139,11 +160,11 @@
       <select />
     </treeState>
   </component>
-  <component name="ProjectFrameBounds">
+  <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="1" />
     <option name="y" value="1" />
     <option name="width" value="1228" />
-    <option name="height" value="749" />
+    <option name="height" value="695" />
   </component>
   <component name="ProjectView">
     <navigator proportions="" version="1">
@@ -281,17 +302,17 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="1" y="1" width="1228" height="749" extended-state="0" />
+    <frame x="-8" y="-8" width="1296" height="776" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.3946918" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.37297735" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="UI Designer" order="3" />
       <window_info id="Favorites" order="4" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.4642857" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.2799378" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.39907727" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -324,8 +345,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/nl/jacbeekers/Main.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="122">
-          <caret line="30" column="23" lean-forward="true" selection-start-line="30" selection-start-column="23" selection-end-line="30" selection-end-column="23" />
+        <state relative-caret-position="191">
+          <caret line="38" column="31" selection-start-line="38" selection-start-column="31" selection-end-line="38" selection-end-column="31" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -334,33 +355,49 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/nl/jacbeekers/generateXml.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="192" column="2" selection-start-line="192" selection-start-column="2" selection-end-line="192" selection-end-column="2" />
+        <state relative-caret-position="187">
+          <caret line="201" column="53" selection-start-line="201" selection-start-column="53" selection-end-line="201" selection-end-column="53" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#1460#1470#0" expanded="true" />
-            <element signature="e#1744#1745#0" expanded="true" />
-            <element signature="e#1780#1781#0" expanded="true" />
-            <element signature="e#1814#1815#0" expanded="true" />
-            <element signature="e#1849#1850#0" expanded="true" />
-            <element signature="e#1895#1896#0" expanded="true" />
-            <element signature="e#1933#1934#0" expanded="true" />
-            <element signature="e#2034#2035#0" expanded="true" />
-            <element signature="e#2070#2071#0" expanded="true" />
-            <element signature="e#14254#14255#0" expanded="true" />
-            <element signature="e#14354#14355#0" expanded="true" />
-            <element signature="e#14430#14431#0" expanded="true" />
-            <element signature="e#14538#14539#0" expanded="true" />
-            <element signature="e#14631#14632#0" expanded="true" />
-            <element signature="e#14714#14715#0" expanded="true" />
-            <element signature="e#14813#14814#0" expanded="true" />
-            <element signature="e#14887#14888#0" expanded="true" />
-            <element signature="e#14969#14970#0" expanded="true" />
-            <element signature="e#15035#15036#0" expanded="true" />
+            <element signature="e#1604#1605#0" expanded="true" />
+            <element signature="e#1637#1638#0" expanded="true" />
+            <element signature="e#1678#1679#0" expanded="true" />
+            <element signature="e#1711#1712#0" expanded="true" />
+            <element signature="e#1754#1755#0" expanded="true" />
+            <element signature="e#1786#1787#0" expanded="true" />
+            <element signature="e#1827#1828#0" expanded="true" />
+            <element signature="e#1860#1861#0" expanded="true" />
+            <element signature="e#1901#1902#0" expanded="true" />
+            <element signature="e#1934#1935#0" expanded="true" />
+            <element signature="e#16058#16059#0" expanded="true" />
+            <element signature="e#16138#16139#0" expanded="true" />
+            <element signature="e#16207#16208#0" expanded="true" />
+            <element signature="e#16291#16292#0" expanded="true" />
+            <element signature="e#16351#16352#0" expanded="true" />
+            <element signature="e#16428#16429#0" expanded="true" />
+            <element signature="e#16505#16506#0" expanded="true" />
+            <element signature="e#16605#16606#0" expanded="true" />
+            <element signature="e#16681#16682#0" expanded="true" />
+            <element signature="e#16789#16790#0" expanded="true" />
+            <element signature="e#16883#16884#0" expanded="true" />
+            <element signature="e#16966#16967#0" expanded="true" />
+            <element signature="e#17064#17065#0" expanded="true" />
+            <element signature="e#17138#17139#0" expanded="true" />
+            <element signature="e#17220#17221#0" expanded="true" />
+            <element signature="e#17286#17287#0" expanded="true" />
             <element signature="e#13889#13890#0" expanded="true" />
             <element signature="e#13919#13920#0" expanded="true" />
             <element signature="e#13951#13952#0" expanded="true" />
             <element signature="e#14012#14013#0" expanded="true" />
+            <element signature="e#16813#16814#0" expanded="true" />
+            <element signature="e#16855#16856#0" expanded="true" />
+            <element signature="e#16891#16892#0" expanded="true" />
+            <element signature="e#16928#16929#0" expanded="true" />
+            <element signature="e#16982#16983#0" expanded="true" />
+            <element signature="e#17028#17029#0" expanded="true" />
+            <element signature="e#17066#17067#0" expanded="true" />
+            <element signature="e#17105#17106#0" expanded="true" />
           </folding>
         </state>
       </provider>
