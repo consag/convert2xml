@@ -2,11 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="19547e0a-df33-43ed-a81f-b4fbd21e4cd7" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/nl/jacbeekers/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/nl/jacbeekers/Main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/nl/jacbeekers/generateXml.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/nl/jacbeekers/generateXml.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/Appl_convertToXML.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/Appl_convertToXML.xml" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -24,8 +20,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/nl/jacbeekers/generateXml.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="326">
-              <caret line="213" column="54" selection-start-line="213" selection-start-column="54" selection-end-line="213" selection-end-column="54" />
+            <state relative-caret-position="34">
+              <caret line="192" column="2" selection-start-line="192" selection-start-column="2" selection-end-line="192" selection-end-column="2" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#1460#1470#0" expanded="true" />
@@ -37,16 +33,16 @@
                 <element signature="e#1933#1934#0" expanded="true" />
                 <element signature="e#2034#2035#0" expanded="true" />
                 <element signature="e#2070#2071#0" expanded="true" />
-                <element signature="e#13406#13407#0" expanded="true" />
-                <element signature="e#13506#13507#0" expanded="true" />
-                <element signature="e#13582#13583#0" expanded="true" />
-                <element signature="e#13690#13691#0" expanded="true" />
-                <element signature="e#13783#13784#0" expanded="true" />
-                <element signature="e#13866#13867#0" expanded="true" />
-                <element signature="e#13965#13966#0" expanded="true" />
-                <element signature="e#14039#14040#0" expanded="true" />
-                <element signature="e#14121#14122#0" expanded="true" />
-                <element signature="e#14187#14188#0" expanded="true" />
+                <element signature="e#14254#14255#0" expanded="true" />
+                <element signature="e#14354#14355#0" expanded="true" />
+                <element signature="e#14430#14431#0" expanded="true" />
+                <element signature="e#14538#14539#0" expanded="true" />
+                <element signature="e#14631#14632#0" expanded="true" />
+                <element signature="e#14714#14715#0" expanded="true" />
+                <element signature="e#14813#14814#0" expanded="true" />
+                <element signature="e#14887#14888#0" expanded="true" />
+                <element signature="e#14969#14970#0" expanded="true" />
+                <element signature="e#15035#15036#0" expanded="true" />
                 <element signature="e#13889#13890#0" expanded="true" />
                 <element signature="e#13919#13920#0" expanded="true" />
                 <element signature="e#13951#13952#0" expanded="true" />
@@ -144,10 +140,10 @@
     </treeState>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="52" />
-    <option name="y" value="190" />
-    <option name="width" value="1612" />
-    <option name="height" value="1000" />
+    <option name="x" value="1" />
+    <option name="y" value="1" />
+    <option name="width" value="1228" />
+    <option name="height" value="749" />
   </component>
   <component name="ProjectView">
     <navigator proportions="" version="1">
@@ -285,17 +281,17 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="52" y="190" width="1612" height="1000" extended-state="0" />
+    <frame x="1" y="1" width="1228" height="749" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.29703608" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.3946918" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="UI Designer" order="3" />
       <window_info id="Favorites" order="4" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.3298731" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.4642857" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.39907727" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -338,8 +334,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/nl/jacbeekers/generateXml.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="326">
-          <caret line="213" column="54" selection-start-line="213" selection-start-column="54" selection-end-line="213" selection-end-column="54" />
+        <state relative-caret-position="34">
+          <caret line="192" column="2" selection-start-line="192" selection-start-column="2" selection-end-line="192" selection-end-column="2" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#1460#1470#0" expanded="true" />
@@ -351,16 +347,16 @@
             <element signature="e#1933#1934#0" expanded="true" />
             <element signature="e#2034#2035#0" expanded="true" />
             <element signature="e#2070#2071#0" expanded="true" />
-            <element signature="e#13406#13407#0" expanded="true" />
-            <element signature="e#13506#13507#0" expanded="true" />
-            <element signature="e#13582#13583#0" expanded="true" />
-            <element signature="e#13690#13691#0" expanded="true" />
-            <element signature="e#13783#13784#0" expanded="true" />
-            <element signature="e#13866#13867#0" expanded="true" />
-            <element signature="e#13965#13966#0" expanded="true" />
-            <element signature="e#14039#14040#0" expanded="true" />
-            <element signature="e#14121#14122#0" expanded="true" />
-            <element signature="e#14187#14188#0" expanded="true" />
+            <element signature="e#14254#14255#0" expanded="true" />
+            <element signature="e#14354#14355#0" expanded="true" />
+            <element signature="e#14430#14431#0" expanded="true" />
+            <element signature="e#14538#14539#0" expanded="true" />
+            <element signature="e#14631#14632#0" expanded="true" />
+            <element signature="e#14714#14715#0" expanded="true" />
+            <element signature="e#14813#14814#0" expanded="true" />
+            <element signature="e#14887#14888#0" expanded="true" />
+            <element signature="e#14969#14970#0" expanded="true" />
+            <element signature="e#15035#15036#0" expanded="true" />
             <element signature="e#13889#13890#0" expanded="true" />
             <element signature="e#13919#13920#0" expanded="true" />
             <element signature="e#13951#13952#0" expanded="true" />

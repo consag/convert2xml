@@ -157,6 +157,10 @@ public class generateXml {
         nodeInfo.setElementType("root");
 
         getXsdStructure(document.getDocumentElement(), nodeInfo);
+        if(elementList.size() == 1)
+            logDebug("elementList contains >" + elementList.size() +"< entry.");
+        else
+            logDebug("elementList contains >" + elementList.size() +"< entries.");
 
         outInfoElementList();
 
@@ -179,18 +183,31 @@ public class generateXml {
         int nrLines=0;
         while ((line = reader.readLine()) != null) {
             nrLines++;
+            String[] values = line.split(";");
+            if(values.length ==1)
+                logVerbose("Line >" + nrLines + "< contains >" + values.length +"< field value.");
+            else
+                logVerbose("Line >" + nrLines + "< contains >" + values.length +"< field values.");
             writer.writeCharacters("\n");
-            writer.writeComment("line >" +nrLines +"<.");
-            writer.writeCharacters("\n");
+//            writer.writeComment("line >" +nrLines +"<.");
+//            writer.writeCharacters("\n");
+            int i=0;
             for(NodeInfo node : elementList) {
                 if(node.getElementType() != null) {
                     switch(node.getElementType()) {
                         case COMPLEX:
-//                            writer.writeStartElement(node.getAttribute());
                             break;
                         case SIMPLE:
                             writer.writeStartElement(node.getAttribute());
-                            writer.writeComment("some data here");
+//                            writer.writeComment("some data here");
+                            if(i < values.length) {
+                                writer.writeCharacters(values[i]);
+                                i++;
+                            } else {
+                                //more xml elements than data elements
+                                logVerbose("There are more xml elements than data fields.");
+                            }
+
                             writer.writeEndElement();
                             break;
                         default:
