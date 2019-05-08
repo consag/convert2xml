@@ -1,11 +1,10 @@
 package nl.jacbeekers;
 
 import java.util.ArrayList;
-import java.util.Collection;
 import java.util.HashMap;
 
 public class Main {
-    public static void main(String[] args) throws SDKException, Exception {
+    public static void main(String[] args) throws ConversionException, Exception {
         // write your code here
         String xsdFile = args[0];
         String rootElement = args[1];
@@ -30,9 +29,9 @@ public class Main {
         map2.put("rating_rank","456");
         data.add(map2);
 
-        generateXml xml =null;
+        GenerateXml xml =null;
 
-        xml = new generateXml();
+        xml = new GenerateXml();
         xml.setRootElement(rootElement);
         xml.setXsdFile(xsdFile);
         xml.setTarget(xmlFile);

@@ -52,9 +52,9 @@ import java.util.ArrayList;
 import java.util.Date;
 import java.util.HashMap;
 
-public class generateXml {
+public class GenerateXml {
 
-    private static final Logger logger = LogManager.getLogger(generateXml.class.getName());
+    private static final Logger logger = LogManager.getLogger(GenerateXml.class.getName());
 
     static Object lock = new Object();   // lock to synchronize nrRows
     final String COMPLEX = "xs:complexType";
@@ -90,13 +90,13 @@ public class generateXml {
         logger.fatal(msg);
     }
 
-    private void failSession(String msg) throws SDKException {
-        throw new SDKException(msg);
+    private void failSession(String msg) throws ConversionException {
+        throw new ConversionException(msg);
     }
 
 
     public void generateXmlFile(String sourceFile)
-            throws IOException, XMLStreamException, ParserConfigurationException, SAXException, TransformerException, SDKException {
+            throws IOException, XMLStreamException, ParserConfigurationException, SAXException, TransformerException, ConversionException {
         if ("Y".equals(getOneFilePerRow())) {
             generateOneXmlFilePerRow(sourceFile);
         } else {
@@ -105,7 +105,7 @@ public class generateXml {
     }
 
     public void generateXmlFile(ArrayList<HashMap<String, String>> data)
-            throws SDKException, TransformerException, ParserConfigurationException, SAXException, IOException, XMLStreamException {
+            throws ConversionException, TransformerException, ParserConfigurationException, SAXException, IOException, XMLStreamException {
 
         if ("Y".equals(getOneFilePerRow())) {
             generateOneXmlFilePerRow(data);
@@ -116,13 +116,13 @@ public class generateXml {
     }
 
     public void generateOneXmlFilePerRow(String sourceFile)
-            throws SDKException, TransformerException, ParserConfigurationException, SAXException {
+            throws ConversionException, TransformerException, ParserConfigurationException, SAXException {
         logFatal("Generate one xml file for each line in a source file has not been implemented in "
                 + getClass().getName() + ".");
     }
 
     public void generateOneXmlFilePerRow(ArrayList<HashMap<String, String>> data)
-            throws SDKException, TransformerException, ParserConfigurationException, SAXException {
+            throws ConversionException  {
         for (HashMap<String, String> entry : data) {
             setNrRows(getNrRows() + 1);
             String currentTarget = getTarget() + "_" + getNrRows() + ".xml";
@@ -135,6 +135,12 @@ public class generateXml {
                 failSession("xml file already exists: " + e.toString());
             } catch (IOException ioe) {
                 failSession("could not create xml file: " + ioe.toString());
+            } catch (TransformerException te) {
+                failSession("Transformer exception occurred. Could not write data to terget file: "+ te.toString());
+            } catch (ParserConfigurationException pce) {
+                failSession(("Parser Configuration exception occurred. could not write data to target file: " + pce.toString()));
+            } catch (SAXException se) {
+                failSession("SAXException occurred writing data to target file: " +se.toString());
             }
         }
     }
@@ -207,25 +213,42 @@ public class generateXml {
     }
 
     public void generateOneXmlFile(ArrayList<HashMap<String, String>> data)
-            throws IOException, XMLStreamException, ParserConfigurationException, SAXException {
-        XMLStreamWriter writer = initWriter();
-        writeHeader(writer);
-        getXsdStructure();
-        outInfoElementList();
-        writeInitialComplexElementsStart(writer);
+            throws ConversionException, IOException {
+        XMLStreamWriter writer = null;
+        try {
+            writer = initWriter();
+            writeHeader(writer);
+            try {
+                getXsdStructure();
+                outInfoElementList();
+                writeInitialComplexElementsStart(writer);
+            } catch(ParserConfigurationException pce) {
+                failSession("ParserConfigurationException occurred geeting XSD structure: " +pce.toString());
+            } catch(SAXException se) {
+                failSession("SAXException occurred getting XSD structure: " +se.toString());
+            }
+        } catch (XMLStreamException e) {
+            failSession("XMLStreamException occurred. Could not write initial elements to target xml file: " + e.toString());
+        }
 
         int nrMap = 0;
         for (HashMap<String, String> map : data) {
             nrMap++;
             logDebug("Processing array entry >" + nrMap + "<.");
             String[] currentElements = map.values().toArray(new String[0]);
-            //TODO: output values
-            writeDataElements(currentElements, writer);
+            try {
+                writeDataElements(currentElements, writer);
+            } catch (XMLStreamException e) {
+                failSession("XMLStreamException occurred. Could not write data elements: "+e.toString());
+            }
         }
-
-        writeInitialComplexElementsEnd(writer);
-        writer.writeEndDocument();
-        writer.close();
+        try {
+            writeInitialComplexElementsEnd(writer);
+            writer.writeEndDocument();
+            writer.close();
+        } catch (XMLStreamException e) {
+            failSession("XMLStreamException occurred. Could not write final closing elements: " + e.toString());
+        }
     }
 
     public void generateOneXmlFile(String sourceFile)
@@ -471,13 +494,8 @@ public class generateXml {
         this.rootElement = rootElement;
     }
 
-    public String getOneFilePerRow() {
-        return oneFilePerRow;
-    }
-
-    public void setOneFilePerRow(String oneFilePerRow) {
-        this.oneFilePerRow = oneFilePerRow;
-    }
+    public String getOneFilePerRow() { return oneFilePerRow; }
+    public void setOneFilePerRow(String oneFilePerRow) { this.oneFilePerRow = oneFilePerRow; }
 
     private HashMap<String, String> getEntry() {
         return this.entry;
@@ -505,17 +523,6 @@ public class generateXml {
 
 }
 
-class SDKException extends Exception {
-    String msg;
-
-    SDKException(String msg) {
-        this.msg = msg;
-    }
-
-    public String toString() {
-        return ("SDKException occurred: " + this.msg);
-    }
-}
 
 class NodeInfo {
     String attribute;

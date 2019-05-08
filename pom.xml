@@ -6,8 +6,8 @@
 
 
     <groupId>nl.jacbeekers</groupId>
-    <artifactId>rel2xml</artifactId>
-    <version>0.1-SNAPSHOT</version>
+    <artifactId>convert2xml</artifactId>
+    <version>0.2-SNAPSHOT</version>
     <packaging>jar</packaging>
     <properties>
             <jdk.version>1.8</jdk.version>
