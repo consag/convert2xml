@@ -1,7 +1,35 @@
+/*
+ * MIT License
+ *
+ * Copyright (c) 2019 Jac. Beekers
+ *
+ * Permission is hereby granted, free of charge, to any person obtaining a copy
+ * of this software and associated documentation files (the "Software"), to deal
+ * in the Software without restriction, including without limitation the rights
+ * to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+ * copies of the Software, and to permit persons to whom the Software is
+ * furnished to do so, subject to the following conditions:
+ *
+ * The above copyright notice and this permission notice shall be included in all
+ * copies or substantial portions of the Software.
+ *
+ * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+ * IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+ * FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+ * AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+ * LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+ * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+ * SOFTWARE.
+ *
+ */
+
 package nl.jacbeekers;
 
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import org.w3c.dom.*;
 import org.xml.sax.InputSource;
+import org.xml.sax.SAXException;
 
 import javax.xml.parsers.DocumentBuilder;
 import javax.xml.parsers.DocumentBuilderFactory;
@@ -19,22 +47,18 @@ import java.nio.file.FileAlreadyExistsException;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
-import java.util.ArrayList;
-import java.util.HashMap;
-
-import org.apache.logging.log4j.Logger;
-import org.apache.logging.log4j.LogManager;
-import org.xml.sax.SAXException;
-
 import java.text.SimpleDateFormat;
+import java.util.ArrayList;
 import java.util.Date;
+import java.util.HashMap;
 
 public class generateXml {
 
     private static final Logger logger = LogManager.getLogger(generateXml.class.getName());
 
     static Object lock = new Object();   // lock to synchronize nrRows
-
+    final String COMPLEX = "xs:complexType";
+    final String SIMPLE = "xs:simpleType";
     String target = "tryout";
     String xsdFile = "dummy.xsd";
     int nrRows;
@@ -45,8 +69,6 @@ public class generateXml {
     HashMap<String, String> entry = null;
     String oneFilePerRow = "N";
     ArrayList<NodeInfo> elementList = new ArrayList<NodeInfo>();
-    final String COMPLEX = "xs:complexType";
-    final String SIMPLE = "xs:simpleType";
 
     private void logVerbose(String msg) {
         logger.trace(msg);
@@ -155,10 +177,10 @@ public class generateXml {
             }
             if (stop) break;
         }
-
     }
+
     private void writeInitialComplexElementsEnd(XMLStreamWriter writer)
-        throws XMLStreamException{
+            throws XMLStreamException {
         boolean stop = false;
         boolean wroteEndTime = false;
         for (NodeInfo node : elementList) {
@@ -182,7 +204,6 @@ public class generateXml {
                 break;
             }
         }
-
     }
 
     public void generateOneXmlFile(ArrayList<HashMap<String, String>> data)
@@ -193,10 +214,10 @@ public class generateXml {
         outInfoElementList();
         writeInitialComplexElementsStart(writer);
 
-        int nrMap=0;
-        for(HashMap<String, String> map : data) {
+        int nrMap = 0;
+        for (HashMap<String, String> map : data) {
             nrMap++;
-            logDebug("Processing array entry >" +nrMap +"<.");
+            logDebug("Processing array entry >" + nrMap + "<.");
             String[] currentElements = map.values().toArray(new String[0]);
             //TODO: output values
             writeDataElements(currentElements, writer);
@@ -205,7 +226,6 @@ public class generateXml {
         writeInitialComplexElementsEnd(writer);
         writer.writeEndDocument();
         writer.close();
-
     }
 
     public void generateOneXmlFile(String sourceFile)
@@ -234,13 +254,13 @@ public class generateXml {
         while ((line = reader.readLine()) != null) {
             nrLines++;
             String[] values = line.split(";");
-            logVerbose("line >" + nrLines +"< contains >" + values.length +"< values.");
+            logVerbose("line >" + nrLines + "< contains >" + values.length + "< values.");
             writeDataElements(values, writer);
         }
     }
 
     private void writeDataElements(String[] values, XMLStreamWriter writer)
-        throws XMLStreamException{
+            throws XMLStreamException {
         if (values.length == 1)
             logVerbose("Line contains >" + values.length + "< field value.");
         else
@@ -459,28 +479,28 @@ public class generateXml {
         this.oneFilePerRow = oneFilePerRow;
     }
 
-    private void setEntry(HashMap<String, String> entry) {
-        this.entry = entry;
-    }
-
     private HashMap<String, String> getEntry() {
         return this.entry;
     }
 
-    private void setPartNrFiles(int partNrFiles) {
-        this.partNrFiles = partNrFiles;
+    private void setEntry(HashMap<String, String> entry) {
+        this.entry = entry;
     }
 
     public int getPartNrFiles() {
         return this.partNrFiles;
     }
 
-    private void setNrFiles(int nrFiles) {
-        this.nrFiles = nrFiles;
+    private void setPartNrFiles(int partNrFiles) {
+        this.partNrFiles = partNrFiles;
     }
 
     public int getNrFiles() {
         return this.nrFiles;
+    }
+
+    private void setNrFiles(int nrFiles) {
+        this.nrFiles = nrFiles;
     }
 
 }
@@ -501,19 +521,19 @@ class NodeInfo {
     String attribute;
     String elementType; // complex?
 
-    public void setAttribute(String attribute) {
-        this.attribute = attribute;
-    }
-
     public String getAttribute() {
         return this.attribute;
     }
 
-    public void setElementType(String elementType) {
-        this.elementType = elementType;
+    public void setAttribute(String attribute) {
+        this.attribute = attribute;
     }
 
     public String getElementType() {
         return this.elementType;
+    }
+
+    public void setElementType(String elementType) {
+        this.elementType = elementType;
     }
 }
