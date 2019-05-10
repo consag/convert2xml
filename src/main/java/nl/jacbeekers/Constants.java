@@ -69,6 +69,7 @@ public class Constants {
     //defaults
     public static final String DEFAULT_TARGET = "target";
     public static final String DEFAULT_XSD ="dummy.xsd";
+    public static final String DEFAULT_XSD_PATH ="./";
     public static final String DEFAULT_ROOT_ELEMENT ="root";
     public static final String DEFAULT_ONE_FILE_PER_ROW = NO;
 

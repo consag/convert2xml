@@ -11,10 +11,9 @@
             </PatternLayout>
         </File>
  
-<!--        <Console name="console" target="SYSTEM_OUT">
+        <Console name="console" target="SYSTEM_OUT">
             <PatternLayout   pattern="[%-5level] %d{yyyy-MM-dd HH:mm:ss.SSS} [%t] %c{1} - %msg%n" />
         </Console>
-        -->
     </Appenders>
     <Loggers>
 <!--        <Logger name="nl.jacbeekers" level="debug" additivity="true">
@@ -23,6 +22,7 @@
         -->
         <Root level ="debug">
             <appender-ref ref="fileLogger" level="debug" />
+            <appender-ref ref="console" level="debug" />"
         </Root>
     </Loggers>
 </Configuration>

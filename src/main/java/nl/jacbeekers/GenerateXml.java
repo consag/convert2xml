@@ -25,8 +25,7 @@
 
 package nl.jacbeekers;
 
-import org.apache.logging.log4j.LogManager;
-import org.apache.logging.log4j.Logger;
+import org.apache.log4j.Logger;
 import org.w3c.dom.*;
 import org.xml.sax.InputSource;
 import org.xml.sax.SAXException;
@@ -54,12 +53,16 @@ import java.util.Date;
 import java.util.HashMap;
 
 public class GenerateXml {
+    public GenerateXml() {
+    }
 
-    private static final Logger logger = LogManager.getLogger(GenerateXml.class.getName());
+    private static final org.apache.log4j.Logger logger = Logger.getLogger(GenerateXml.class.getName());
+//    private static final Logger logger = LogManager.getLogger(GenerateXml.class.getName());
 
     private static Object lock = new Object();   // lock to synchronize nrRows
     private String target = Constants.DEFAULT_TARGET;
     private String xsdFile = Constants.DEFAULT_XSD;
+    private String xsdPath = Constants.DEFAULT_XSD_PATH;
     private int nrRows;
     private int partNrFiles = 1;
     private int nrFiles = 1;
@@ -115,7 +118,7 @@ public class GenerateXml {
 
 
     public void generateXmlFile(String sourceFile)
-            throws IOException, XMLStreamException, ParserConfigurationException, SAXException, TransformerException, ConversionException {
+            throws IOException, XMLStreamException {
         if ("Y".equals(getOneFilePerRow())) {
             generateOneXmlFilePerRow(sourceFile);
         } else {
@@ -123,8 +126,7 @@ public class GenerateXml {
         }
     }
 
-    public void generateXmlFile(ArrayList<HashMap<String, String>> data)
-            throws ConversionException {
+    public void generateXmlFile(ArrayList<HashMap<String, String>> data) {
 
         if ("Y".equals(getOneFilePerRow())) {
             generateOneXmlFilePerRow(data);
@@ -224,7 +226,7 @@ public class GenerateXml {
         }
     }
 
-    public void initXmlFile() throws ConversionException {
+    public void initXmlFile() {
         try {
             initWriter();
             writeHeader();
@@ -239,7 +241,7 @@ public class GenerateXml {
 
     }
 
-    public void endXmlFile() throws ConversionException{
+    public void endXmlFile(){
         try {
             writeInitialComplexElementsEnd();
             getWriter().writeEndDocument();
@@ -250,8 +252,7 @@ public class GenerateXml {
 
     }
 
-    public void generateOneXmlFile(ArrayList<HashMap<String, String>> data)
-            throws ConversionException {
+    public void generateOneXmlFile(ArrayList<HashMap<String, String>> data) {
 
         initXmlFile();
 
@@ -267,7 +268,7 @@ public class GenerateXml {
     }
 
     public void generateOneXmlFile(String sourceFile)
-            throws ConversionException, IOException, XMLStreamException, ParserConfigurationException, SAXException {
+            throws IOException, XMLStreamException {
 
         initWriter();
         writeHeader();
@@ -281,7 +282,7 @@ public class GenerateXml {
     }
 
     private void processSourceFile(String sourceFile)
-            throws IOException, ConversionException {
+            throws IOException {
         //input
         File file = new File(sourceFile);
         BufferedReader reader = new BufferedReader(new FileReader(file));
@@ -295,12 +296,12 @@ public class GenerateXml {
         }
     }
 
-    public void writeDataElements(ArrayList<String> values) throws ConversionException {
-        writeDataElements((String[])values.toArray());
+    public void writeDataElements(ArrayList<String> values)  {
+        writeDataElements(values.toArray(new String[0]));
 
     }
 
-    public void writeDataElements(String[] values) throws ConversionException {
+    public void writeDataElements(String[] values) {
         if (values.length == 1)
             logVerbose("Line contains >" + values.length + "< field value.");
         else
@@ -357,7 +358,7 @@ public class GenerateXml {
         try {
             DocumentBuilder builder = factory.newDocumentBuilder();
             Document document = builder.parse(new InputSource(new FileReader(
-                    getXsdFile())));
+                    getXsdPath() + getXsdFile())));
 
             Document outputDoc = builder.newDocument();
             Element outputNode = outputDoc.createElement(getRootElement());
@@ -369,7 +370,7 @@ public class GenerateXml {
             StreamResult result = new StreamResult(xmlFile);
             transformer.transform(new DOMSource(outputNode), result);
         } catch (IOException e) {
-            failSession(Constants.XSDNOTFOUND, getXsdFile());
+            failSession(Constants.XSDNOTFOUND, getXsdPath() + getXsdFile());
         } catch (ParserConfigurationException e) {
             failSession(Constants.XML_PARSER_CONFIG_ERROR, "Writing xsd structure elements to xml: " + e.toString());
         } catch (TransformerConfigurationException e) {
@@ -388,14 +389,14 @@ public class GenerateXml {
         try {
         DocumentBuilder builder = docFactory.newDocumentBuilder();
             Document document = builder.parse(new InputSource(new FileReader(
-                    getXsdFile())));
+                    getXsdPath() + getXsdFile())));
             NodeInfo nodeInfo = new NodeInfo();
             nodeInfo.setAttribute("root");
             nodeInfo.setElementType("root");
 
             getXsdStructure(document.getDocumentElement(), nodeInfo);
         } catch (IOException e) {
-            failSession(Constants.XSDNOTFOUND, getXsdFile());
+            failSession(Constants.XSDNOTFOUND, getXsdPath() + getXsdFile());
         } catch (SAXException e) {
             failSession(Constants.SAX_EXCEPTION, "Parsing xsd >" + getXsdFile() +"<. Error: " + e.toString());
         } catch (ParserConfigurationException e) {
@@ -502,6 +503,9 @@ public class GenerateXml {
 
     public String getXsdFile() { return this.xsdFile; }
     public void setXsdFile(String xsdFile) { this.xsdFile = xsdFile; }
+
+    public String getXsdPath() { return this.xsdPath; }
+    public void setXsdPath(String xsdPath) { this.xsdPath = xsdPath; }
 
     public int getNrRows() { return nrRows; }
     public void setNrRows(int nrRows) { this.nrRows = nrRows; }
