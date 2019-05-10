@@ -38,6 +38,7 @@ import javax.xml.stream.XMLOutputFactory;
 import javax.xml.stream.XMLStreamException;
 import javax.xml.stream.XMLStreamWriter;
 import javax.xml.transform.Transformer;
+import javax.xml.transform.TransformerConfigurationException;
 import javax.xml.transform.TransformerException;
 import javax.xml.transform.TransformerFactory;
 import javax.xml.transform.dom.DOMSource;
@@ -56,19 +57,20 @@ public class GenerateXml {
 
     private static final Logger logger = LogManager.getLogger(GenerateXml.class.getName());
 
-    static Object lock = new Object();   // lock to synchronize nrRows
-    final String COMPLEX = "xs:complexType";
-    final String SIMPLE = "xs:simpleType";
-    String target = "tryout";
-    String xsdFile = "dummy.xsd";
-    int nrRows;
-    int partNrFiles = 1;
-    int nrFiles = 1;
-    int nrElements = 0;
-    String rootElement = "root";
-    HashMap<String, String> entry = null;
-    String oneFilePerRow = "N";
-    ArrayList<NodeInfo> elementList = new ArrayList<NodeInfo>();
+    private static Object lock = new Object();   // lock to synchronize nrRows
+    private String target = Constants.DEFAULT_TARGET;
+    private String xsdFile = Constants.DEFAULT_XSD;
+    private int nrRows;
+    private int partNrFiles = 1;
+    private int nrFiles = 1;
+    private int nrElements = 0;
+    private String rootElement = Constants.DEFAULT_ROOT_ELEMENT;
+    private HashMap<String, String> entry = null;
+    private String oneFilePerRow = Constants.DEFAULT_ONE_FILE_PER_ROW;
+    private ArrayList<NodeInfo> elementList = new ArrayList<NodeInfo>();
+    private XMLStreamWriter writer = null;
+    private String resultCode = Constants.OK;
+    private String resultMessage = Constants.getResultMessage(resultCode);
 
     private void logVerbose(String msg) {
         logger.trace(msg);
@@ -82,16 +84,33 @@ public class GenerateXml {
         logger.warn(msg);
     }
 
-    private void logError(String msg) {
+    private void logError(String resultCode, String msg) {
+        setResult(resultCode, msg);
         logger.error(msg);
     }
+    private void setResult(String resultCode, String msg) {
+        setResultCode(resultCode);
+        if(msg==null) {
+            setResultMessage(Constants.getResultMessage(resultCode));
+        } else {
+            setResultMessage(Constants.getResultMessage(resultCode)
+                    +": " + msg);
+        }
+    }
 
-    private void logFatal(String msg) {
+    private void logFatal(String resultCode) {
+        logFatal(resultCode, Constants.getResultMessage(resultCode));
+    }
+    private void logFatal(String resultCode, String msg) {
+        setResult(resultCode, msg);
         logger.fatal(msg);
     }
 
-    private void failSession(String msg) throws ConversionException {
-        throw new ConversionException(msg);
+    private void failSession(String resultCode) {
+        failSession(resultCode, null);
+    }
+    private void failSession(String resultCode, String msg) {
+        logError(resultCode, msg);
     }
 
 
@@ -105,7 +124,7 @@ public class GenerateXml {
     }
 
     public void generateXmlFile(ArrayList<HashMap<String, String>> data)
-            throws ConversionException, TransformerException, ParserConfigurationException, SAXException, IOException, XMLStreamException {
+            throws ConversionException {
 
         if ("Y".equals(getOneFilePerRow())) {
             generateOneXmlFilePerRow(data);
@@ -115,14 +134,12 @@ public class GenerateXml {
 
     }
 
-    public void generateOneXmlFilePerRow(String sourceFile)
-            throws ConversionException, TransformerException, ParserConfigurationException, SAXException {
-        logFatal("Generate one xml file for each line in a source file has not been implemented in "
-                + getClass().getName() + ".");
+    public void generateOneXmlFilePerRow(String sourceFile) {
+        logFatal(Constants.NOT_IMPLEMENTED,
+                ": " + getClass().getName() + ".");
     }
 
-    public void generateOneXmlFilePerRow(ArrayList<HashMap<String, String>> data)
-            throws ConversionException  {
+    public void generateOneXmlFilePerRow(ArrayList<HashMap<String, String>> data) {
         for (HashMap<String, String> entry : data) {
             setNrRows(getNrRows() + 1);
             String currentTarget = getTarget() + "_" + getNrRows() + ".xml";
@@ -132,15 +149,9 @@ public class GenerateXml {
                 setEntry(entry);
                 writeDataTo(currentTarget);
             } catch (FileAlreadyExistsException e) {
-                failSession("xml file already exists: " + e.toString());
+                failSession( Constants.XMLFILE_EXISTS,  e.toString());
             } catch (IOException ioe) {
-                failSession("could not create xml file: " + ioe.toString());
-            } catch (TransformerException te) {
-                failSession("Transformer exception occurred. Could not write data to terget file: "+ te.toString());
-            } catch (ParserConfigurationException pce) {
-                failSession(("Parser Configuration exception occurred. could not write data to target file: " + pce.toString()));
-            } catch (SAXException se) {
-                failSession("SAXException occurred writing data to target file: " +se.toString());
+                failSession( Constants.XMLFILE_CREATE_FAILED, ioe.toString());
             }
         }
     }
@@ -153,28 +164,29 @@ public class GenerateXml {
         return formattedTime;
     }
 
-    private XMLStreamWriter initWriter()
+    private void initWriter()
             throws IOException, XMLStreamException {
         //xml
         XMLOutputFactory factory = XMLOutputFactory.newInstance();
-        XMLStreamWriter writer = factory.createXMLStreamWriter(new FileOutputStream(getTarget() + ".xml"), "UTF-8");
-        return writer;
+        setWriter(factory.createXMLStreamWriter(new FileOutputStream(getTarget() + ".xml"), "UTF-8"));
+
     }
 
-    private void writeHeader(XMLStreamWriter writer)
+    private void writeHeader()
             throws XMLStreamException {
-        writer.writeStartDocument("UTF-8", "1.0");
-        writer.writeComment("Generated by " + getClass() + " on " + getFormattedCurrentTime());
-        writer.writeCharacters("\n");
+        getWriter().writeStartDocument("UTF-8", "1.0");
+        getWriter().writeComment("Generated by " + getClass() + " on " + getFormattedCurrentTime());
+        getWriter().writeCharacters("\n");
     }
 
-    private void writeInitialComplexElementsStart(XMLStreamWriter writer) throws XMLStreamException {
+    private void writeInitialComplexElementsStart()
+            throws XMLStreamException {
         boolean stop = false;
         for (NodeInfo node : elementList) {
             if (node.getElementType() != null) {
                 switch (node.getElementType()) {
-                    case COMPLEX:
-                        writer.writeStartElement(node.getAttribute());
+                    case Constants.COMPLEX:
+                        getWriter().writeStartElement(node.getAttribute());
                         break;
                     default:
                         stop = true;
@@ -185,21 +197,21 @@ public class GenerateXml {
         }
     }
 
-    private void writeInitialComplexElementsEnd(XMLStreamWriter writer)
+    private void writeInitialComplexElementsEnd()
             throws XMLStreamException {
         boolean stop = false;
         boolean wroteEndTime = false;
         for (NodeInfo node : elementList) {
             if (node.getElementType() != null) {
                 switch (node.getElementType()) {
-                    case COMPLEX:
+                    case Constants.COMPLEX:
                         if (! wroteEndTime) {
-                            writer.writeCharacters("\n");
-                            writer.writeComment("Generated by " + getClass() + " completed at " + getFormattedCurrentTime());
+                            getWriter().writeCharacters("\n");
+                            getWriter().writeComment("Generated by " + getClass() + " completed at " + getFormattedCurrentTime());
                             wroteEndTime = true;
                         }
 
-                        writer.writeEndElement();
+                        getWriter().writeEndElement();
                         break;
                     default:
                         stop = true;
@@ -212,63 +224,64 @@ public class GenerateXml {
         }
     }
 
-    public void generateOneXmlFile(ArrayList<HashMap<String, String>> data)
-            throws ConversionException, IOException {
-        XMLStreamWriter writer = null;
+    public void initXmlFile() throws ConversionException {
         try {
-            writer = initWriter();
-            writeHeader(writer);
-            try {
-                getXsdStructure();
-                outInfoElementList();
-                writeInitialComplexElementsStart(writer);
-            } catch(ParserConfigurationException pce) {
-                failSession("ParserConfigurationException occurred geeting XSD structure: " +pce.toString());
-            } catch(SAXException se) {
-                failSession("SAXException occurred getting XSD structure: " +se.toString());
-            }
+            initWriter();
+            writeHeader();
+            getXsdStructure();
+            outInfoElementList();
+            writeInitialComplexElementsStart();
         } catch (XMLStreamException e) {
-            failSession("XMLStreamException occurred. Could not write initial elements to target xml file: " + e.toString());
+            failSession( Constants.XMLSTREAM_ERROR, "Could not write initial elements to target xml file: " + e.toString());
+        } catch (IOException ioe) {
+            failSession( Constants.XMLFILE_CREATE_FAILED, ioe.toString());
         }
+
+    }
+
+    public void endXmlFile() throws ConversionException{
+        try {
+            writeInitialComplexElementsEnd();
+            getWriter().writeEndDocument();
+            getWriter().close();
+        } catch (XMLStreamException e) {
+            failSession( Constants.XMLSTREAM_ERROR, "Could not write final closing elements: " + e.toString());
+        }
+
+    }
+
+    public void generateOneXmlFile(ArrayList<HashMap<String, String>> data)
+            throws ConversionException {
+
+        initXmlFile();
 
         int nrMap = 0;
         for (HashMap<String, String> map : data) {
             nrMap++;
             logDebug("Processing array entry >" + nrMap + "<.");
             String[] currentElements = map.values().toArray(new String[0]);
-            try {
-                writeDataElements(currentElements, writer);
-            } catch (XMLStreamException e) {
-                failSession("XMLStreamException occurred. Could not write data elements: "+e.toString());
-            }
+            writeDataElements(currentElements);
         }
-        try {
-            writeInitialComplexElementsEnd(writer);
-            writer.writeEndDocument();
-            writer.close();
-        } catch (XMLStreamException e) {
-            failSession("XMLStreamException occurred. Could not write final closing elements: " + e.toString());
-        }
+
+        endXmlFile();
     }
 
     public void generateOneXmlFile(String sourceFile)
-            throws IOException, XMLStreamException, ParserConfigurationException, SAXException {
+            throws ConversionException, IOException, XMLStreamException, ParserConfigurationException, SAXException {
 
-        XMLStreamWriter writer = initWriter();
-        writeHeader(writer);
+        initWriter();
+        writeHeader();
         getXsdStructure();
         outInfoElementList();
-        writeInitialComplexElementsStart(writer);
+        writeInitialComplexElementsStart();
 
-        processSourceFile(sourceFile, writer);
+        processSourceFile(sourceFile);
 
-        writeInitialComplexElementsEnd(writer);
-        writer.writeEndDocument();
-        writer.close();
+        endXmlFile();
     }
 
-    private void processSourceFile(String sourceFile, XMLStreamWriter writer)
-            throws IOException, XMLStreamException {
+    private void processSourceFile(String sourceFile)
+            throws IOException, ConversionException {
         //input
         File file = new File(sourceFile);
         BufferedReader reader = new BufferedReader(new FileReader(file));
@@ -278,46 +291,51 @@ public class GenerateXml {
             nrLines++;
             String[] values = line.split(";");
             logVerbose("line >" + nrLines + "< contains >" + values.length + "< values.");
-            writeDataElements(values, writer);
+            writeDataElements(values);
         }
     }
 
-    private void writeDataElements(String[] values, XMLStreamWriter writer)
-            throws XMLStreamException {
+    public void writeDataElements(ArrayList<String> values) throws ConversionException {
+        writeDataElements((String[])values.toArray());
+
+    }
+
+    public void writeDataElements(String[] values) throws ConversionException {
         if (values.length == 1)
             logVerbose("Line contains >" + values.length + "< field value.");
         else
             logVerbose("Line contains >" + values.length + "< field values.");
-        writer.writeCharacters("\n");
-//            writer.writeComment("line >" +nrLines +"<.");
-//            writer.writeCharacters("\n");
-        int i = 0;
-        for (NodeInfo node : elementList) {
-            if (node.getElementType() != null) {
-                switch (node.getElementType()) {
-                    case COMPLEX:
-                        break;
-                    case SIMPLE:
-                        writer.writeStartElement(node.getAttribute());
-//                            writer.writeComment("some data here");
-                        if (i < values.length) {
-                            writer.writeCharacters(values[i]);
-                            i++;
-                        } else {
-                            //more xml elements than data elements
-                            logVerbose("There are more xml elements than data fields.");
-                        }
+        try {
+            getWriter().writeCharacters("\n");
+            int i = 0;
+            for (NodeInfo node : elementList) {
+                if (node.getElementType() != null) {
+                    switch (node.getElementType()) {
+                        case Constants.COMPLEX:
+                            break;
+                        case Constants.SIMPLE:
+                            getWriter().writeStartElement(node.getAttribute());
+                            if (i < values.length) {
+                                getWriter().writeCharacters(values[i]);
+                                i++;
+                            } else {
+                                //more xml elements than data elements
+                                logVerbose("There are more xml elements than data fields.");
+                            }
 
-                        writer.writeEndElement();
-                        break;
-                    default:
-                        logWarning("Ignored invalid or unsupported elementType >" + node.getElementType() + "<.");
-                        break;
+                            getWriter().writeEndElement();
+                            break;
+                        default:
+                            logWarning("Ignored invalid or unsupported elementType >" + node.getElementType() + "<.");
+                            break;
+                    }
                 }
             }
-        }
-
+        } catch (XMLStreamException e) {
+        failSession("Could not write xml data: " + e.toString());
     }
+
+}
 
     public void outInfoElementList() {
         if (elementList.size() == 1)
@@ -334,37 +352,55 @@ public class GenerateXml {
 
     }
 
-    public void writeDataTo(String xmlFile)
-            throws ParserConfigurationException, IOException, TransformerException, SAXException {
+    public void writeDataTo(String xmlFile) {
         DocumentBuilderFactory factory = DocumentBuilderFactory.newInstance();
-        DocumentBuilder builder = factory.newDocumentBuilder();
-        Document document = builder.parse(new InputSource(new FileReader(
-                getXsdFile())));
+        try {
+            DocumentBuilder builder = factory.newDocumentBuilder();
+            Document document = builder.parse(new InputSource(new FileReader(
+                    getXsdFile())));
 
-        Document outputDoc = builder.newDocument();
-        Element outputNode = outputDoc.createElement(getRootElement());
+            Document outputDoc = builder.newDocument();
+            Element outputNode = outputDoc.createElement(getRootElement());
 
-        recurse(document.getDocumentElement(), outputNode, outputDoc);
+            recurse(document.getDocumentElement(), outputNode, outputDoc);
 
-        TransformerFactory transFactory = TransformerFactory.newInstance();
-        Transformer transformer = transFactory.newTransformer();
-        StreamResult result = new StreamResult(xmlFile);
-        transformer.transform(new DOMSource(outputNode), result);
+            TransformerFactory transFactory = TransformerFactory.newInstance();
+            Transformer transformer = transFactory.newTransformer();
+            StreamResult result = new StreamResult(xmlFile);
+            transformer.transform(new DOMSource(outputNode), result);
+        } catch (IOException e) {
+            failSession(Constants.XSDNOTFOUND, getXsdFile());
+        } catch (ParserConfigurationException e) {
+            failSession(Constants.XML_PARSER_CONFIG_ERROR, "Writing xsd structure elements to xml: " + e.toString());
+        } catch (TransformerConfigurationException e) {
+            failSession(Constants.XML_TRANSFORM_ERROR, "Generating XML file >" + xmlFile + "<. Error: " + e.toString());
+        } catch (TransformerException e) {
+            failSession(Constants.XML_TRANSFORM_ERROR, "Generating XML file >" + xmlFile + "<. Error: " + e.toString());
+        } catch (SAXException e) {
+            failSession(Constants.SAX_EXCEPTION, "Generating XML file >" + xmlFile + "<. Error: " + e.toString());
+        }
 
     }
 
-    public void getXsdStructure()
-            throws ParserConfigurationException, IOException, SAXException {
+    public void getXsdStructure() {
         //xsd
         DocumentBuilderFactory docFactory = DocumentBuilderFactory.newInstance();
+        try {
         DocumentBuilder builder = docFactory.newDocumentBuilder();
-        Document document = builder.parse(new InputSource(new FileReader(
-                getXsdFile())));
-        NodeInfo nodeInfo = new NodeInfo();
-        nodeInfo.setAttribute("root");
-        nodeInfo.setElementType("root");
+            Document document = builder.parse(new InputSource(new FileReader(
+                    getXsdFile())));
+            NodeInfo nodeInfo = new NodeInfo();
+            nodeInfo.setAttribute("root");
+            nodeInfo.setElementType("root");
 
-        getXsdStructure(document.getDocumentElement(), nodeInfo);
+            getXsdStructure(document.getDocumentElement(), nodeInfo);
+        } catch (IOException e) {
+            failSession(Constants.XSDNOTFOUND, getXsdFile());
+        } catch (SAXException e) {
+            failSession(Constants.SAX_EXCEPTION, "Parsing xsd >" + getXsdFile() +"<. Error: " + e.toString());
+        } catch (ParserConfigurationException e) {
+            failSession(Constants.XML_PARSER_CONFIG_ERROR, "Parsing xsd >" + getXsdFile() + "<. Error: ");
+        }
 
 
     }
@@ -385,13 +421,13 @@ public class GenerateXml {
                     NodeList list = element.getChildNodes();
                     for (int i = 0; i < list.getLength(); i++) {
                         logDebug("Child for >" + attr + " is >" + list.item(i).getNodeName() + "<.");
-                        if (COMPLEX.equals(list.item(i).getNodeName())) {
-                            newNodeInfo.setElementType(COMPLEX);
+                        if (Constants.COMPLEX.equals(list.item(i).getNodeName())) {
+                            newNodeInfo.setElementType(Constants.COMPLEX);
                         }
                     }
                     //assume
                     if (newNodeInfo.getElementType() == null) {
-                        newNodeInfo.setElementType(SIMPLE);
+                        newNodeInfo.setElementType(Constants.SIMPLE);
                     }
                     elementList.add(newNodeInfo);
                 } catch (DOMException e) {
@@ -461,66 +497,38 @@ public class GenerateXml {
         }
     }
 
-    public String getTarget() {
-        return target;
-    }
+    public String getTarget() { return target; }
+    public void setTarget(String target) { this.target = target; }
 
-    public void setTarget(String target) {
-        this.target = target;
-    }
+    public String getXsdFile() { return this.xsdFile; }
+    public void setXsdFile(String xsdFile) { this.xsdFile = xsdFile; }
 
-    public String getXsdFile() {
-        return this.xsdFile;
-    }
+    public int getNrRows() { return nrRows; }
+    public void setNrRows(int nrRows) { this.nrRows = nrRows; }
 
-    public void setXsdFile(String xsdFile) {
-        this.xsdFile = xsdFile;
-    }
-
-
-    public int getNrRows() {
-        return nrRows;
-    }
-
-    public void setNrRows(int nrRows) {
-        this.nrRows = nrRows;
-    }
-
-    public String getRootElement() {
-        return this.rootElement;
-    }
-
-    public void setRootElement(String rootElement) {
-        this.rootElement = rootElement;
-    }
+    public String getRootElement() { return this.rootElement; }
+    public void setRootElement(String rootElement) { this.rootElement = rootElement; }
 
     public String getOneFilePerRow() { return oneFilePerRow; }
     public void setOneFilePerRow(String oneFilePerRow) { this.oneFilePerRow = oneFilePerRow; }
 
-    private HashMap<String, String> getEntry() {
-        return this.entry;
-    }
+    public XMLStreamWriter getWriter() { return this.writer; }
+    public void setWriter(XMLStreamWriter writer) { this.writer = writer; }
 
-    private void setEntry(HashMap<String, String> entry) {
-        this.entry = entry;
-    }
+    private HashMap<String, String> getEntry() { return this.entry; }
+    private void setEntry(HashMap<String, String> entry) { this.entry = entry; }
 
-    public int getPartNrFiles() {
-        return this.partNrFiles;
-    }
+    public int getPartNrFiles() { return this.partNrFiles; }
+    private void setPartNrFiles(int partNrFiles) { this.partNrFiles = partNrFiles; }
 
-    private void setPartNrFiles(int partNrFiles) {
-        this.partNrFiles = partNrFiles;
-    }
+    public int getNrFiles() { return this.nrFiles; }
+    private void setNrFiles(int nrFiles) { this.nrFiles = nrFiles; }
 
-    public int getNrFiles() {
-        return this.nrFiles;
-    }
+    public String getResultCode() { return this.resultCode; }
+    public void setResultCode(String resultCode) { this.resultCode = resultCode; }
 
-    private void setNrFiles(int nrFiles) {
-        this.nrFiles = nrFiles;
-    }
-
+    public String getResultMessage() { return this.resultMessage; }
+    public void setResultMessage(String resultMessage) { this.resultMessage = resultMessage; }
 }
 
 
