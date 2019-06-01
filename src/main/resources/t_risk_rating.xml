@@ -8,4 +8,12 @@
     <quality_ascending_sequence>12</quality_ascending_sequence>
     <rating_rank>123</rating_rank>
   </T_RISK_RATING>
+  <T_RISK_RATING>
+    <rating_type>123</rating_type>
+    <rating>str1234</rating>
+    <description>str1234</description>
+    <is_rating_unrated>1</is_rating_unrated>
+    <quality_ascending_sequence>12</quality_ascending_sequence>
+    <rating_rank>123</rating_rank>
+  </T_RISK_RATING>
 </table>
