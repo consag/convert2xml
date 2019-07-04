@@ -2,15 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="19547e0a-df33-43ed-a81f-b4fbd21e4cd7" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/resources/log4j.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/copyright/MIT.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/copyright/MIT.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/nl/jacbeekers/Constants.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/nl/jacbeekers/Constants.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/nl/jacbeekers/GenerateXml.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/nl/jacbeekers/GenerateXml.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/nl/jacbeekers/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/nl/jacbeekers/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/Appl_convertToXML.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/Appl_convertToXML.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/log4j2.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/log4j2.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/t_risk_rating.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/t_risk_rating.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/t_risk_rating.xsd" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/t_risk_rating.xsd" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -25,13 +23,15 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/nl/jacbeekers/GenerateXml.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="4097">
               <caret line="299" column="32" selection-start-line="299" selection-start-column="32" selection-end-line="299" selection-end-column="32" />
               <folding>
                 <element signature="imports" expanded="true" />
+                <element signature="e#3283#3284#0" expanded="true" />
+                <element signature="e#3330#3331#0" expanded="true" />
               </folding>
             </state>
           </provider>
