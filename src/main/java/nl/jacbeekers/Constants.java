@@ -65,6 +65,7 @@ public class Constants {
     //xml types
     public static final String COMPLEX = "xs:complexType";
     public static final String SIMPLE = "xs:simpleType";
+    public static final String REF ="REF";
 
     //defaults
     public static final String DEFAULT_TARGET = "target";
