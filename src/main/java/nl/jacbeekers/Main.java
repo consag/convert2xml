@@ -35,8 +35,11 @@ public class Main {
         org.apache.log4j.Logger logger = Logger.getLogger(GenerateXml.class.getName());
 
         String xsdFile = args[0];
-        String rootElement = args[1];
-        String xmlFile = args[2];
+        String xmlFile = args[1];
+        String rootElement = null;
+        if(args.length > 2) {
+            rootElement = args[2];
+        }
         ArrayList<HashMap<String, String>> data = new ArrayList<HashMap<String, String>>();
 
         HashMap<String,String> map = new HashMap<String, String>();
@@ -60,7 +63,9 @@ public class Main {
         GenerateXml xml =null;
 
         xml = new GenerateXml();
-        xml.setRootElement(rootElement);
+        if (rootElement != null) {
+            xml.setRootElement(rootElement);
+        }
         xml.setXsdFile(xsdFile);
         xml.setXsdPath("D:\\GitRepos\\convert2xml\\src\\main\\resources\\");
         xml.setTarget(xmlFile);
