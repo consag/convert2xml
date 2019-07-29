@@ -1,0 +1,20 @@
+// ToDo: Enter code that executes when all the input data is received by the transformation here
+// 
+// logInfo("The number of null rows for this partition is : " + partCountNullRows);
+// synchronized(lock)
+// {
+//		logInfo("The total number of null rows across partitions till now is : " +  countNullRows);
+// }
+logInfo("The number of rows for this partition is: " + partNrRows);
+fixedNrFiles = partNrFiles -1;
+logInfo("The number of files for this partition is: " + fixedNrFiles);
+synchronized(lock)
+ {
+ 	logInfo("The total number of rows across partitions till now is: " + nrRows);
+ 	fixedNrFiles = nrFiles -1;
+ 	logInfo("The total number of files across partitions till now is: " + fixedNrFiles);
+ }
+xml.endXmlFile();
+ 
+generateRow();
+

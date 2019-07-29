@@ -1,0 +1,67 @@
+try{
+resultCode ="OK";
+resultMessage = "No errors encountered.";
+nrFilesCreated = nrFiles;
+partNrRows++;
+//logInfo("Call synchrozie-lock");
+synchronized(lock)
+		{
+			nrRows++;
+		}
+//logInfo("Before partNrRows==1");
+if (partNrRows == 1) {
+	requestedLogLevel = logLevel;
+	xsd=xsdFile; logInfo("xsd has been set to >" + xsd +"<.");
+	xsdPath=xsdDirectory; logInfo("xsdPath has been set to >" + xsdPath +"<.");
+	elements = elementNames;
+	root = rootElement;
+	level1 = level1Element;
+	xmlFile = targetFileName;
+	oneFilePerRow = oneFilePerInputRow;
+	pathXml = Paths.get(xmlFile);
+   
+    xml =new GenerateXml();
+    log(DEBUG, "setting root element to >" + rootElement +"<.");
+	xml.setRootElement(rootElement);
+	log(DEBUG, "setting xsdfile to >" + xsd +"<.");
+	xml.setXsdFile(xsd);
+	xml.setXsdPath(xsdPath); 
+	log(DEBUG, "setting xml file to >" + xmlFile +"<.");
+    xml.setTarget(xmlFile);
+    log(DEBUG, "setting one file per row to >" + oneFilePerRow +"<.");
+	xml.setOneFilePerRow(oneFilePerRow);
+	xml.initXmlFile();
+	if(!"OK".equals(xml.getResultCode())) { 
+		failSession(xml.getResultMessage());
+	}
+}
+
+log(DEBUG, "new arraylist for values");
+values = new ArrayList<String>(); 
+if(Value1 != null) values.add(Value1);  
+if(Value2 != null) values.add(Value2);  
+if(Value3 != null) values.add(Value3);  
+if(Value4 != null) values.add(Value4);  
+if(Value5 != null) values.add(Value5);  
+if(Value6 != null) values.add(Value6);  
+if(Value7 != null) values.add(Value7);  
+if(Value8 != null) values.add(Value8);  
+if(Value9 != null) values.add(Value9);  
+if(Value10 != null) values.add(Value10);  
+
+
+log(DEBUG,"Received >" + values.size() +"< value(s).");
+elementList = new ArrayList<String>(Arrays.asList(elements.split(";"))); 
+log(DEBUG, "Received >" + elementList.size() +"< element(s).");
+
+	if ("Y".equals(oneFilePerRow)) {
+            xml.generateOneXmlFilePerRow(data); 
+	} else {
+            xml.writeDataElements(values);
+	}
+
+
+} catch(Exception e) {
+	logError(e.toString());
+	failSession(e.getMessage());
+}

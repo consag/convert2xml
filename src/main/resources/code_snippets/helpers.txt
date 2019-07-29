@@ -1,0 +1,33 @@
+// ToDo: Declare static and non-static  partition level variables and functions here
+// For example,
+// 
+// static int countNullRows;            // counts the number of output rows across all partitions containing null values
+// int partCountNullRows;               // counts the number of output rows in this partition containing null values
+// 
+static Object lock = new Object();   // lock to synchronize nrRows
+static int nrRows;
+int partNrRows;
+static int nrFiles =1;
+int partNrFiles =1;
+int fixedNrFiles=0;
+int rc;
+static String oneFilePerRow ="X";
+static String xsd ="UNKNOWN";
+static String xsdPath = "UNKNOWN";
+static String xmlFile ="UNKNOWN";
+//static Path pathXsd;
+static Path pathXml;
+static String elements = "UNKNOWN";
+static String root ="UNKNOWN";
+static String level1 ="UNKNOWN";
+static String requestedLogLevel ="INFO";
+
+static ArrayList<String> elementList = null;
+ArrayList<String> values =null;
+ArrayList<HashMap<String, String>> data = new ArrayList<HashMap<String, String>>();
+GenerateXml xml =null;
+
+static final String DEBUG="DEBUG";
+static final String WARN="WARN";
+static final String INFO="INFO";
+static final String ERROR="ERROR";

@@ -1,0 +1,18 @@
+	private void log(String level, String msg) {
+		switch(level) {
+			case ERROR:
+				logError(msg);
+				break;
+			case WARN:
+				logInfo("WARNING: " +msg);
+				break;
+			case INFO:
+				logInfo(msg);
+				break;
+			case DEBUG:
+				if(DEBUG.equals(requestedLogLevel)) {
+					logInfo(DEBUG +": " +msg);
+				}
+				break;
+		}
+	}
