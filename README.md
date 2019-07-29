@@ -10,12 +10,30 @@ If you just want to use the transformation, it is unlikely you need to change th
 
 ## Usage
 ### Input
-- logLevel
+- logLevel 
+  Optional or Required: Required
+  Purpose: Determines the amount and details of log information.
+  Possible values (from detailed to only on Errors): DEBUG, INFO, WARN, ERROR
 - xsdFile
+  Optional or Required: Required
+  Purpose: name of the XSD file to be used. Specify only the file name, not the path.
+  Possible values: Any valid file name up to 1000 characters
 - xsdDirectory
+  Optional or Required: Required
+  Purpose: The location of the XSD file. Can be a relative or absolute path. Must end with a / (forward slash)
+  Possible values: Any valid path name that ends on a forward slash (also on Windows)
 - targetFileName
+  Optional or Required: Required
+  Purpose: The location and file name to be used as target file name. Must NOT include an extension.
+  Possible values: Any valid path and file name, excluding its extension. The Java code will add the extension .xml
 - oneFilePerInputRow
+  Optional or Required: Required
+  Purpose: Whether each input row should generate its own XML file (Y) or not (N). If 'N' then all input rows will be collected in one single XML file
+  Possible values: Y|N
 - Value1.. Value70
+  Optional or Required: Optional
+  Purpose: The input data that must be converted into XML elements. Value1 will be used as input for the first XML element (as determined by the provided XSD), Value2 is the input for the second XML element, and so forth.
+  Possible values: Any character string up to 100 characters (Value1 can be up to 1000 characters)
 
 ### Output
 - resultCode: the OK or Error code
