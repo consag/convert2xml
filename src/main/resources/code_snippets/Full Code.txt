@@ -161,7 +161,7 @@ public class JTXPartitionDriverImplGen extends JTXPartitionDriverImplFixed
 				inBufInit.bindColumnDataType(2,IField.JDataType.CHAR);
 		}
 
-		if(isInFldConnected("elementNames"))
+		if(isInFldConnected("targetFileName"))
 		{
 			if(jtxUtils.isServerUnicodeMode())
 				inBufInit.bindColumnDataType(3,IField.JDataType.UNICHAR);
@@ -169,7 +169,7 @@ public class JTXPartitionDriverImplGen extends JTXPartitionDriverImplFixed
 				inBufInit.bindColumnDataType(3,IField.JDataType.CHAR);
 		}
 
-		if(isInFldConnected("targetFileName"))
+		if(isInFldConnected("oneFilePerInputRow"))
 		{
 			if(jtxUtils.isServerUnicodeMode())
 				inBufInit.bindColumnDataType(4,IField.JDataType.UNICHAR);
@@ -177,7 +177,7 @@ public class JTXPartitionDriverImplGen extends JTXPartitionDriverImplFixed
 				inBufInit.bindColumnDataType(4,IField.JDataType.CHAR);
 		}
 
-		if(isInFldConnected("oneFilePerInputRow"))
+		if(isInFldConnected("Value1"))
 		{
 			if(jtxUtils.isServerUnicodeMode())
 				inBufInit.bindColumnDataType(5,IField.JDataType.UNICHAR);
@@ -185,7 +185,7 @@ public class JTXPartitionDriverImplGen extends JTXPartitionDriverImplFixed
 				inBufInit.bindColumnDataType(5,IField.JDataType.CHAR);
 		}
 
-		if(isInFldConnected("rootElement"))
+		if(isInFldConnected("Value2"))
 		{
 			if(jtxUtils.isServerUnicodeMode())
 				inBufInit.bindColumnDataType(6,IField.JDataType.UNICHAR);
@@ -193,7 +193,7 @@ public class JTXPartitionDriverImplGen extends JTXPartitionDriverImplFixed
 				inBufInit.bindColumnDataType(6,IField.JDataType.CHAR);
 		}
 
-		if(isInFldConnected("level1Element"))
+		if(isInFldConnected("Value3"))
 		{
 			if(jtxUtils.isServerUnicodeMode())
 				inBufInit.bindColumnDataType(7,IField.JDataType.UNICHAR);
@@ -201,7 +201,7 @@ public class JTXPartitionDriverImplGen extends JTXPartitionDriverImplFixed
 				inBufInit.bindColumnDataType(7,IField.JDataType.CHAR);
 		}
 
-		if(isInFldConnected("Value1"))
+		if(isInFldConnected("Value4"))
 		{
 			if(jtxUtils.isServerUnicodeMode())
 				inBufInit.bindColumnDataType(8,IField.JDataType.UNICHAR);
@@ -209,7 +209,7 @@ public class JTXPartitionDriverImplGen extends JTXPartitionDriverImplFixed
 				inBufInit.bindColumnDataType(8,IField.JDataType.CHAR);
 		}
 
-		if(isInFldConnected("Value2"))
+		if(isInFldConnected("Value5"))
 		{
 			if(jtxUtils.isServerUnicodeMode())
 				inBufInit.bindColumnDataType(9,IField.JDataType.UNICHAR);
@@ -217,7 +217,7 @@ public class JTXPartitionDriverImplGen extends JTXPartitionDriverImplFixed
 				inBufInit.bindColumnDataType(9,IField.JDataType.CHAR);
 		}
 
-		if(isInFldConnected("Value3"))
+		if(isInFldConnected("Value6"))
 		{
 			if(jtxUtils.isServerUnicodeMode())
 				inBufInit.bindColumnDataType(10,IField.JDataType.UNICHAR);
@@ -225,7 +225,7 @@ public class JTXPartitionDriverImplGen extends JTXPartitionDriverImplFixed
 				inBufInit.bindColumnDataType(10,IField.JDataType.CHAR);
 		}
 
-		if(isInFldConnected("Value4"))
+		if(isInFldConnected("Value7"))
 		{
 			if(jtxUtils.isServerUnicodeMode())
 				inBufInit.bindColumnDataType(11,IField.JDataType.UNICHAR);
@@ -233,7 +233,7 @@ public class JTXPartitionDriverImplGen extends JTXPartitionDriverImplFixed
 				inBufInit.bindColumnDataType(11,IField.JDataType.CHAR);
 		}
 
-		if(isInFldConnected("Value5"))
+		if(isInFldConnected("Value8"))
 		{
 			if(jtxUtils.isServerUnicodeMode())
 				inBufInit.bindColumnDataType(12,IField.JDataType.UNICHAR);
@@ -241,7 +241,7 @@ public class JTXPartitionDriverImplGen extends JTXPartitionDriverImplFixed
 				inBufInit.bindColumnDataType(12,IField.JDataType.CHAR);
 		}
 
-		if(isInFldConnected("Value6"))
+		if(isInFldConnected("Value9"))
 		{
 			if(jtxUtils.isServerUnicodeMode())
 				inBufInit.bindColumnDataType(13,IField.JDataType.UNICHAR);
@@ -249,7 +249,7 @@ public class JTXPartitionDriverImplGen extends JTXPartitionDriverImplFixed
 				inBufInit.bindColumnDataType(13,IField.JDataType.CHAR);
 		}
 
-		if(isInFldConnected("Value7"))
+		if(isInFldConnected("Value10"))
 		{
 			if(jtxUtils.isServerUnicodeMode())
 				inBufInit.bindColumnDataType(14,IField.JDataType.UNICHAR);
@@ -257,7 +257,7 @@ public class JTXPartitionDriverImplGen extends JTXPartitionDriverImplFixed
 				inBufInit.bindColumnDataType(14,IField.JDataType.CHAR);
 		}
 
-		if(isInFldConnected("Value8"))
+		if(isInFldConnected("Value11"))
 		{
 			if(jtxUtils.isServerUnicodeMode())
 				inBufInit.bindColumnDataType(15,IField.JDataType.UNICHAR);
@@ -265,7 +265,7 @@ public class JTXPartitionDriverImplGen extends JTXPartitionDriverImplFixed
 				inBufInit.bindColumnDataType(15,IField.JDataType.CHAR);
 		}
 
-		if(isInFldConnected("Value9"))
+		if(isInFldConnected("Value12"))
 		{
 			if(jtxUtils.isServerUnicodeMode())
 				inBufInit.bindColumnDataType(16,IField.JDataType.UNICHAR);
@@ -273,12 +273,468 @@ public class JTXPartitionDriverImplGen extends JTXPartitionDriverImplFixed
 				inBufInit.bindColumnDataType(16,IField.JDataType.CHAR);
 		}
 
-		if(isInFldConnected("Value10"))
+		if(isInFldConnected("Value13"))
 		{
 			if(jtxUtils.isServerUnicodeMode())
 				inBufInit.bindColumnDataType(17,IField.JDataType.UNICHAR);
 			else
 				inBufInit.bindColumnDataType(17,IField.JDataType.CHAR);
+		}
+
+		if(isInFldConnected("Value14"))
+		{
+			if(jtxUtils.isServerUnicodeMode())
+				inBufInit.bindColumnDataType(18,IField.JDataType.UNICHAR);
+			else
+				inBufInit.bindColumnDataType(18,IField.JDataType.CHAR);
+		}
+
+		if(isInFldConnected("Value15"))
+		{
+			if(jtxUtils.isServerUnicodeMode())
+				inBufInit.bindColumnDataType(19,IField.JDataType.UNICHAR);
+			else
+				inBufInit.bindColumnDataType(19,IField.JDataType.CHAR);
+		}
+
+		if(isInFldConnected("Value16"))
+		{
+			if(jtxUtils.isServerUnicodeMode())
+				inBufInit.bindColumnDataType(20,IField.JDataType.UNICHAR);
+			else
+				inBufInit.bindColumnDataType(20,IField.JDataType.CHAR);
+		}
+
+		if(isInFldConnected("Value17"))
+		{
+			if(jtxUtils.isServerUnicodeMode())
+				inBufInit.bindColumnDataType(21,IField.JDataType.UNICHAR);
+			else
+				inBufInit.bindColumnDataType(21,IField.JDataType.CHAR);
+		}
+
+		if(isInFldConnected("Value18"))
+		{
+			if(jtxUtils.isServerUnicodeMode())
+				inBufInit.bindColumnDataType(22,IField.JDataType.UNICHAR);
+			else
+				inBufInit.bindColumnDataType(22,IField.JDataType.CHAR);
+		}
+
+		if(isInFldConnected("Value19"))
+		{
+			if(jtxUtils.isServerUnicodeMode())
+				inBufInit.bindColumnDataType(23,IField.JDataType.UNICHAR);
+			else
+				inBufInit.bindColumnDataType(23,IField.JDataType.CHAR);
+		}
+
+		if(isInFldConnected("Value20"))
+		{
+			if(jtxUtils.isServerUnicodeMode())
+				inBufInit.bindColumnDataType(24,IField.JDataType.UNICHAR);
+			else
+				inBufInit.bindColumnDataType(24,IField.JDataType.CHAR);
+		}
+
+		if(isInFldConnected("Value21"))
+		{
+			if(jtxUtils.isServerUnicodeMode())
+				inBufInit.bindColumnDataType(25,IField.JDataType.UNICHAR);
+			else
+				inBufInit.bindColumnDataType(25,IField.JDataType.CHAR);
+		}
+
+		if(isInFldConnected("Value22"))
+		{
+			if(jtxUtils.isServerUnicodeMode())
+				inBufInit.bindColumnDataType(26,IField.JDataType.UNICHAR);
+			else
+				inBufInit.bindColumnDataType(26,IField.JDataType.CHAR);
+		}
+
+		if(isInFldConnected("Value23"))
+		{
+			if(jtxUtils.isServerUnicodeMode())
+				inBufInit.bindColumnDataType(27,IField.JDataType.UNICHAR);
+			else
+				inBufInit.bindColumnDataType(27,IField.JDataType.CHAR);
+		}
+
+		if(isInFldConnected("Value24"))
+		{
+			if(jtxUtils.isServerUnicodeMode())
+				inBufInit.bindColumnDataType(28,IField.JDataType.UNICHAR);
+			else
+				inBufInit.bindColumnDataType(28,IField.JDataType.CHAR);
+		}
+
+		if(isInFldConnected("Value25"))
+		{
+			if(jtxUtils.isServerUnicodeMode())
+				inBufInit.bindColumnDataType(29,IField.JDataType.UNICHAR);
+			else
+				inBufInit.bindColumnDataType(29,IField.JDataType.CHAR);
+		}
+
+		if(isInFldConnected("Value26"))
+		{
+			if(jtxUtils.isServerUnicodeMode())
+				inBufInit.bindColumnDataType(30,IField.JDataType.UNICHAR);
+			else
+				inBufInit.bindColumnDataType(30,IField.JDataType.CHAR);
+		}
+
+		if(isInFldConnected("Value27"))
+		{
+			if(jtxUtils.isServerUnicodeMode())
+				inBufInit.bindColumnDataType(31,IField.JDataType.UNICHAR);
+			else
+				inBufInit.bindColumnDataType(31,IField.JDataType.CHAR);
+		}
+
+		if(isInFldConnected("Value28"))
+		{
+			if(jtxUtils.isServerUnicodeMode())
+				inBufInit.bindColumnDataType(32,IField.JDataType.UNICHAR);
+			else
+				inBufInit.bindColumnDataType(32,IField.JDataType.CHAR);
+		}
+
+		if(isInFldConnected("Value29"))
+		{
+			if(jtxUtils.isServerUnicodeMode())
+				inBufInit.bindColumnDataType(33,IField.JDataType.UNICHAR);
+			else
+				inBufInit.bindColumnDataType(33,IField.JDataType.CHAR);
+		}
+
+		if(isInFldConnected("Value30"))
+		{
+			if(jtxUtils.isServerUnicodeMode())
+				inBufInit.bindColumnDataType(34,IField.JDataType.UNICHAR);
+			else
+				inBufInit.bindColumnDataType(34,IField.JDataType.CHAR);
+		}
+
+		if(isInFldConnected("Value31"))
+		{
+			if(jtxUtils.isServerUnicodeMode())
+				inBufInit.bindColumnDataType(35,IField.JDataType.UNICHAR);
+			else
+				inBufInit.bindColumnDataType(35,IField.JDataType.CHAR);
+		}
+
+		if(isInFldConnected("Value32"))
+		{
+			if(jtxUtils.isServerUnicodeMode())
+				inBufInit.bindColumnDataType(36,IField.JDataType.UNICHAR);
+			else
+				inBufInit.bindColumnDataType(36,IField.JDataType.CHAR);
+		}
+
+		if(isInFldConnected("Value33"))
+		{
+			if(jtxUtils.isServerUnicodeMode())
+				inBufInit.bindColumnDataType(37,IField.JDataType.UNICHAR);
+			else
+				inBufInit.bindColumnDataType(37,IField.JDataType.CHAR);
+		}
+
+		if(isInFldConnected("Value34"))
+		{
+			if(jtxUtils.isServerUnicodeMode())
+				inBufInit.bindColumnDataType(38,IField.JDataType.UNICHAR);
+			else
+				inBufInit.bindColumnDataType(38,IField.JDataType.CHAR);
+		}
+
+		if(isInFldConnected("Value35"))
+		{
+			if(jtxUtils.isServerUnicodeMode())
+				inBufInit.bindColumnDataType(39,IField.JDataType.UNICHAR);
+			else
+				inBufInit.bindColumnDataType(39,IField.JDataType.CHAR);
+		}
+
+		if(isInFldConnected("Value36"))
+		{
+			if(jtxUtils.isServerUnicodeMode())
+				inBufInit.bindColumnDataType(40,IField.JDataType.UNICHAR);
+			else
+				inBufInit.bindColumnDataType(40,IField.JDataType.CHAR);
+		}
+
+		if(isInFldConnected("Value37"))
+		{
+			if(jtxUtils.isServerUnicodeMode())
+				inBufInit.bindColumnDataType(41,IField.JDataType.UNICHAR);
+			else
+				inBufInit.bindColumnDataType(41,IField.JDataType.CHAR);
+		}
+
+		if(isInFldConnected("Value38"))
+		{
+			if(jtxUtils.isServerUnicodeMode())
+				inBufInit.bindColumnDataType(42,IField.JDataType.UNICHAR);
+			else
+				inBufInit.bindColumnDataType(42,IField.JDataType.CHAR);
+		}
+
+		if(isInFldConnected("Value39"))
+		{
+			if(jtxUtils.isServerUnicodeMode())
+				inBufInit.bindColumnDataType(43,IField.JDataType.UNICHAR);
+			else
+				inBufInit.bindColumnDataType(43,IField.JDataType.CHAR);
+		}
+
+		if(isInFldConnected("Value40"))
+		{
+			if(jtxUtils.isServerUnicodeMode())
+				inBufInit.bindColumnDataType(44,IField.JDataType.UNICHAR);
+			else
+				inBufInit.bindColumnDataType(44,IField.JDataType.CHAR);
+		}
+
+		if(isInFldConnected("Value41"))
+		{
+			if(jtxUtils.isServerUnicodeMode())
+				inBufInit.bindColumnDataType(45,IField.JDataType.UNICHAR);
+			else
+				inBufInit.bindColumnDataType(45,IField.JDataType.CHAR);
+		}
+
+		if(isInFldConnected("Value42"))
+		{
+			if(jtxUtils.isServerUnicodeMode())
+				inBufInit.bindColumnDataType(46,IField.JDataType.UNICHAR);
+			else
+				inBufInit.bindColumnDataType(46,IField.JDataType.CHAR);
+		}
+
+		if(isInFldConnected("Value43"))
+		{
+			if(jtxUtils.isServerUnicodeMode())
+				inBufInit.bindColumnDataType(47,IField.JDataType.UNICHAR);
+			else
+				inBufInit.bindColumnDataType(47,IField.JDataType.CHAR);
+		}
+
+		if(isInFldConnected("Value44"))
+		{
+			if(jtxUtils.isServerUnicodeMode())
+				inBufInit.bindColumnDataType(48,IField.JDataType.UNICHAR);
+			else
+				inBufInit.bindColumnDataType(48,IField.JDataType.CHAR);
+		}
+
+		if(isInFldConnected("Value45"))
+		{
+			if(jtxUtils.isServerUnicodeMode())
+				inBufInit.bindColumnDataType(49,IField.JDataType.UNICHAR);
+			else
+				inBufInit.bindColumnDataType(49,IField.JDataType.CHAR);
+		}
+
+		if(isInFldConnected("Value46"))
+		{
+			if(jtxUtils.isServerUnicodeMode())
+				inBufInit.bindColumnDataType(50,IField.JDataType.UNICHAR);
+			else
+				inBufInit.bindColumnDataType(50,IField.JDataType.CHAR);
+		}
+
+		if(isInFldConnected("Value47"))
+		{
+			if(jtxUtils.isServerUnicodeMode())
+				inBufInit.bindColumnDataType(51,IField.JDataType.UNICHAR);
+			else
+				inBufInit.bindColumnDataType(51,IField.JDataType.CHAR);
+		}
+
+		if(isInFldConnected("Value48"))
+		{
+			if(jtxUtils.isServerUnicodeMode())
+				inBufInit.bindColumnDataType(52,IField.JDataType.UNICHAR);
+			else
+				inBufInit.bindColumnDataType(52,IField.JDataType.CHAR);
+		}
+
+		if(isInFldConnected("Value49"))
+		{
+			if(jtxUtils.isServerUnicodeMode())
+				inBufInit.bindColumnDataType(53,IField.JDataType.UNICHAR);
+			else
+				inBufInit.bindColumnDataType(53,IField.JDataType.CHAR);
+		}
+
+		if(isInFldConnected("Value50"))
+		{
+			if(jtxUtils.isServerUnicodeMode())
+				inBufInit.bindColumnDataType(54,IField.JDataType.UNICHAR);
+			else
+				inBufInit.bindColumnDataType(54,IField.JDataType.CHAR);
+		}
+
+		if(isInFldConnected("Value51"))
+		{
+			if(jtxUtils.isServerUnicodeMode())
+				inBufInit.bindColumnDataType(55,IField.JDataType.UNICHAR);
+			else
+				inBufInit.bindColumnDataType(55,IField.JDataType.CHAR);
+		}
+
+		if(isInFldConnected("Value52"))
+		{
+			if(jtxUtils.isServerUnicodeMode())
+				inBufInit.bindColumnDataType(56,IField.JDataType.UNICHAR);
+			else
+				inBufInit.bindColumnDataType(56,IField.JDataType.CHAR);
+		}
+
+		if(isInFldConnected("Value53"))
+		{
+			if(jtxUtils.isServerUnicodeMode())
+				inBufInit.bindColumnDataType(57,IField.JDataType.UNICHAR);
+			else
+				inBufInit.bindColumnDataType(57,IField.JDataType.CHAR);
+		}
+
+		if(isInFldConnected("Value54"))
+		{
+			if(jtxUtils.isServerUnicodeMode())
+				inBufInit.bindColumnDataType(58,IField.JDataType.UNICHAR);
+			else
+				inBufInit.bindColumnDataType(58,IField.JDataType.CHAR);
+		}
+
+		if(isInFldConnected("Value55"))
+		{
+			if(jtxUtils.isServerUnicodeMode())
+				inBufInit.bindColumnDataType(59,IField.JDataType.UNICHAR);
+			else
+				inBufInit.bindColumnDataType(59,IField.JDataType.CHAR);
+		}
+
+		if(isInFldConnected("Value56"))
+		{
+			if(jtxUtils.isServerUnicodeMode())
+				inBufInit.bindColumnDataType(60,IField.JDataType.UNICHAR);
+			else
+				inBufInit.bindColumnDataType(60,IField.JDataType.CHAR);
+		}
+
+		if(isInFldConnected("Value57"))
+		{
+			if(jtxUtils.isServerUnicodeMode())
+				inBufInit.bindColumnDataType(61,IField.JDataType.UNICHAR);
+			else
+				inBufInit.bindColumnDataType(61,IField.JDataType.CHAR);
+		}
+
+		if(isInFldConnected("Value58"))
+		{
+			if(jtxUtils.isServerUnicodeMode())
+				inBufInit.bindColumnDataType(62,IField.JDataType.UNICHAR);
+			else
+				inBufInit.bindColumnDataType(62,IField.JDataType.CHAR);
+		}
+
+		if(isInFldConnected("Value59"))
+		{
+			if(jtxUtils.isServerUnicodeMode())
+				inBufInit.bindColumnDataType(63,IField.JDataType.UNICHAR);
+			else
+				inBufInit.bindColumnDataType(63,IField.JDataType.CHAR);
+		}
+
+		if(isInFldConnected("Value60"))
+		{
+			if(jtxUtils.isServerUnicodeMode())
+				inBufInit.bindColumnDataType(64,IField.JDataType.UNICHAR);
+			else
+				inBufInit.bindColumnDataType(64,IField.JDataType.CHAR);
+		}
+
+		if(isInFldConnected("Value61"))
+		{
+			if(jtxUtils.isServerUnicodeMode())
+				inBufInit.bindColumnDataType(65,IField.JDataType.UNICHAR);
+			else
+				inBufInit.bindColumnDataType(65,IField.JDataType.CHAR);
+		}
+
+		if(isInFldConnected("Value62"))
+		{
+			if(jtxUtils.isServerUnicodeMode())
+				inBufInit.bindColumnDataType(66,IField.JDataType.UNICHAR);
+			else
+				inBufInit.bindColumnDataType(66,IField.JDataType.CHAR);
+		}
+
+		if(isInFldConnected("Value63"))
+		{
+			if(jtxUtils.isServerUnicodeMode())
+				inBufInit.bindColumnDataType(67,IField.JDataType.UNICHAR);
+			else
+				inBufInit.bindColumnDataType(67,IField.JDataType.CHAR);
+		}
+
+		if(isInFldConnected("Value64"))
+		{
+			if(jtxUtils.isServerUnicodeMode())
+				inBufInit.bindColumnDataType(68,IField.JDataType.UNICHAR);
+			else
+				inBufInit.bindColumnDataType(68,IField.JDataType.CHAR);
+		}
+
+		if(isInFldConnected("Value65"))
+		{
+			if(jtxUtils.isServerUnicodeMode())
+				inBufInit.bindColumnDataType(69,IField.JDataType.UNICHAR);
+			else
+				inBufInit.bindColumnDataType(69,IField.JDataType.CHAR);
+		}
+
+		if(isInFldConnected("Value66"))
+		{
+			if(jtxUtils.isServerUnicodeMode())
+				inBufInit.bindColumnDataType(70,IField.JDataType.UNICHAR);
+			else
+				inBufInit.bindColumnDataType(70,IField.JDataType.CHAR);
+		}
+
+		if(isInFldConnected("Value67"))
+		{
+			if(jtxUtils.isServerUnicodeMode())
+				inBufInit.bindColumnDataType(71,IField.JDataType.UNICHAR);
+			else
+				inBufInit.bindColumnDataType(71,IField.JDataType.CHAR);
+		}
+
+		if(isInFldConnected("Value68"))
+		{
+			if(jtxUtils.isServerUnicodeMode())
+				inBufInit.bindColumnDataType(72,IField.JDataType.UNICHAR);
+			else
+				inBufInit.bindColumnDataType(72,IField.JDataType.CHAR);
+		}
+
+		if(isInFldConnected("Value69"))
+		{
+			if(jtxUtils.isServerUnicodeMode())
+				inBufInit.bindColumnDataType(73,IField.JDataType.UNICHAR);
+			else
+				inBufInit.bindColumnDataType(73,IField.JDataType.CHAR);
+		}
+
+		if(isInFldConnected("Value70"))
+		{
+			if(jtxUtils.isServerUnicodeMode())
+				inBufInit.bindColumnDataType(74,IField.JDataType.UNICHAR);
+			else
+				inBufInit.bindColumnDataType(74,IField.JDataType.CHAR);
 		}
 
 		if(isOutFldProjected("resultCode"))
@@ -320,11 +776,8 @@ public class JTXPartitionDriverImplGen extends JTXPartitionDriverImplFixed
 		String logLevel;
 		String xsdFile;
 		String xsdDirectory;
-		String elementNames;
 		String targetFileName;
 		String oneFilePerInputRow;
-		String rootElement;
-		String level1Element;
 		String Value1;
 		String Value2;
 		String Value3;
@@ -335,6 +788,66 @@ public class JTXPartitionDriverImplGen extends JTXPartitionDriverImplFixed
 		String Value8;
 		String Value9;
 		String Value10;
+		String Value11;
+		String Value12;
+		String Value13;
+		String Value14;
+		String Value15;
+		String Value16;
+		String Value17;
+		String Value18;
+		String Value19;
+		String Value20;
+		String Value21;
+		String Value22;
+		String Value23;
+		String Value24;
+		String Value25;
+		String Value26;
+		String Value27;
+		String Value28;
+		String Value29;
+		String Value30;
+		String Value31;
+		String Value32;
+		String Value33;
+		String Value34;
+		String Value35;
+		String Value36;
+		String Value37;
+		String Value38;
+		String Value39;
+		String Value40;
+		String Value41;
+		String Value42;
+		String Value43;
+		String Value44;
+		String Value45;
+		String Value46;
+		String Value47;
+		String Value48;
+		String Value49;
+		String Value50;
+		String Value51;
+		String Value52;
+		String Value53;
+		String Value54;
+		String Value55;
+		String Value56;
+		String Value57;
+		String Value58;
+		String Value59;
+		String Value60;
+		String Value61;
+		String Value62;
+		String Value63;
+		String Value64;
+		String Value65;
+		String Value66;
+		String Value67;
+		String Value68;
+		String Value69;
+		String Value70;
 
 		for(int jtx_row_counter=1 ;jtx_row_counter<= numRowsAvailable;jtx_row_counter++)
 		{
@@ -349,11 +862,8 @@ public class JTXPartitionDriverImplGen extends JTXPartitionDriverImplFixed
 				logLevel = null;
 				xsdFile = null;
 				xsdDirectory = null;
-				elementNames = null;
 				targetFileName = null;
 				oneFilePerInputRow = null;
-				rootElement = null;
-				level1Element = null;
 				Value1 = null;
 				Value2 = null;
 				Value3 = null;
@@ -364,6 +874,66 @@ public class JTXPartitionDriverImplGen extends JTXPartitionDriverImplFixed
 				Value8 = null;
 				Value9 = null;
 				Value10 = null;
+				Value11 = null;
+				Value12 = null;
+				Value13 = null;
+				Value14 = null;
+				Value15 = null;
+				Value16 = null;
+				Value17 = null;
+				Value18 = null;
+				Value19 = null;
+				Value20 = null;
+				Value21 = null;
+				Value22 = null;
+				Value23 = null;
+				Value24 = null;
+				Value25 = null;
+				Value26 = null;
+				Value27 = null;
+				Value28 = null;
+				Value29 = null;
+				Value30 = null;
+				Value31 = null;
+				Value32 = null;
+				Value33 = null;
+				Value34 = null;
+				Value35 = null;
+				Value36 = null;
+				Value37 = null;
+				Value38 = null;
+				Value39 = null;
+				Value40 = null;
+				Value41 = null;
+				Value42 = null;
+				Value43 = null;
+				Value44 = null;
+				Value45 = null;
+				Value46 = null;
+				Value47 = null;
+				Value48 = null;
+				Value49 = null;
+				Value50 = null;
+				Value51 = null;
+				Value52 = null;
+				Value53 = null;
+				Value54 = null;
+				Value55 = null;
+				Value56 = null;
+				Value57 = null;
+				Value58 = null;
+				Value59 = null;
+				Value60 = null;
+				Value61 = null;
+				Value62 = null;
+				Value63 = null;
+				Value64 = null;
+				Value65 = null;
+				Value66 = null;
+				Value67 = null;
+				Value68 = null;
+				Value69 = null;
+				Value70 = null;
 				
 
 				if(isInFldConnected("logLevel") && !inputBuf.isNull(inRowNum,0))
@@ -387,109 +957,508 @@ public class JTXPartitionDriverImplGen extends JTXPartitionDriverImplFixed
 					xsdDirectory = strBuf.toString();
 				}
 
-				if(isInFldConnected("elementNames") && !inputBuf.isNull(inRowNum,3))
+				if(isInFldConnected("targetFileName") && !inputBuf.isNull(inRowNum,3))
 				{
 					strBuf.setLength(0);
 					inputBuf.getStringBuffer(inRowNum,3,strBuf);
-					elementNames = strBuf.toString();
-				}
-
-				if(isInFldConnected("targetFileName") && !inputBuf.isNull(inRowNum,4))
-				{
-					strBuf.setLength(0);
-					inputBuf.getStringBuffer(inRowNum,4,strBuf);
 					targetFileName = strBuf.toString();
 				}
 
-				if(isInFldConnected("oneFilePerInputRow") && !inputBuf.isNull(inRowNum,5))
+				if(isInFldConnected("oneFilePerInputRow") && !inputBuf.isNull(inRowNum,4))
 				{
 					strBuf.setLength(0);
-					inputBuf.getStringBuffer(inRowNum,5,strBuf);
+					inputBuf.getStringBuffer(inRowNum,4,strBuf);
 					oneFilePerInputRow = strBuf.toString();
 				}
 
-				if(isInFldConnected("rootElement") && !inputBuf.isNull(inRowNum,6))
+				if(isInFldConnected("Value1") && !inputBuf.isNull(inRowNum,5))
 				{
 					strBuf.setLength(0);
-					inputBuf.getStringBuffer(inRowNum,6,strBuf);
-					rootElement = strBuf.toString();
-				}
-
-				if(isInFldConnected("level1Element") && !inputBuf.isNull(inRowNum,7))
-				{
-					strBuf.setLength(0);
-					inputBuf.getStringBuffer(inRowNum,7,strBuf);
-					level1Element = strBuf.toString();
-				}
-
-				if(isInFldConnected("Value1") && !inputBuf.isNull(inRowNum,8))
-				{
-					strBuf.setLength(0);
-					inputBuf.getStringBuffer(inRowNum,8,strBuf);
+					inputBuf.getStringBuffer(inRowNum,5,strBuf);
 					Value1 = strBuf.toString();
 				}
 
-				if(isInFldConnected("Value2") && !inputBuf.isNull(inRowNum,9))
+				if(isInFldConnected("Value2") && !inputBuf.isNull(inRowNum,6))
 				{
 					strBuf.setLength(0);
-					inputBuf.getStringBuffer(inRowNum,9,strBuf);
+					inputBuf.getStringBuffer(inRowNum,6,strBuf);
 					Value2 = strBuf.toString();
 				}
 
-				if(isInFldConnected("Value3") && !inputBuf.isNull(inRowNum,10))
+				if(isInFldConnected("Value3") && !inputBuf.isNull(inRowNum,7))
 				{
 					strBuf.setLength(0);
-					inputBuf.getStringBuffer(inRowNum,10,strBuf);
+					inputBuf.getStringBuffer(inRowNum,7,strBuf);
 					Value3 = strBuf.toString();
 				}
 
-				if(isInFldConnected("Value4") && !inputBuf.isNull(inRowNum,11))
+				if(isInFldConnected("Value4") && !inputBuf.isNull(inRowNum,8))
 				{
 					strBuf.setLength(0);
-					inputBuf.getStringBuffer(inRowNum,11,strBuf);
+					inputBuf.getStringBuffer(inRowNum,8,strBuf);
 					Value4 = strBuf.toString();
 				}
 
-				if(isInFldConnected("Value5") && !inputBuf.isNull(inRowNum,12))
+				if(isInFldConnected("Value5") && !inputBuf.isNull(inRowNum,9))
 				{
 					strBuf.setLength(0);
-					inputBuf.getStringBuffer(inRowNum,12,strBuf);
+					inputBuf.getStringBuffer(inRowNum,9,strBuf);
 					Value5 = strBuf.toString();
 				}
 
-				if(isInFldConnected("Value6") && !inputBuf.isNull(inRowNum,13))
+				if(isInFldConnected("Value6") && !inputBuf.isNull(inRowNum,10))
 				{
 					strBuf.setLength(0);
-					inputBuf.getStringBuffer(inRowNum,13,strBuf);
+					inputBuf.getStringBuffer(inRowNum,10,strBuf);
 					Value6 = strBuf.toString();
 				}
 
-				if(isInFldConnected("Value7") && !inputBuf.isNull(inRowNum,14))
+				if(isInFldConnected("Value7") && !inputBuf.isNull(inRowNum,11))
 				{
 					strBuf.setLength(0);
-					inputBuf.getStringBuffer(inRowNum,14,strBuf);
+					inputBuf.getStringBuffer(inRowNum,11,strBuf);
 					Value7 = strBuf.toString();
 				}
 
-				if(isInFldConnected("Value8") && !inputBuf.isNull(inRowNum,15))
+				if(isInFldConnected("Value8") && !inputBuf.isNull(inRowNum,12))
 				{
 					strBuf.setLength(0);
-					inputBuf.getStringBuffer(inRowNum,15,strBuf);
+					inputBuf.getStringBuffer(inRowNum,12,strBuf);
 					Value8 = strBuf.toString();
 				}
 
-				if(isInFldConnected("Value9") && !inputBuf.isNull(inRowNum,16))
+				if(isInFldConnected("Value9") && !inputBuf.isNull(inRowNum,13))
 				{
 					strBuf.setLength(0);
-					inputBuf.getStringBuffer(inRowNum,16,strBuf);
+					inputBuf.getStringBuffer(inRowNum,13,strBuf);
 					Value9 = strBuf.toString();
 				}
 
-				if(isInFldConnected("Value10") && !inputBuf.isNull(inRowNum,17))
+				if(isInFldConnected("Value10") && !inputBuf.isNull(inRowNum,14))
+				{
+					strBuf.setLength(0);
+					inputBuf.getStringBuffer(inRowNum,14,strBuf);
+					Value10 = strBuf.toString();
+				}
+
+				if(isInFldConnected("Value11") && !inputBuf.isNull(inRowNum,15))
+				{
+					strBuf.setLength(0);
+					inputBuf.getStringBuffer(inRowNum,15,strBuf);
+					Value11 = strBuf.toString();
+				}
+
+				if(isInFldConnected("Value12") && !inputBuf.isNull(inRowNum,16))
+				{
+					strBuf.setLength(0);
+					inputBuf.getStringBuffer(inRowNum,16,strBuf);
+					Value12 = strBuf.toString();
+				}
+
+				if(isInFldConnected("Value13") && !inputBuf.isNull(inRowNum,17))
 				{
 					strBuf.setLength(0);
 					inputBuf.getStringBuffer(inRowNum,17,strBuf);
-					Value10 = strBuf.toString();
+					Value13 = strBuf.toString();
+				}
+
+				if(isInFldConnected("Value14") && !inputBuf.isNull(inRowNum,18))
+				{
+					strBuf.setLength(0);
+					inputBuf.getStringBuffer(inRowNum,18,strBuf);
+					Value14 = strBuf.toString();
+				}
+
+				if(isInFldConnected("Value15") && !inputBuf.isNull(inRowNum,19))
+				{
+					strBuf.setLength(0);
+					inputBuf.getStringBuffer(inRowNum,19,strBuf);
+					Value15 = strBuf.toString();
+				}
+
+				if(isInFldConnected("Value16") && !inputBuf.isNull(inRowNum,20))
+				{
+					strBuf.setLength(0);
+					inputBuf.getStringBuffer(inRowNum,20,strBuf);
+					Value16 = strBuf.toString();
+				}
+
+				if(isInFldConnected("Value17") && !inputBuf.isNull(inRowNum,21))
+				{
+					strBuf.setLength(0);
+					inputBuf.getStringBuffer(inRowNum,21,strBuf);
+					Value17 = strBuf.toString();
+				}
+
+				if(isInFldConnected("Value18") && !inputBuf.isNull(inRowNum,22))
+				{
+					strBuf.setLength(0);
+					inputBuf.getStringBuffer(inRowNum,22,strBuf);
+					Value18 = strBuf.toString();
+				}
+
+				if(isInFldConnected("Value19") && !inputBuf.isNull(inRowNum,23))
+				{
+					strBuf.setLength(0);
+					inputBuf.getStringBuffer(inRowNum,23,strBuf);
+					Value19 = strBuf.toString();
+				}
+
+				if(isInFldConnected("Value20") && !inputBuf.isNull(inRowNum,24))
+				{
+					strBuf.setLength(0);
+					inputBuf.getStringBuffer(inRowNum,24,strBuf);
+					Value20 = strBuf.toString();
+				}
+
+				if(isInFldConnected("Value21") && !inputBuf.isNull(inRowNum,25))
+				{
+					strBuf.setLength(0);
+					inputBuf.getStringBuffer(inRowNum,25,strBuf);
+					Value21 = strBuf.toString();
+				}
+
+				if(isInFldConnected("Value22") && !inputBuf.isNull(inRowNum,26))
+				{
+					strBuf.setLength(0);
+					inputBuf.getStringBuffer(inRowNum,26,strBuf);
+					Value22 = strBuf.toString();
+				}
+
+				if(isInFldConnected("Value23") && !inputBuf.isNull(inRowNum,27))
+				{
+					strBuf.setLength(0);
+					inputBuf.getStringBuffer(inRowNum,27,strBuf);
+					Value23 = strBuf.toString();
+				}
+
+				if(isInFldConnected("Value24") && !inputBuf.isNull(inRowNum,28))
+				{
+					strBuf.setLength(0);
+					inputBuf.getStringBuffer(inRowNum,28,strBuf);
+					Value24 = strBuf.toString();
+				}
+
+				if(isInFldConnected("Value25") && !inputBuf.isNull(inRowNum,29))
+				{
+					strBuf.setLength(0);
+					inputBuf.getStringBuffer(inRowNum,29,strBuf);
+					Value25 = strBuf.toString();
+				}
+
+				if(isInFldConnected("Value26") && !inputBuf.isNull(inRowNum,30))
+				{
+					strBuf.setLength(0);
+					inputBuf.getStringBuffer(inRowNum,30,strBuf);
+					Value26 = strBuf.toString();
+				}
+
+				if(isInFldConnected("Value27") && !inputBuf.isNull(inRowNum,31))
+				{
+					strBuf.setLength(0);
+					inputBuf.getStringBuffer(inRowNum,31,strBuf);
+					Value27 = strBuf.toString();
+				}
+
+				if(isInFldConnected("Value28") && !inputBuf.isNull(inRowNum,32))
+				{
+					strBuf.setLength(0);
+					inputBuf.getStringBuffer(inRowNum,32,strBuf);
+					Value28 = strBuf.toString();
+				}
+
+				if(isInFldConnected("Value29") && !inputBuf.isNull(inRowNum,33))
+				{
+					strBuf.setLength(0);
+					inputBuf.getStringBuffer(inRowNum,33,strBuf);
+					Value29 = strBuf.toString();
+				}
+
+				if(isInFldConnected("Value30") && !inputBuf.isNull(inRowNum,34))
+				{
+					strBuf.setLength(0);
+					inputBuf.getStringBuffer(inRowNum,34,strBuf);
+					Value30 = strBuf.toString();
+				}
+
+				if(isInFldConnected("Value31") && !inputBuf.isNull(inRowNum,35))
+				{
+					strBuf.setLength(0);
+					inputBuf.getStringBuffer(inRowNum,35,strBuf);
+					Value31 = strBuf.toString();
+				}
+
+				if(isInFldConnected("Value32") && !inputBuf.isNull(inRowNum,36))
+				{
+					strBuf.setLength(0);
+					inputBuf.getStringBuffer(inRowNum,36,strBuf);
+					Value32 = strBuf.toString();
+				}
+
+				if(isInFldConnected("Value33") && !inputBuf.isNull(inRowNum,37))
+				{
+					strBuf.setLength(0);
+					inputBuf.getStringBuffer(inRowNum,37,strBuf);
+					Value33 = strBuf.toString();
+				}
+
+				if(isInFldConnected("Value34") && !inputBuf.isNull(inRowNum,38))
+				{
+					strBuf.setLength(0);
+					inputBuf.getStringBuffer(inRowNum,38,strBuf);
+					Value34 = strBuf.toString();
+				}
+
+				if(isInFldConnected("Value35") && !inputBuf.isNull(inRowNum,39))
+				{
+					strBuf.setLength(0);
+					inputBuf.getStringBuffer(inRowNum,39,strBuf);
+					Value35 = strBuf.toString();
+				}
+
+				if(isInFldConnected("Value36") && !inputBuf.isNull(inRowNum,40))
+				{
+					strBuf.setLength(0);
+					inputBuf.getStringBuffer(inRowNum,40,strBuf);
+					Value36 = strBuf.toString();
+				}
+
+				if(isInFldConnected("Value37") && !inputBuf.isNull(inRowNum,41))
+				{
+					strBuf.setLength(0);
+					inputBuf.getStringBuffer(inRowNum,41,strBuf);
+					Value37 = strBuf.toString();
+				}
+
+				if(isInFldConnected("Value38") && !inputBuf.isNull(inRowNum,42))
+				{
+					strBuf.setLength(0);
+					inputBuf.getStringBuffer(inRowNum,42,strBuf);
+					Value38 = strBuf.toString();
+				}
+
+				if(isInFldConnected("Value39") && !inputBuf.isNull(inRowNum,43))
+				{
+					strBuf.setLength(0);
+					inputBuf.getStringBuffer(inRowNum,43,strBuf);
+					Value39 = strBuf.toString();
+				}
+
+				if(isInFldConnected("Value40") && !inputBuf.isNull(inRowNum,44))
+				{
+					strBuf.setLength(0);
+					inputBuf.getStringBuffer(inRowNum,44,strBuf);
+					Value40 = strBuf.toString();
+				}
+
+				if(isInFldConnected("Value41") && !inputBuf.isNull(inRowNum,45))
+				{
+					strBuf.setLength(0);
+					inputBuf.getStringBuffer(inRowNum,45,strBuf);
+					Value41 = strBuf.toString();
+				}
+
+				if(isInFldConnected("Value42") && !inputBuf.isNull(inRowNum,46))
+				{
+					strBuf.setLength(0);
+					inputBuf.getStringBuffer(inRowNum,46,strBuf);
+					Value42 = strBuf.toString();
+				}
+
+				if(isInFldConnected("Value43") && !inputBuf.isNull(inRowNum,47))
+				{
+					strBuf.setLength(0);
+					inputBuf.getStringBuffer(inRowNum,47,strBuf);
+					Value43 = strBuf.toString();
+				}
+
+				if(isInFldConnected("Value44") && !inputBuf.isNull(inRowNum,48))
+				{
+					strBuf.setLength(0);
+					inputBuf.getStringBuffer(inRowNum,48,strBuf);
+					Value44 = strBuf.toString();
+				}
+
+				if(isInFldConnected("Value45") && !inputBuf.isNull(inRowNum,49))
+				{
+					strBuf.setLength(0);
+					inputBuf.getStringBuffer(inRowNum,49,strBuf);
+					Value45 = strBuf.toString();
+				}
+
+				if(isInFldConnected("Value46") && !inputBuf.isNull(inRowNum,50))
+				{
+					strBuf.setLength(0);
+					inputBuf.getStringBuffer(inRowNum,50,strBuf);
+					Value46 = strBuf.toString();
+				}
+
+				if(isInFldConnected("Value47") && !inputBuf.isNull(inRowNum,51))
+				{
+					strBuf.setLength(0);
+					inputBuf.getStringBuffer(inRowNum,51,strBuf);
+					Value47 = strBuf.toString();
+				}
+
+				if(isInFldConnected("Value48") && !inputBuf.isNull(inRowNum,52))
+				{
+					strBuf.setLength(0);
+					inputBuf.getStringBuffer(inRowNum,52,strBuf);
+					Value48 = strBuf.toString();
+				}
+
+				if(isInFldConnected("Value49") && !inputBuf.isNull(inRowNum,53))
+				{
+					strBuf.setLength(0);
+					inputBuf.getStringBuffer(inRowNum,53,strBuf);
+					Value49 = strBuf.toString();
+				}
+
+				if(isInFldConnected("Value50") && !inputBuf.isNull(inRowNum,54))
+				{
+					strBuf.setLength(0);
+					inputBuf.getStringBuffer(inRowNum,54,strBuf);
+					Value50 = strBuf.toString();
+				}
+
+				if(isInFldConnected("Value51") && !inputBuf.isNull(inRowNum,55))
+				{
+					strBuf.setLength(0);
+					inputBuf.getStringBuffer(inRowNum,55,strBuf);
+					Value51 = strBuf.toString();
+				}
+
+				if(isInFldConnected("Value52") && !inputBuf.isNull(inRowNum,56))
+				{
+					strBuf.setLength(0);
+					inputBuf.getStringBuffer(inRowNum,56,strBuf);
+					Value52 = strBuf.toString();
+				}
+
+				if(isInFldConnected("Value53") && !inputBuf.isNull(inRowNum,57))
+				{
+					strBuf.setLength(0);
+					inputBuf.getStringBuffer(inRowNum,57,strBuf);
+					Value53 = strBuf.toString();
+				}
+
+				if(isInFldConnected("Value54") && !inputBuf.isNull(inRowNum,58))
+				{
+					strBuf.setLength(0);
+					inputBuf.getStringBuffer(inRowNum,58,strBuf);
+					Value54 = strBuf.toString();
+				}
+
+				if(isInFldConnected("Value55") && !inputBuf.isNull(inRowNum,59))
+				{
+					strBuf.setLength(0);
+					inputBuf.getStringBuffer(inRowNum,59,strBuf);
+					Value55 = strBuf.toString();
+				}
+
+				if(isInFldConnected("Value56") && !inputBuf.isNull(inRowNum,60))
+				{
+					strBuf.setLength(0);
+					inputBuf.getStringBuffer(inRowNum,60,strBuf);
+					Value56 = strBuf.toString();
+				}
+
+				if(isInFldConnected("Value57") && !inputBuf.isNull(inRowNum,61))
+				{
+					strBuf.setLength(0);
+					inputBuf.getStringBuffer(inRowNum,61,strBuf);
+					Value57 = strBuf.toString();
+				}
+
+				if(isInFldConnected("Value58") && !inputBuf.isNull(inRowNum,62))
+				{
+					strBuf.setLength(0);
+					inputBuf.getStringBuffer(inRowNum,62,strBuf);
+					Value58 = strBuf.toString();
+				}
+
+				if(isInFldConnected("Value59") && !inputBuf.isNull(inRowNum,63))
+				{
+					strBuf.setLength(0);
+					inputBuf.getStringBuffer(inRowNum,63,strBuf);
+					Value59 = strBuf.toString();
+				}
+
+				if(isInFldConnected("Value60") && !inputBuf.isNull(inRowNum,64))
+				{
+					strBuf.setLength(0);
+					inputBuf.getStringBuffer(inRowNum,64,strBuf);
+					Value60 = strBuf.toString();
+				}
+
+				if(isInFldConnected("Value61") && !inputBuf.isNull(inRowNum,65))
+				{
+					strBuf.setLength(0);
+					inputBuf.getStringBuffer(inRowNum,65,strBuf);
+					Value61 = strBuf.toString();
+				}
+
+				if(isInFldConnected("Value62") && !inputBuf.isNull(inRowNum,66))
+				{
+					strBuf.setLength(0);
+					inputBuf.getStringBuffer(inRowNum,66,strBuf);
+					Value62 = strBuf.toString();
+				}
+
+				if(isInFldConnected("Value63") && !inputBuf.isNull(inRowNum,67))
+				{
+					strBuf.setLength(0);
+					inputBuf.getStringBuffer(inRowNum,67,strBuf);
+					Value63 = strBuf.toString();
+				}
+
+				if(isInFldConnected("Value64") && !inputBuf.isNull(inRowNum,68))
+				{
+					strBuf.setLength(0);
+					inputBuf.getStringBuffer(inRowNum,68,strBuf);
+					Value64 = strBuf.toString();
+				}
+
+				if(isInFldConnected("Value65") && !inputBuf.isNull(inRowNum,69))
+				{
+					strBuf.setLength(0);
+					inputBuf.getStringBuffer(inRowNum,69,strBuf);
+					Value65 = strBuf.toString();
+				}
+
+				if(isInFldConnected("Value66") && !inputBuf.isNull(inRowNum,70))
+				{
+					strBuf.setLength(0);
+					inputBuf.getStringBuffer(inRowNum,70,strBuf);
+					Value66 = strBuf.toString();
+				}
+
+				if(isInFldConnected("Value67") && !inputBuf.isNull(inRowNum,71))
+				{
+					strBuf.setLength(0);
+					inputBuf.getStringBuffer(inRowNum,71,strBuf);
+					Value67 = strBuf.toString();
+				}
+
+				if(isInFldConnected("Value68") && !inputBuf.isNull(inRowNum,72))
+				{
+					strBuf.setLength(0);
+					inputBuf.getStringBuffer(inRowNum,72,strBuf);
+					Value68 = strBuf.toString();
+				}
+
+				if(isInFldConnected("Value69") && !inputBuf.isNull(inRowNum,73))
+				{
+					strBuf.setLength(0);
+					inputBuf.getStringBuffer(inRowNum,73,strBuf);
+					Value69 = strBuf.toString();
+				}
+
+				if(isInFldConnected("Value70") && !inputBuf.isNull(inRowNum,74))
+				{
+					strBuf.setLength(0);
+					inputBuf.getStringBuffer(inRowNum,74,strBuf);
+					Value70 = strBuf.toString();
 				}
 
 				if(isVerboseData)
@@ -514,16 +1483,11 @@ public class JTXPartitionDriverImplGen extends JTXPartitionDriverImplFixed
 					requestedLogLevel = logLevel;
 					xsd=xsdFile; logInfo("xsd has been set to >" + xsd +"<.");
 					xsdPath=xsdDirectory; logInfo("xsdPath has been set to >" + xsdPath +"<.");
-					elements = elementNames;
-					root = rootElement;
-					level1 = level1Element;
 					xmlFile = targetFileName;
 					oneFilePerRow = oneFilePerInputRow;
 					pathXml = Paths.get(xmlFile);
 				   
 				    xml =new GenerateXml();
-				    log(DEBUG, "setting root element to >" + rootElement +"<.");
-					xml.setRootElement(rootElement);
 					log(DEBUG, "setting xsdfile to >" + xsd +"<.");
 					xml.setXsdFile(xsd);
 					xml.setXsdPath(xsdPath); 
@@ -549,18 +1513,74 @@ public class JTXPartitionDriverImplGen extends JTXPartitionDriverImplFixed
 				if(Value8 != null) values.add(Value8);  
 				if(Value9 != null) values.add(Value9);  
 				if(Value10 != null) values.add(Value10);  
-				
+				if(Value11 != null) values.add(Value11);  
+				if(Value12 != null) values.add(Value12);  
+				if(Value13 != null) values.add(Value13);  
+				if(Value14 != null) values.add(Value14);  
+				if(Value15 != null) values.add(Value15);  
+				if(Value16 != null) values.add(Value16);  
+				if(Value17 != null) values.add(Value17);  
+				if(Value18 != null) values.add(Value18);  
+				if(Value19 != null) values.add(Value19);  
+				if(Value20 != null) values.add(Value20);  
+				if(Value21 != null) values.add(Value21);  
+				if(Value22 != null) values.add(Value22);  
+				if(Value23 != null) values.add(Value23);  
+				if(Value24 != null) values.add(Value24);  
+				if(Value25 != null) values.add(Value25);  
+				if(Value26 != null) values.add(Value26);  
+				if(Value27 != null) values.add(Value27);  
+				if(Value28 != null) values.add(Value28);  
+				if(Value29 != null) values.add(Value29);  
+				if(Value30 != null) values.add(Value30);
+				if(Value31 != null) values.add(Value31);
+				if(Value32 != null) values.add(Value32);
+				if(Value33 != null) values.add(Value33);
+				if(Value34 != null) values.add(Value34);
+				if(Value35 != null) values.add(Value35);
+				if(Value36 != null) values.add(Value36);
+				if(Value37 != null) values.add(Value37);
+				if(Value38 != null) values.add(Value38);
+				if(Value39 != null) values.add(Value39);
+				if(Value40 != null) values.add(Value40);
+				if(Value41 != null) values.add(Value41);
+				if(Value42 != null) values.add(Value42);
+				if(Value43 != null) values.add(Value43);
+				if(Value44 != null) values.add(Value44);
+				if(Value45 != null) values.add(Value45);
+				if(Value46 != null) values.add(Value46);
+				if(Value47 != null) values.add(Value47);
+				if(Value48 != null) values.add(Value48);
+				if(Value49 != null) values.add(Value49);
+				if(Value50 != null) values.add(Value50);
+				if(Value51 != null) values.add(Value51);
+				if(Value52 != null) values.add(Value52);
+				if(Value53 != null) values.add(Value53);
+				if(Value54 != null) values.add(Value54);
+				if(Value55 != null) values.add(Value55);
+				if(Value56 != null) values.add(Value56);
+				if(Value57 != null) values.add(Value57);
+				if(Value58 != null) values.add(Value58);
+				if(Value59 != null) values.add(Value59);
+				if(Value60 != null) values.add(Value60);
+				if(Value61 != null) values.add(Value61);
+				if(Value62 != null) values.add(Value62);
+				if(Value63 != null) values.add(Value63);
+				if(Value64 != null) values.add(Value64);
+				if(Value65 != null) values.add(Value65);
+				if(Value66 != null) values.add(Value66);
+				if(Value67 != null) values.add(Value67);
+				if(Value68 != null) values.add(Value68);
+				if(Value69 != null) values.add(Value69);
+				if(Value70 != null) values.add(Value70);
 				
 				log(DEBUG,"Received >" + values.size() +"< value(s).");
-				elementList = new ArrayList<String>(Arrays.asList(elements.split(";"))); 
-				log(DEBUG, "Received >" + elementList.size() +"< element(s).");
 				
 					if ("Y".equals(oneFilePerRow)) {
 				            xml.generateOneXmlFilePerRow(data); 
 					} else {
 				            xml.writeDataElements(values);
 					}
-				
 				
 				} catch(Exception e) {
 					logError(e.toString());
