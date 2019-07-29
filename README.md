@@ -11,6 +11,7 @@ If you just want to use the transformation, it is unlikely you need to change th
 ## Usage
 ### Input
 - logLevel 
+
   Optional or Required: Required
   Purpose: Determines the amount and details of log information.
   Possible values (from detailed to only on Errors): DEBUG, INFO, WARN, ERROR
