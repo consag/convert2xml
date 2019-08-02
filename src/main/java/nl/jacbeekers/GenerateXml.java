@@ -352,7 +352,11 @@ public class GenerateXml {
                             logDebug(procName, "Writing Simple element type info for attribute >" + node.getAttribute() +"<.");
                             getWriter().writeStartElement(node.getAttribute());
                             if (i < values.length) {
-                                getWriter().writeCharacters(values[i]);
+                                if(values[i] == null) {
+                                    getWriter().writeCharacters("");
+                                } else {
+                                    getWriter().writeCharacters(values[i]);
+                                }
                                 i++;
                             } else {
                                 //more xml elements than data elements

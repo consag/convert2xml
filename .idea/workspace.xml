@@ -2,7 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="19547e0a-df33-43ed-a81f-b4fbd21e4cd7" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/nl/jacbeekers/GenerateXml.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/nl/jacbeekers/GenerateXml.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/APP_convertToXML.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/code_snippets/On Input.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/code_snippets/On Input.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/convert2XML.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/convert2XML.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/m_convertToXML.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/m_convertToXML.xml" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -20,8 +26,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/nl/jacbeekers/GenerateXml.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="153">
-              <caret line="182" column="2" selection-start-line="182" selection-start-column="2" selection-end-line="182" selection-end-column="2" />
+            <state relative-caret-position="480">
+              <caret line="353" column="51" selection-start-line="353" selection-start-column="51" selection-end-line="353" selection-end-column="51" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#3283#3284#0" expanded="true" />
@@ -134,18 +140,18 @@
       <select />
     </treeState>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
+  <component name="ProjectFrameBounds">
     <option name="x" value="1" />
     <option name="y" value="1" />
-    <option name="width" value="1100" />
-    <option name="height" value="691" />
+    <option name="width" value="1514" />
+    <option name="height" value="1096" />
   </component>
   <component name="ProjectView">
     <navigator proportions="" version="1">
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="PackagesPane" />
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -158,41 +164,11 @@
               <item name="convert2xml" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
             </path>
-            <path>
-              <item name="convert2xml" type="b2602c69:ProjectViewProjectNode" />
-              <item name="convert2xml" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="convert2xml" type="b2602c69:ProjectViewProjectNode" />
-              <item name="convert2xml" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="convert2xml" type="b2602c69:ProjectViewProjectNode" />
-              <item name="convert2xml" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="jacbeekers" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="convert2xml" type="b2602c69:ProjectViewProjectNode" />
-              <item name="convert2xml" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="jacbeekers" type="462c0819:PsiDirectoryNode" />
-              <item name="GenerateXml.java" type="529ef68f:ClassesTreeStructureProvider$PsiClassOwnerTreeNode" />
-            </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
+      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -288,17 +264,17 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1282" height="672" extended-state="6" />
+    <frame x="1" y="1" width="1514" height="1096" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.17594108" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.16368638" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="UI Designer" order="3" />
       <window_info id="Favorites" order="4" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32982087" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.255079" />
+      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.25441328" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.3988673" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -312,7 +288,7 @@
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" visible="true" weight="0.27963918" />
       <window_info anchor="right" id="Palette" order="3" />
-      <window_info anchor="right" id="Maven" order="4" visible="true" weight="0.16284779" />
+      <window_info anchor="right" id="Maven" order="4" visible="true" weight="0.28129297" />
       <window_info anchor="right" id="Palette&#9;" order="5" />
       <window_info anchor="right" id="Database" order="6" />
     </layout>
@@ -383,8 +359,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/nl/jacbeekers/GenerateXml.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="182" column="2" selection-start-line="182" selection-start-column="2" selection-end-line="182" selection-end-column="2" />
+        <state relative-caret-position="480">
+          <caret line="353" column="51" selection-start-line="353" selection-start-column="51" selection-end-line="353" selection-end-column="51" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#3283#3284#0" expanded="true" />
