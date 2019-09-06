@@ -54,7 +54,7 @@ public class Main {
         HashMap<String,String> map2 = new HashMap<String, String>();
         map2.put("rating_type","123");
         map2.put("rating","2");
-        map2.put("description","test2");
+        map2.put("description",null);
         map2.put("is_rating_unrated","2");
         map2.put("quality_ascending_sequence","2");
         map2.put("rating_rank","456");
@@ -70,6 +70,7 @@ public class Main {
         xml.setXsdPath("D:\\GitRepos\\convert2xml\\src\\main\\resources\\");
         xml.setTarget(xmlFile);
         xml.setOneFilePerRow("N");
+        xml.setSuppressEmptyTags("Y");
         xml.generateXmlFile(data);
         logger.info(xml.getResultCode());
         logger.info(xml.getResultMessage());

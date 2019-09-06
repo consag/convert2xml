@@ -74,6 +74,8 @@ public class GenerateXml {
     private XMLStreamWriter writer = null;
     private String resultCode = Constants.OK;
     private String resultMessage = Constants.getResultMessage(resultCode);
+    //do not write empty tags
+    private String suppressEmptyTags = Constants.DEFAULT_SUPPRESS_EMPTY_TAGS;
 
     private void logVerbose(String msg) {
         logger.trace(msg);
@@ -350,19 +352,26 @@ public class GenerateXml {
                             break;
                         case Constants.SIMPLE:
                             logDebug(procName, "Writing Simple element type info for attribute >" + node.getAttribute() +"<.");
-                            getWriter().writeStartElement(node.getAttribute());
                             if (i < values.length) {
                                 if(values[i] == null) {
-                                    getWriter().writeCharacters("");
+                                    if(Constants.YES == getSuppressEmptyTags()) {
+                                        logWarning("Empty value found and suppressEmptyTags=Y. Suppressing tag >" + node.getAttribute()+"<.");
+                                    } else {
+                                        writeTag(node.getAttribute(), "");
+                                    }
                                 } else {
-                                    getWriter().writeCharacters(values[i]);
+                                    writeTag(node.getAttribute(), values[i]);
                                 }
                                 i++;
                             } else {
                                 //more xml elements than data elements
                                 logVerbose("There are more xml elements than data fields.");
+                                if(Constants.YES == getSuppressEmptyTags()) {
+                                    logWarning("Empty value found and suppressEmptyTags=Y. Suppressing tag >" + node.getAttribute()+"<.");
+                                } else {
+                                    writeTag(node.getAttribute(), "");
+                                }
                             }
-                            getWriter().writeEndElement();
                             break;
                         default:
                             logWarning("Ignored invalid or unsupported elementType >" + node.getElementType() + "<.");
@@ -378,6 +387,12 @@ public class GenerateXml {
     }
 
 }
+
+    private void writeTag(String attribute, String value) throws XMLStreamException {
+        getWriter().writeStartElement(attribute);
+        getWriter().writeCharacters( value);
+        getWriter().writeEndElement();
+    }
 
     public void outInfoElementList() {
         if (elementList.size() == 1)
@@ -584,6 +599,11 @@ public class GenerateXml {
 
     public String getResultMessage() { return this.resultMessage; }
     public void setResultMessage(String resultMessage) { this.resultMessage = resultMessage; }
+
+    public String getSuppressEmptyTags() { return  this.suppressEmptyTags; }
+    public void setSuppressEmptyTags(String suppressEmptyTags) {
+        this.suppressEmptyTags = suppressEmptyTags;
+    }
 }
 
 

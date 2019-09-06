@@ -73,6 +73,7 @@ public class Constants {
     public static final String DEFAULT_XSD_PATH ="./";
     public static final String DEFAULT_ROOT_ELEMENT ="root";
     public static final String DEFAULT_ONE_FILE_PER_ROW = NO;
+    public static final String DEFAULT_SUPPRESS_EMPTY_TAGS = NO;
 
     public static String getResultMessage(String resultCode){
         return result.getOrDefault(resultCode, result.get(UNKNOWN));
