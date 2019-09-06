@@ -17,15 +17,20 @@ if (partNrRows == 1) {
 	xmlFile = targetFileName;
 	oneFilePerRow = oneFilePerInputRow;
 	pathXml = Paths.get(xmlFile);
+	suppressTags = suppressEmptyTags;
    
     xml =new GenerateXml();
-	log(DEBUG, "setting xsdfile to >" + xsd +"<.");
+	logInfo("setting xsdfile to >" + xsd +"<.");
 	xml.setXsdFile(xsd);
 	xml.setXsdPath(xsdPath); 
-	log(DEBUG, "setting xml file to >" + xmlFile +"<.");
+	logInfo("setting xml file to >" + xmlFile +"<.");
     xml.setTarget(xmlFile);
-    log(DEBUG, "setting one file per row to >" + oneFilePerRow +"<.");
+    logInfo("setting one file per row to >" + oneFilePerRow +"<.");
 	xml.setOneFilePerRow(oneFilePerRow);
+	if(suppressEmptyTags != null) {
+	    logInfo("setting suppressEmptyTags to >" + suppressTags +"<.");
+		xml.setSuppressEmptyTags(suppressTags);
+	}
 	xml.initXmlFile();
 	if(!"OK".equals(xml.getResultCode())) { 
 		failSession(xml.getResultMessage());
