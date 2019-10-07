@@ -353,8 +353,9 @@ public class GenerateXml {
                         case Constants.SIMPLE:
                             logDebug(procName, "Writing Simple element type info for attribute >" + node.getAttribute() +"<.");
                             if (i < values.length) {
-                                if(values[i] == null) {
-                                    if(Constants.YES == getSuppressEmptyTags()) {
+//                                if(values[i] == null || values[i].length()==0) {
+                                    if(values[i] == null) {
+                                    if(Constants.YES.equals(getSuppressEmptyTags())) {
                                         logWarning("Empty value found and suppressEmptyTags=Y. Suppressing tag >" + node.getAttribute()+"<.");
                                     } else {
                                         writeTag(node.getAttribute(), "");

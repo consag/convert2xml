@@ -125,7 +125,17 @@
 </JavaDataInterface>
 </javaInterfaces>
 </javatx:JavaTx>
-<folder:Folder imx:id="U:T5wLd-jXEem4jiV5PkKq-A" name="xmlDemo_Java">
+<project:Project imx:id="U:DIt-hejUEem6qy52FJm0FQ" name="p_1022only">
+<imx:annotations>
+<imx:IGenericAnnotations>
+<com.informatica.tools.objectie key1="projectName" value1="MRS_DQFramework_ST_01"/>
+</imx:IGenericAnnotations>
+</imx:annotations>
+<annotations>
+<Annotation imx:id="ID_12" xsi:type="description:Description"/>
+</annotations>
+<contents>
+<IObject imx:id="U:T5wLd-jXEem4jiV5PkKq-A" xsi:type="folder:Folder" name="xmlDemo_Java">
 <contents>
 <IObject imx:id="U:T5wLeOjXEem4jiV5PkKq-A" xsi:type="folder:Folder" name="convert2xml_Native_Without_Lookup">
 <contents>
@@ -133,16 +143,8 @@
 </contents>
 </IObject>
 </contents>
-</folder:Folder>
-<project:Project imx:id="U:DIt-hejUEem6qy52FJm0FQ" name="p_1022only">
-<imx:annotations>
-<imx:IGenericAnnotations>
-<com.informatica.tools.objectie key1="projectName" value1="MRS_DQFramework_ST_01"/>
-</imx:IGenericAnnotations>
-</imx:annotations>
-<contents>
-<IObject imx:idref="U:T5wLd-jXEem4jiV5PkKq-A" xsi:type="folder:Folder"/>
+</IObject>
 </contents>
 </project:Project>
-<imx:crc value="3994744756"/>
+<imx:crc value="848682520"/>
 </imx:IMX>
