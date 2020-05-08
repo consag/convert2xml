@@ -24,7 +24,7 @@
  */
 package nl.jacbeekers;
 
-import org.apache.log4j.Logger;
+import org.apache.logging.log4j.LogManager;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -32,7 +32,7 @@ import java.util.HashMap;
 public class Main {
     public static void main(String[] args) throws ConversionException, Exception {
         // write your code here
-        org.apache.log4j.Logger logger = Logger.getLogger(GenerateXml.class.getName());
+        org.apache.logging.log4j.Logger logger = LogManager.getLogger(GenerateXml.class.getName());
 
         String xsdFile = args[0];
         String xmlFile = args[1];

@@ -25,7 +25,8 @@
 
 package nl.jacbeekers;
 
-import org.apache.log4j.Logger;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import org.w3c.dom.*;
 import org.xml.sax.InputSource;
 import org.xml.sax.SAXException;
@@ -56,7 +57,7 @@ public class GenerateXml {
     public GenerateXml() {
     }
 
-    private static final org.apache.log4j.Logger logger = Logger.getLogger(GenerateXml.class.getName());
+    private static final org.apache.logging.log4j.Logger logger = LogManager.getLogger(GenerateXml.class.getName());
 //    private static final Logger logger = LogManager.getLogger(GenerateXml.class.getName());
 
     private static Object lock = new Object();   // lock to synchronize nrRows
